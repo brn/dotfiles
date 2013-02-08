@@ -1,0 +1,88 @@
+;; Object event/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "event/"
+  :tables (list 
+   (semanticdb-table "event.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("string.h" include (:system-flag t) nil [1 20])
+            ("fs.h" include (:system-flag t) nil [21 36])
+            ("utilities.h" include (:system-flag t) nil [37 59])
+            ("fs/event/md5.h" include (:system-flag t) nil [60 85])
+            ("lib/unique_ptr.h" include (:system-flag t) nil [86 113])
+            ("os" type
+               (:members 
+                  ( ("fs" type
+                       (:members 
+                          ( ("ReadFile" function
+                               (:arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [158 175])
+                                    ("path" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [176 193]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [144 648])
+                            ("FSEvent" function
+                               (:constructor-flag t
+                                :parent "FSEvent"
+                                :arguments 
+                                  ( ("path" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [667 684])
+                                    ("fs_watcher" variable
+                                       (:pointer 1
+                                        :type ("FSWatcher" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [685 707]))                                  
+                                :type ("FSEvent" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [650 905])
+                            ("FSEvent" function
+                               (:destructor-flag t
+                                :parent "FSEvent"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [907 928])
+                            ("IsModified" function
+                               (:parent "FSEvent"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [930 1223])
+                            ("IsUpdate" function
+                               (:parent "FSEvent"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1225 1456])
+                            ("IsExist" function
+                               (:parent "FSEvent"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1458 1544])
+                            ("filename" function
+                               (:pointer 1
+                                :parent "FSEvent"
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [1546 1607])
+                            ("md5" function
+                               (:pointer 1
+                                :parent "FSEvent"
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [1608 1663]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [128 1665]))                  
+                :type "namespace")
+                nil [114 1666]))          
+    :file "event.cc"
+    :pointmax 1669
+    :fsize 1666
+    :lastmodtime '(20459 49587)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!github!libos!src!fs!event!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

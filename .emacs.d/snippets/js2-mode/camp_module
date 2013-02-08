@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: camp_module
+# key: md
+# --
+camp.module("$1", function (exports) {
+  $0
+});

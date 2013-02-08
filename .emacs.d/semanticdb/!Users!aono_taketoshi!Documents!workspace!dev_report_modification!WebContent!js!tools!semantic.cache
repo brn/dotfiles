@@ -1,0 +1,27 @@
+;; Object tools/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tools/"
+  :tables (list 
+   (semanticdb-table "build.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "build.json"
+    :pointmax 1636
+    :fsize 1635
+    :lastmodtime '(20495 52253)
+    :unmatched-syntax 'nil
+    )
+    (semanticdb-table "ignored.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "ignored.json"
+    :pointmax 78
+    :fsize 77
+    :lastmodtime '(20492 41091)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!Documents!workspace!dev_report_modification!WebContent!js!tools!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

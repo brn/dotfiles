@@ -1,0 +1,231 @@
+;; Object rtb/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "rtb/"
+  :tables (list 
+   (semanticdb-table "AbstractAction.java"
+    :major-mode 'malabar-mode
+    :tags 
+        '( ("jp.co.cyberagent.adsys.action.loginClientName.adserving.rtb" package nil (reparse-symbol package_declaration) [1 69])
+            ("java.text.MessageFormat" include nil (reparse-symbol import_declaration) [71 102])
+            ("java.text.NumberFormat" include nil (reparse-symbol import_declaration) [103 133])
+            ("java.util.HashMap" include nil (reparse-symbol import_declaration) [134 159])
+            ("java.util.Iterator" include nil (reparse-symbol import_declaration) [160 186])
+            ("java.util.Map" include nil (reparse-symbol import_declaration) [187 208])
+            ("javax.annotation.Resource" include nil (reparse-symbol import_declaration) [210 243])
+            ("javax.servlet.http.HttpServletRequest" include nil (reparse-symbol import_declaration) [244 289])
+            ("jp.co.cyberagent.adsys.dto.LoginUserDto" include nil (reparse-symbol import_declaration) [291 338])
+            ("jp.co.cyberagent.adsys.dto.adserving.rtb.RtbCampaignDto" include nil (reparse-symbol import_declaration) [339 402])
+            ("jp.co.cyberagent.adsys.entity.consts.Flag" include nil (reparse-symbol import_declaration) [403 452])
+            ("jp.co.cyberagent.adsys.service.loginClientName.adserving.rtb.CampaignService" include nil (reparse-symbol import_declaration) [453 537])
+            ("jp.co.cyberagent.adsys.util.JsonUtil" include nil (reparse-symbol import_declaration) [538 582])
+            ("jp.co.cyberagent.adsys.util.ValidateUtil" include nil (reparse-symbol import_declaration) [583 631])
+            ("org.apache.commons.logging.Log" include nil (reparse-symbol import_declaration) [633 671])
+            ("org.apache.commons.logging.LogFactory" include nil (reparse-symbol import_declaration) [672 717])
+            ("org.apache.struts.action.ActionMessage" include nil (reparse-symbol import_declaration) [718 764])
+            ("org.apache.struts.action.ActionMessages" include nil (reparse-symbol import_declaration) [765 812])
+            ("org.apache.struts.util.TokenProcessor" include nil (reparse-symbol import_declaration) [813 858])
+            ("org.seasar.framework.util.ArrayUtil" include nil (reparse-symbol import_declaration) [859 902])
+            ("org.seasar.framework.util.StringUtil" include nil (reparse-symbol import_declaration) [903 947])
+            ("org.seasar.framework.util.tiger.CollectionsUtil" include nil (reparse-symbol import_declaration) [948 1003])
+            ("org.seasar.struts.util.MessageResourcesUtil" include nil (reparse-symbol import_declaration) [1004 1055])
+            ("org.seasar.struts.util.RequestUtil" include nil (reparse-symbol import_declaration) [1056 1098])
+            ("AbstractAction" type
+               (:typemodifiers ("public" "abstract")
+                :members 
+                  ( ("log" variable
+                       (:typemodifiers ("private" "static")
+                        :type "Log")
+                        (reparse-symbol field_declaration) [1181 1246])
+                    ("campaignService" variable (:type "CampaignService") (reparse-symbol field_declaration) [1270 1302])
+                    ("isEmpty" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("str" variable (:type "String") (reparse-symbol formal_parameter) [1385 1395]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [1359 1435])
+                    ("isEmpty" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("s" variable (:type "Long") (reparse-symbol formal_parameter) [1519 1525]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [1493 1596])
+                    ("validate" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("errors" variable (:type "ActionMessages") (reparse-symbol formal_parameter) [1734 1755]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [1707 1877])
+                    ("toInt" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("s" variable (:type "String") (reparse-symbol formal_parameter) [1904 1912]))                          
+                        :type "Integer")
+                        (reparse-symbol method_declaration) [1880 2045])
+                    ("integerCheck" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("s" variable (:type "String") (reparse-symbol formal_parameter) [2100 2108]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [2069 2250])
+                    ("writeValidateErrToJson" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("errors" variable (:type "ActionMessages") (reparse-symbol formal_parameter) [2411 2432]))                          
+                        :type "void")
+                        (reparse-symbol method_declaration) [2375 3514])
+                    ("validateCreativeName" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("creativeName" variable (:type "String") (reparse-symbol formal_parameter) [3618 3637]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [3579 3765])
+                    ("writeStatusUpdateSuccessToJson" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("activeStatus" variable (:type "Boolean") (reparse-symbol formal_parameter) [3845 3865]))                          
+                        :type "void")
+                        (reparse-symbol method_declaration) [3799 4205])
+                    ("writeDeleteSuccessToJson" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("okCnt" variable (:type "int") (reparse-symbol formal_parameter) [4276 4285])
+                            ("ngCnt" variable (:type "int") (reparse-symbol formal_parameter) [4287 4296])
+                            ("notDeleteIdx" variable (:type "String") (reparse-symbol formal_parameter) [4301 4320]))                          
+                        :type "void")
+                        (reparse-symbol method_declaration) [4236 4696])
+                    ("writeFreqUpdateSuccessToJson" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("freqSettingFlag" variable (:type "String") (reparse-symbol formal_parameter) [4779 4801])
+                            ("frequencyTermHour" variable (:type "String") (reparse-symbol formal_parameter) [4806 4830])
+                            ("frequencyFrom" variable (:type "String") (reparse-symbol formal_parameter) [4832 4852])
+                            ("frequencyTo" variable (:type "String") (reparse-symbol formal_parameter) [4854 4872]))                          
+                        :type "void")
+                        (reparse-symbol method_declaration) [4735 5387])
+                    ("getTotalBudgetSuccessToJson" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("totalBudget" variable (:type "String") (reparse-symbol formal_parameter) [5463 5481]))                          
+                        :type "void")
+                        (reparse-symbol method_declaration) [5420 5717])
+                    ("getTotalBudgetErrorToJson" function
+                       (:typemodifiers ("protected")
+                        :type "void")
+                        (reparse-symbol method_declaration) [5750 6008])
+                    ("toString" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("l" variable (:type "long") (reparse-symbol formal_parameter) [6072 6078]))                          
+                        :type "String")
+                        (reparse-symbol method_declaration) [6046 6112])
+                    ("hasUpdateRole" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [6207 6232])
+                            ("rtbCampaignId" variable (:type "long") (reparse-symbol formal_parameter) [6237 6255]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [6175 6732])
+                    ("hasUpdateGroupRole" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [6832 6857])
+                            ("rtbGroupId" variable (:type "long") (reparse-symbol formal_parameter) [6862 6877]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [6795 7357])
+                    ("getCampaign" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [7395 7420])
+                            ("rtbCampaignId" variable (:type "Long") (reparse-symbol formal_parameter) [7425 7443]))                          
+                        :type "RtbCampaignDto")
+                        (reparse-symbol method_declaration) [7360 7502])
+                    ("getCampaignByGroupId" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [7549 7574])
+                            ("rtbGroupId" variable (:type "Long") (reparse-symbol formal_parameter) [7579 7594]))                          
+                        :type "RtbCampaignDto")
+                        (reparse-symbol method_declaration) [7505 7659])
+                    ("isLengthOver" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("checkStr" variable (:type "String") (reparse-symbol formal_parameter) [7752 7767])
+                            ("lengh" variable (:type "int") (reparse-symbol formal_parameter) [7769 7778]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [7721 7837])
+                    ("saveToken" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameter) [7894 7920]))                          
+                        :type "void")
+                        (reparse-symbol method_declaration) [7869 7977])
+                    ("isTokenValid" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameter) [8033 8059]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [8002 8132])
+                    ("writeSuccessToJson" function
+                       (:typemodifiers ("protected")
+                        :type "void")
+                        (reparse-symbol method_declaration) [8161 8412])
+                    ("writeErrToJson" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("messageStr" variable (:type "String") (reparse-symbol formal_parameter) [8468 8485]))                          
+                        :type "void")
+                        (reparse-symbol method_declaration) [8438 8707])
+                    ("writeIllegalAccessErrToJson" function
+                       (:typemodifiers ("protected")
+                        :type "void")
+                        (reparse-symbol method_declaration) [8741 9007])
+                    ("isEmpty" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("array" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameter) [9075 9089]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [9049 9140])
+                    ("writeMarkCntParamErrorToJson" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("errors" variable (:type "ActionMessages") (reparse-symbol formal_parameter) [9218 9239]))                          
+                        :type "void")
+                        (reparse-symbol method_declaration) [9174 9776])
+                    ("writeMarkCntSuccessToJson" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("markCnt" variable (:type "Long") (reparse-symbol formal_parameter) [9852 9864]))                          
+                        :type "void")
+                        (reparse-symbol method_declaration) [9811 10251])
+                    ("updateingError" function
+                       (:typemodifiers ("public")
+                        :type "ActionMessages")
+                        (reparse-symbol method_declaration) [10268 10452])
+                    ("campaignRegistError" function
+                       (:typemodifiers ("public")
+                        :type "ActionMessages")
+                        (reparse-symbol method_declaration) [10467 10663])
+                    ("groupRegistError" function
+                       (:typemodifiers ("public")
+                        :type "ActionMessages")
+                        (reparse-symbol method_declaration) [10678 10871])
+                    ("creativeRegistError" function
+                       (:typemodifiers ("public")
+                        :type "ActionMessages")
+                        (reparse-symbol method_declaration) [10886 11085]))                  
+                :type "class")
+                (reparse-symbol class_declaration) [1140 11088]))          
+    :file "AbstractAction.java"
+    :pointmax 11089
+    :fsize 12400
+    :lastmodtime '(20452 10806)
+    :unmatched-syntax '((RPAREN 9607 . 9608) (GT 9549 . 9550) (LT 9535 . 9536) (IDENTIFIER 9527 . 9535) (RPAREN 9443 . 9444) (GT 9366 . 9367) (LT 9359 . 9360) (IDENTIFIER 9351 . 9359) (GT 2793 . 2794) (LT 2779 . 2780) (IDENTIFIER 2771 . 2779) (GT 2612 . 2613) (LT 2605 . 2606) (IDENTIFIER 2597 . 2605) (PROTECTED 1260 . 1269))
+    )
+   )
+  :file "!Users!aono_taketoshi!Documents!workspace!dev_rtb_rtg_ameba!src!jp!co!cyberagent!adsys!action!loginClientName!adserving!rtb!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

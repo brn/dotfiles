@@ -1,0 +1,38 @@
+;; Object study/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "study/"
+  :tables (list 
+   (semanticdb-table "sumup-map.scm"
+    :major-mode 'scheme-mode
+    :tags 
+        '( ("sumup-map" function (:arguments ("li")) nil [1 62])
+            ("diff-map" function (:arguments ("li" "li2")) nil [64 107]))          
+    :file "sumup-map.scm"
+    :pointmax 110
+    :fsize 109
+    :lastmodtime '(20465 22436)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "apply.scm"
+    :major-mode 'scheme-mode
+    :tags 
+        '( ("fold-apply" function (:arguments ("ls")) nil [1 55])
+            ("my-filter" function (:arguments ("fn" "ls")) nil [128 437]))          
+    :file "apply.scm"
+    :pointmax 919
+    :fsize 918
+    :lastmodtime '(20466 22594)
+    :unmatched-syntax '((semantic-list 439 . 918) (semantic-list 57 . 126) (semantic-list 439 . 953) (semantic-list 57 . 126) (semantic-list 439 . 957) (semantic-list 57 . 126) (semantic-list 439 . 952) (semantic-list 57 . 126) (semantic-list 439 . 947) (semantic-list 57 . 126) (semantic-list 439 . 952) (semantic-list 57 . 126) (semantic-list 439 . 957) (semantic-list 57 . 126) (close-paren 944 . 945) (semantic-list 439 . 944) (semantic-list 57 . 126) (close-paren 947 . 948) (semantic-list 439 . 947) (semantic-list 57 . 126) (close-paren 947 . 948) (semantic-list 439 . 947) (semantic-list 57 . 126) (semantic-list 439 . 952) (semantic-list 57 . 126) (semantic-list 439 . 951) (semantic-list 57 . 126) (semantic-list 439 . 957) (semantic-list 57 . 126) (semantic-list 439 . 957) (semantic-list 57 . 126) (semantic-list 439 . 967) (semantic-list 57 . 126) (semantic-list 439 . 957) (semantic-list 57 . 126) (semantic-list 439 . 927) (semantic-list 57 . 126) (semantic-list 439 . 937) (semantic-list 57 . 126) (semantic-list 439 . 937) (semantic-list 57 . 126) (close-paren 937 . 938) (semantic-list 439 . 937) (semantic-list 57 . 126) (semantic-list 439 . 877) (semantic-list 57 . 126) (semantic-list 439 . 878) (semantic-list 57 . 126) (semantic-list 439 . 889) (semantic-list 57 . 126) (semantic-list 439 . 862) (semantic-list 57 . 126) (semantic-list 439 . 950) (semantic-list 57 . 126) (semantic-list 439 . 984) (semantic-list 57 . 126) (semantic-list 439 . 950) (semantic-list 57 . 126) (semantic-list 439 . 972) (semantic-list 57 . 126) (semantic-list 439 . 953) (semantic-list 57 . 126) (semantic-list 439 . 950) (semantic-list 57 . 126) (semantic-list 439 . 919) (semantic-list 57 . 126) (semantic-list 439 . 956) (semantic-list 57 . 126) (semantic-list 439 . 966) (semantic-list 57 . 126) (semantic-list 439 . 950) (semantic-list 57 . 126) (semantic-list 439 . 919) (semantic-list 57 . 126) (semantic-list 439 . 1012) (semantic-list 57 . 126) (semantic-list 439 . 885) (semantic-list 57 . 126) (semantic-list 439 . 886) (semantic-list 57 . 126) (semantic-list 439 . 885) (semantic-list 57 . 126) (semantic-list 439 . 865) (semantic-list 57 . 126) (semantic-list 439 . 866) (semantic-list 57 . 126) (semantic-list 439 . 865) (semantic-list 57 . 126) (semantic-list 439 . 859) (semantic-list 57 . 126) (semantic-list 439 . 665) (semantic-list 57 . 126))
+    )
+   (semanticdb-table "read-file.scm"
+    :major-mode 'scheme-mode
+    :tags nil
+    :file "read-file.scm"
+    :pointmax 1
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!scheme!study!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

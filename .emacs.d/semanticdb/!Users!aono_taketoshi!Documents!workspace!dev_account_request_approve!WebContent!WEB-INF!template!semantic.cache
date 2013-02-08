@@ -1,0 +1,27 @@
+;; Object template/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "template/"
+  :tables (list 
+   (semanticdb-table "applyAgentMail.html"
+    :major-mode 'html-mode
+    :tags nil
+    :file "applyAgentMail.html"
+    :pointmax 396
+    :fsize 581
+    :lastmodtime '(20501 59762)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "applyPopup.html"
+    :major-mode 'html-mode
+    :tags nil
+    :file "applyPopup.html"
+    :pointmax 8123
+    :fsize 9110
+    :lastmodtime '(20501 59762)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!Documents!workspace!dev_account_request_approve!WebContent!WEB-INF!template!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

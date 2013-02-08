@@ -1,0 +1,36 @@
+;; Object jscc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "jscc/"
+  :tables (list 
+   (semanticdb-table "package.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "package.json"
+    :pointmax 873
+    :fsize 872
+    :lastmodtime '(20497 64575)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "build.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "build.json"
+    :pointmax 1687
+    :fsize 1686
+    :lastmodtime '(20498 17274)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ignored.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "ignored.json"
+    :pointmax 70
+    :fsize 69
+    :lastmodtime '(20497 64173)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!github!jscc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

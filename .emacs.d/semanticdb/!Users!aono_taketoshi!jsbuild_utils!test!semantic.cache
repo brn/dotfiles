@@ -1,0 +1,31 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "test1.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("" section nil nil [110 201])
+            ("" section nil nil [201 226]))          
+    :file "test1.html"
+    :pointmax 226
+    :fsize 225
+    :lastmodtime '(20496 63615)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test2.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("" section nil nil [110 187])
+            ("" section nil nil [187 212]))          
+    :file "test2.html"
+    :pointmax 212
+    :fsize 211
+    :lastmodtime '(20497 1920)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!jsbuild_utils!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

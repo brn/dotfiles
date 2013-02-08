@@ -1,0 +1,28 @@
+;; Object common/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "common/"
+  :tables (list 
+   (semanticdb-table "layout.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("CA Marketing Platform" section nil nil [675 905])
+            ("CAMP by CyberAgent" section (:members 
+              ( ("CAMP by CyberAgent" anchor nil nil [981 984])
+                ("ヘルプ" anchor nil nil [1720 1723])
+                ("ログアウト" anchor nil nil [2106 2109])
+                ("ページ上部へ" anchor nil nil [2383 2386])
+                ("利用規約" anchor nil nil [2522 2525])
+                ("プライバシーポリシー" anchor nil nil [2603 2606])
+                ("企業情報" anchor nil nil [2713 2716])
+                (">" anchor nil nil [2948 2951]))              ) nil [905 3163]))          
+    :file "layout.html"
+    :pointmax 3163
+    :fsize 3387
+    :lastmodtime '(20520 50320)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!Documents!workspace!dev_account_request_approve!WebContent!WEB-INF!template!common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,429 @@
+;; Object notificator/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "notificator/"
+  :tables (list 
+   (semanticdb-table "notificator-impl.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UTILS_NOTIFICATOR_IMPL_H_" variable (:constant-flag t) nil [43 68])
+            ("../thread.h" include nil nil [1245 1267])
+            ("../lib/bind.h" include nil nil [1268 1292])
+            ("../lib/make_shared.h" include nil nil [1293 1324])
+            ("../lib/foreach.h" include nil nil [1325 1352])
+            ("../logging.h" include nil nil [1353 1376])
+            ("../static_assert.h" include nil nil [1377 1406])
+            ("../defines.h" include nil nil [1407 1430])
+            ("os" type
+               (:members 
+                  ( ("TEMPLATE" variable (:constant-flag t) (reparse-symbol namespacesubparts) [1456 1464])
+                    ("Notificator" function
+                       (:constructor-flag t
+                        :parent "Notificator"
+                        :type ("ALWAYS_INLINE" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1504 1594])
+                    ("Notificator" function
+                       (:template 
+                          ( ("Signature" type (:type "class") nil nil))                          
+                        :type ("ALWAYS_INLINE" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("notificator" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Notificator" type
+                                     (:template-specifier 
+                                        ( ("Signature" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1655 1697]))                          
+                        :parent "Notificator"
+                        :constructor-flag t)
+                        (reparse-symbol namespacesubparts) [1596 1740])
+                    ("=" function
+                       (:operator-flag t
+                        :parent "Notificator"
+                        :constant-flag t
+                        :arguments 
+                          ( ("notificator" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Notificator" type
+                                     (:template-specifier 
+                                        ( ("Signature" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1831 1873]))                          
+                        :type ("Notificator" type
+                             (:template-specifier 
+                                ( ("Signature" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [1765 1934])
+                    ("AddListener" function
+                       (:parent "Notificator"
+                        :arguments 
+                          ( ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2029 2045])
+                            ("listener" variable (:type ("Listener" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2046 2064]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1988 2438])
+                    ("+=" function
+                       (:operator-flag t
+                        :parent "Notificator"
+                        :arguments 
+                          ( ("listener_pack" variable (:type ("std::pair" type
+                                 (:template-specifier 
+                                    ( ("char" type
+                                         (:pointer 1
+                                          :constant-flag t)
+                                          nil nil)
+                                      ("Listener" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [2534 2581]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2492 2643])
+                    ("RemoveListener" function
+                       (:parent "Notificator"
+                        :arguments 
+                          ( ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2712 2728]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2668 2841])
+                    ("-=" function
+                       (:operator-flag t
+                        :parent "Notificator"
+                        :arguments 
+                          ( ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2908 2924]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2866 2951])
+                    ("TEMPLATE_ARGUMENTS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2962 2980])
+                    ("BOOST_PP_REPEAT" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TEMPLATE_ARGUMENTS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3592 3611])
+                            ("" variable (:type ("ALWAYS_INLINE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3612 3626]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3572 3627])
+                    ("TEMPLATE_ARGUMENTS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [3664 3682])
+                    ("NotifyAllAsync" function
+                       (:parent "Notificator"
+                        :arguments 
+                          ( ("" variable (:type ("BOOST_PP_ENUM_BINARY_PARAMS_Z" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3927 3982]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3883 4312])
+                    ("BOOST_PP_REPEAT" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TEMPLATE_ARGUMENTS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4334 4353])
+                            ("" variable (:type ("ALWAYS_INLINE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4354 4368]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [4314 4369])
+                    ("TEMPLATE_ARGUMENTS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [4407 4425])
+                    ("BOOST_PP_REPEAT" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TEMPLATE_ARGUMENTS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5135 5154])
+                            ("" variable (:type ("ALWAYS_INLINE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5155 5169]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [5115 5170])
+                    ("TEMPLATE_ARGUMENTS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [5207 5225])
+                    ("NotifyForKeyAsync" function
+                       (:parent "Notificator"
+                        :arguments 
+                          ( ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [5473 5489])
+                            ("" variable (:type ("BOOST_PP_ENUM_BINARY_PARAMS_Z" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5490 5545]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5426 5944])
+                    ("BOOST_PP_REPEAT" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TEMPLATE_ARGUMENTS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5966 5985])
+                            ("" variable (:type ("ALWAYS_INLINE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5986 6000]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [5946 6001])
+                    ("TEMPLATE_ARGUMENTS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [6039 6057])
+                    ("BOOST_PP_REPEAT" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TEMPLATE_ARGUMENTS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6766 6785])
+                            ("" variable (:type ("ALWAYS_INLINE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6786 6800]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6746 6801])
+                    ("TEMPLATE_ARGUMENTS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [6839 6857])
+                    ("BOOST_PP_REPEAT" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TEMPLATE_ARGUMENTS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7588 7607])
+                            ("" variable (:type ("ALWAYS_INLINE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7608 7622]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [7568 7623])
+                    ("swap" function
+                       (:parent "Notificator"
+                        :arguments 
+                          ( ("notificator" variable
+                               (:reference 1
+                                :type ("Notificator" type
+                                     (:template-specifier 
+                                        ( ("Signature" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7710 7746]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7676 7793]))                  
+                :type "namespace")
+                nil [1432 7813]))          
+    :file "notificator-impl.h"
+    :pointmax 7784
+    :fsize 7821
+    :lastmodtime '(20461 13708)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("UTILS_NOTIFICATOR_IMPL_H_")
+          )
+
+    )
+   (semanticdb-table "notificator.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UTILS_NOTIFICATOR_H_" variable (:constant-flag t) nil [1214 1234])
+            ("../utilities.h" include nil nil [1236 1261])
+            ("../thread.h" include nil nil [1262 1284])
+            ("../worker/worker.h" include nil nil [1285 1314])
+            ("../lib/unordered_map.h" include nil nil [1315 1348])
+            ("../lib/shared_ptr.h" include nil nil [1349 1379])
+            ("../lib/function.h" include nil nil [1380 1408])
+            ("../lib/type_traits.h" include nil nil [1409 1440])
+            ("../lib/pp.h" include nil nil [1441 1463])
+            ("PARAMETER_LENGTH" variable (:constant-flag t) nil [1498 1514])
+            ("os" type
+               (:members 
+                  ( ("Notificator" type
+                       (:template 
+                          ( ("Signature" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("ListenerFunction" type
+                               (:typedef ("function" type
+                                     (:template-specifier 
+                                        ( ("Signature" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "function"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1648 1693])
+                            ("ListenerHandle" type
+                               (:typedef ("shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("ListenerFunction" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "shared_ptr"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1696 1748])
+                            ("ListenerSet" type
+                               (:typedef ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("char" type
+                                             (:pointer 1
+                                              :constant-flag t)
+                                              nil nil)
+                                          ("ListenerHandle" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "std::pair"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1790 1849])
+                            ("Listeners" type
+                               (:typedef ("unordered_multimap" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("ListenerHandle" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "unordered_multimap"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1852 1918])
+                            ("ListenersIterator" type
+                               (:typedef ("Listeners::iterator" type (:type "class") nil nil)
+                                :superclasses "Listeners::iterator"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1921 1976])
+                            ("ListenersRange" type
+                               (:typedef ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("ListenersIterator" type nil nil nil)
+                                          ("ListenersIterator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "std::pair"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [2024 2095])
+                            ("public" label nil (reparse-symbol classsubparts) [2100 2108])
+                            ("Notificator" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Notificator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2111 2125])
+                            ("Notificator" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2128 2152])
+                            ("Notificator" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("notificator" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Notificator" type
+                                             (:template-specifier 
+                                                ( ("Signature" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2168 2210]))                                  
+                                :type ("Notificator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2156 2211])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :constant-flag t
+                                :arguments 
+                                  ( ("notificator" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Notificator" type
+                                             (:template-specifier 
+                                                ( ("Signature" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2256 2298]))                                  
+                                :type ("Notificator" type
+                                     (:template-specifier 
+                                        ( ("Signature" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [2214 2299])
+                            ("AddListener" function
+                               (:template 
+                                  ( ("Listener" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("key" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [2529 2545])
+                                    ("listener" variable (:type ("Listener" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2546 2564]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2481 2565])
+                            ("RemoveListener" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("key" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [2589 2605]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2569 2606])
+                            ("+=" function
+                               (:template 
+                                  ( ("Listener" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("listener_pack" variable (:type ("std::pair" type
+                                         (:template-specifier 
+                                            ( ("char" type
+                                                 (:pointer 1
+                                                  :constant-flag t)
+                                                  nil nil)
+                                              ("Listener" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2659 2706]))                                  
+                                :operator-flag t
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2610 2707])
+                            ("-=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("key" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [2729 2745]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2711 2746])
+                            ("TEMPLATE_ARGUMENTS" variable (:constant-flag t) (reparse-symbol classsubparts) [2756 2774])
+                            ("BOOST_PP_REPEAT" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("TEMPLATE_ARGUMENTS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3096 3115])
+                                    ("" variable (:type ("NotifyAll" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3116 3126]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3062 3127])
+                            ("BOOST_PP_REPEAT" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("TEMPLATE_ARGUMENTS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3164 3183])
+                                    ("" variable (:type ("NotifyAllAsync" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3184 3199]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3130 3200])
+                            ("TEMPLATE_ARGUMENTS" variable (:constant-flag t) (reparse-symbol classsubparts) [3379 3397])
+                            ("OPERATOR_CALL_ARGUMENTS" variable (:constant-flag t) (reparse-symbol classsubparts) [3784 3807])
+                            ("OPERATOR_CALL_FOR_KEY_ARGUMENTS" variable (:constant-flag t) (reparse-symbol classsubparts) [4127 4158])
+                            ("size" function (:type "int") (reparse-symbol classsubparts) [4590 4634])
+                            ("swap" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("notificator" variable
+                                       (:reference 1
+                                        :type ("Notificator" type
+                                             (:template-specifier 
+                                                ( ("Signature" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4647 4683]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4637 4684])
+                            ("empty" function (:type "bool") (reparse-symbol classsubparts) [4687 4734])
+                            ("private" label nil (reparse-symbol classsubparts) [4736 4745])
+                            ("workers_" variable
+                               (:pointer 1
+                                :type ("Worker" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4748 4765])
+                            ("listeners_" variable (:type ("Listeners" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4768 4789]))                          )
+                        (reparse-symbol namespacesubparts) [1597 4792]))                  
+                :type "namespace")
+                nil [1526 4795])
+            ("notificator-impl.h" include nil nil [4796 4825]))          
+    :file "notificator.h"
+    :pointmax 4826
+    :fsize 4833
+    :lastmodtime '(20461 24475)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("UTILS_NOTIFICATOR_H_")
+          ("PARAMETER_LENGTH" . ((number "11" 1508 . 1510)))
+          )
+
+    )
+   )
+  :file "!Users!aono_taketoshi!github!libos!include!notificator!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

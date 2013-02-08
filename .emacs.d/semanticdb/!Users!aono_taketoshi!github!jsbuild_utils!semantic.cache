@@ -1,0 +1,25 @@
+;; Object jsbuild_utils/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "jsbuild_utils/"
+  :tables (list 
+   (semanticdb-table "build.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "build.json"
+    :pointmax 1485
+    :fsize 1484
+    :lastmodtime '(20497 58980)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "package.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "package.json"
+    :pointmax 1
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!github!jsbuild_utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

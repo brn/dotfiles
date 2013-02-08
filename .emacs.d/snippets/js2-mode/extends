@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: extends
+# key: extends
+# --
+goog.inherits($1, $0);

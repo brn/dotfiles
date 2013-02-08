@@ -1,0 +1,113 @@
+;; Object service/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "service/"
+  :tables (list 
+   (semanticdb-table "LoginService.java"
+    :major-mode 'malabar-mode
+    :tags 
+        '( ("jp.co.cyberagent.adsys.service" package nil (reparse-symbol package_declaration) [12 51])
+            ("java.util.Date" include nil (reparse-symbol import_declaration) [53 75])
+            ("javax.annotation.Resource" include nil (reparse-symbol import_declaration) [77 110])
+            ("javax.servlet.http.HttpSession" include nil (reparse-symbol import_declaration) [111 149])
+            ("jp.co.cyberagent.adsys.dao.MstAgentDao" include nil (reparse-symbol import_declaration) [151 197])
+            ("jp.co.cyberagent.adsys.dao.MstAnnouncementDao" include nil (reparse-symbol import_declaration) [198 251])
+            ("jp.co.cyberagent.adsys.dao.MstClientDao" include nil (reparse-symbol import_declaration) [252 299])
+            ("jp.co.cyberagent.adsys.dao.MstListingApiClientDao" include nil (reparse-symbol import_declaration) [300 357])
+            ("jp.co.cyberagent.adsys.dao.MstLoginUserDao" include nil (reparse-symbol import_declaration) [358 408])
+            ("jp.co.cyberagent.adsys.dao.MstMainteClientDao" include nil (reparse-symbol import_declaration) [409 462])
+            ("jp.co.cyberagent.adsys.dao.MstMasterDbDao" include nil (reparse-symbol import_declaration) [463 512])
+            ("jp.co.cyberagent.adsys.dao.MstReportDbDao" include nil (reparse-symbol import_declaration) [513 562])
+            ("jp.co.cyberagent.adsys.dao.MstReportSlaveDbDao" include nil (reparse-symbol import_declaration) [563 617])
+            ("jp.co.cyberagent.adsys.dao.RelLoginPrivDao" include nil (reparse-symbol import_declaration) [618 668])
+            ("jp.co.cyberagent.adsys.dao.RptTableCreateCheckDao" include nil (reparse-symbol import_declaration) [669 726])
+            ("jp.co.cyberagent.adsys.dto.LoginUserDto" include nil (reparse-symbol import_declaration) [727 774])
+            ("jp.co.cyberagent.adsys.dto.OptionStatusDto" include nil (reparse-symbol import_declaration) [775 825])
+            ("jp.co.cyberagent.adsys.dto.RelLoginPrivDto" include nil (reparse-symbol import_declaration) [826 876])
+            ("jp.co.cyberagent.adsys.entity.MstAgent" include nil (reparse-symbol import_declaration) [877 923])
+            ("jp.co.cyberagent.adsys.entity.MstClient" include nil (reparse-symbol import_declaration) [924 971])
+            ("jp.co.cyberagent.adsys.entity.MstLoginUser" include nil (reparse-symbol import_declaration) [972 1022])
+            ("jp.co.cyberagent.adsys.entity.MstMasterDb" include nil (reparse-symbol import_declaration) [1023 1072])
+            ("jp.co.cyberagent.adsys.entity.MstReportDb" include nil (reparse-symbol import_declaration) [1073 1122])
+            ("jp.co.cyberagent.adsys.entity.MstReportSlaveDb" include nil (reparse-symbol import_declaration) [1123 1177])
+            ("jp.co.cyberagent.adsys.entity.consts.Flag" include nil (reparse-symbol import_declaration) [1178 1227])
+            ("jp.co.cyberagent.adsys.entity.consts.SystemType" include nil (reparse-symbol import_declaration) [1228 1283])
+            ("jp.co.cyberagent.adsys.form.LoginForm" include nil (reparse-symbol import_declaration) [1284 1329])
+            ("jp.co.cyberagent.adsys.form.util.ReportFormCookieUtil" include nil (reparse-symbol import_declaration) [1330 1391])
+            ("jp.co.cyberagent.adsys.util.ErrorsUtil" include nil (reparse-symbol import_declaration) [1392 1438])
+            ("jp.co.cyberagent.adsys.util.SessionUtil" include nil (reparse-symbol import_declaration) [1439 1486])
+            ("org.apache.struts.action.ActionMessages" include nil (reparse-symbol import_declaration) [1488 1535])
+            ("org.seasar.framework.container.factory.SingletonS2ContainerFactory" include nil (reparse-symbol import_declaration) [1536 1610])
+            ("org.seasar.framework.util.StringUtil" include nil (reparse-symbol import_declaration) [1611 1655])
+            ("org.seasar.struts.util.RequestUtil" include nil (reparse-symbol import_declaration) [1656 1698])
+            ("LoginService" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("mstLoginUserDao" variable (:type "MstLoginUserDao") (reparse-symbol field_declaration) [1786 1818])
+                    ("mstClientDao" variable (:type "MstClientDao") (reparse-symbol field_declaration) [1841 1867])
+                    ("mstAgentDao" variable (:type "MstAgentDao") (reparse-symbol field_declaration) [1890 1914])
+                    ("relLoginPrivDao" variable (:type "RelLoginPrivDao") (reparse-symbol field_declaration) [1937 1969])
+                    ("rptTableCreateCheckDao" variable (:type "RptTableCreateCheckDao") (reparse-symbol field_declaration) [1992 2038])
+                    ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol field_declaration) [2061 2087])
+                    ("mstMasterDbDao" variable (:type "MstMasterDbDao") (reparse-symbol field_declaration) [2110 2140])
+                    ("mstReportDbDao" variable (:type "MstReportDbDao") (reparse-symbol field_declaration) [2163 2193])
+                    ("mstReportSlaveDbDao" variable (:type "MstReportSlaveDbDao") (reparse-symbol field_declaration) [2216 2256])
+                    ("optionService" variable (:type "OptionService") (reparse-symbol field_declaration) [2279 2307])
+                    ("mstMainteClientDao" variable (:type "MstMainteClientDao") (reparse-symbol field_declaration) [2330 2368])
+                    ("mstListingApiClientDao" variable (:type "MstListingApiClientDao") (reparse-symbol field_declaration) [2391 2437])
+                    ("mstAnnouncementDao" variable (:type "MstAnnouncementDao") (reparse-symbol field_declaration) [2460 2498])
+                    ("doLogin" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("loginForm" variable (:type "LoginForm") (reparse-symbol formal_parameter) [2563 2582]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [2544 3283])
+                    ("doSpoofingLogin" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("loginForm" variable (:type "LoginForm") (reparse-symbol formal_parameter) [3313 3332]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [3286 4339])
+                    ("resetSession" function
+                       (:typemodifiers ("private")
+                        :type "void")
+                        (reparse-symbol method_declaration) [4343 4644])
+                    ("checkAndSetLoginInfo" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("mstLoginUser" variable (:type "MstLoginUser") (reparse-symbol formal_parameter) [4680 4705])
+                            ("mstClient" variable (:type "MstClient") (reparse-symbol formal_parameter) [4707 4726]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [4647 10278])
+                    ("doLogout" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol method_declaration) [10303 10395])
+                    ("getBackUrl" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("loginForm" variable (:type "LoginForm") (reparse-symbol formal_parameter) [10470 10489]))                          
+                        :type "String")
+                        (reparse-symbol method_declaration) [10445 11088])
+                    ("getDefaultSystemType" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("option" variable (:type "OptionStatusDto") (reparse-symbol formal_parameter) [11184 11206]))                          
+                        :type "String")
+                        (reparse-symbol method_declaration) [11148 11601])
+                    ("canUseListingApi" function
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [11664 11767]))                  
+                :type "class")
+                (reparse-symbol class_declaration) [1735 11770]))          
+    :file "LoginService.java"
+    :pointmax 11771
+    :fsize 12723
+    :lastmodtime '(20459 63904)
+    :unmatched-syntax '((PROTECTED 2450 . 2459) (PROTECTED 2381 . 2390) (PROTECTED 2320 . 2329) (PROTECTED 2269 . 2278) (PROTECTED 2206 . 2215) (PROTECTED 2153 . 2162) (PROTECTED 2100 . 2109) (PROTECTED 2051 . 2060) (PROTECTED 1982 . 1991) (PROTECTED 1927 . 1936) (PROTECTED 1880 . 1889) (PROTECTED 1831 . 1840) (PROTECTED 1776 . 1785))
+    )
+   )
+  :file "!Users!aono_taketoshi!Documents!workspace!dev_report_modification!src!jp!co!cyberagent!adsys!service!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,18 @@
+;; Object cvtagList/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cvtagList/"
+  :tables (list 
+   (semanticdb-table "index.html"
+    :major-mode 'html-mode
+    :tags nil
+    :file "index.html"
+    :pointmax 4381
+    :fsize 5170
+    :lastmodtime '(20459 61822)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!Documents!workspace!dev_close_rtb!WebContent!WEB-INF!template!loginClientName!settings!pc!cvtagList!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

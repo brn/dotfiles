@@ -1,0 +1,173 @@
+;; Object rtb/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "rtb/"
+  :tables (list 
+   (semanticdb-table "AbstractService.java"
+    :major-mode 'malabar-mode
+    :tags 
+        '( ("jp.co.cyberagent.adsys.service.loginClientName.adserving.rtb" package nil (reparse-symbol package_declaration) [1 70])
+            ("java.text.DecimalFormat" include nil (reparse-symbol import_declaration) [72 103])
+            ("java.text.SimpleDateFormat" include nil (reparse-symbol import_declaration) [104 138])
+            ("java.util.ArrayList" include nil (reparse-symbol import_declaration) [139 166])
+            ("java.util.Calendar" include nil (reparse-symbol import_declaration) [167 193])
+            ("java.util.HashMap" include nil (reparse-symbol import_declaration) [194 219])
+            ("java.util.List" include nil (reparse-symbol import_declaration) [220 242])
+            ("java.util.Map" include nil (reparse-symbol import_declaration) [243 264])
+            ("javax.annotation.Resource" include nil (reparse-symbol import_declaration) [266 299])
+            ("jp.co.cyberagent.adsys.dao.RtbCampaignBudgetDao" include nil (reparse-symbol import_declaration) [301 356])
+            ("jp.co.cyberagent.adsys.dao.RtbCampaignDao" include nil (reparse-symbol import_declaration) [357 406])
+            ("jp.co.cyberagent.adsys.dto.LoginUserDto" include nil (reparse-symbol import_declaration) [407 454])
+            ("jp.co.cyberagent.adsys.dto.adserving.rtb.RtbCampaignBudgetDto" include nil (reparse-symbol import_declaration) [455 524])
+            ("jp.co.cyberagent.adsys.dto.adserving.rtb.RtbListOutputDto" include nil (reparse-symbol import_declaration) [525 590])
+            ("jp.co.cyberagent.adsys.dto.pc.rpt.RptSumRtbPcDto" include nil (reparse-symbol import_declaration) [591 647])
+            ("jp.co.cyberagent.adsys.dto.rpt.RptSumSearchDto" include nil (reparse-symbol import_declaration) [648 702])
+            ("jp.co.cyberagent.adsys.entity.MstConversion" include nil (reparse-symbol import_declaration) [703 754])
+            ("jp.co.cyberagent.adsys.entity.consts.RptConst" include nil (reparse-symbol import_declaration) [755 808])
+            ("jp.co.cyberagent.adsys.entity.consts.RtbSearchReportType" include nil (reparse-symbol import_declaration) [809 873])
+            ("jp.co.cyberagent.adsys.entity.consts.RtbSearchType" include nil (reparse-symbol import_declaration) [874 932])
+            ("jp.co.cyberagent.adsys.entity.consts.SystemType" include nil (reparse-symbol import_declaration) [933 988])
+            ("jp.co.cyberagent.adsys.form.loginClientName.adserving.rtb.RtbListOutputForm" include nil (reparse-symbol import_declaration) [989 1072])
+            ("jp.co.cyberagent.adsys.service.loginClientName.adserving.common.MstConversionService" include nil (reparse-symbol import_declaration) [1073 1165])
+            ("org.apache.commons.logging.Log" include nil (reparse-symbol import_declaration) [1167 1205])
+            ("org.apache.commons.logging.LogFactory" include nil (reparse-symbol import_declaration) [1206 1251])
+            ("org.seasar.framework.util.StringUtil" include nil (reparse-symbol import_declaration) [1252 1296])
+            ("AbstractService" type
+               (:typemodifiers ("public" "abstract")
+                :members 
+                  ( ("log" variable
+                       (:typemodifiers ("static")
+                        :type "Log")
+                        (reparse-symbol field_declaration) [1448 1506])
+                    ("mstConversionService" variable (:type "MstConversionService") (reparse-symbol field_declaration) [1530 1572])
+                    ("rtbCampaignDao" variable (:type "RtbCampaignDao") (reparse-symbol field_declaration) [1596 1626])
+                    ("rtbCampaignBudgetDao" variable (:type "RtbCampaignBudgetDao") (reparse-symbol field_declaration) [1650 1692])
+                    ("isEmpty" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("str" variable (:type "String") (reparse-symbol formal_parameter) [1774 1784]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [1748 1824])
+                    ("isEmpty" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("strs" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameter) [1908 1921]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [1882 2005])
+                    ("toInt" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("s" variable (:type "String") (reparse-symbol formal_parameter) [2067 2075]))                          
+                        :type "Integer")
+                        (reparse-symbol method_declaration) [2043 2160])
+                    ("toDouble" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("s" variable (:type "String") (reparse-symbol formal_parameter) [2224 2232]))                          
+                        :type "Double")
+                        (reparse-symbol method_declaration) [2198 2321])
+                    ("toLong" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("s" variable (:type "String") (reparse-symbol formal_parameter) [2381 2389]))                          
+                        :type "Long")
+                        (reparse-symbol method_declaration) [2359 2473])
+                    ("toString" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("i" variable (:type "Integer") (reparse-symbol formal_parameter) [2537 2546]))                          
+                        :type "String")
+                        (reparse-symbol method_declaration) [2511 2626])
+                    ("toString" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("i" variable (:type "Double") (reparse-symbol formal_parameter) [2690 2698])
+                            ("point" variable (:type "Integer") (reparse-symbol formal_parameter) [2700 2713]))                          
+                        :type "String")
+                        (reparse-symbol method_declaration) [2664 3093])
+                    ("getStatusIdsToAll" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("rtbIds" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameter) [3202 3217]))                          
+                        :type "long[]")
+                        (reparse-symbol method_declaration) [3167 3376])
+                    ("setSearchCondition" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [3425 3450])
+                            ("rtbListOutputForm" variable (:type "RtbListOutputForm") (reparse-symbol formal_parameter) [3455 3490]))                          
+                        :type "RtbListOutputDto")
+                        (reparse-symbol method_declaration) [3379 7358])
+                    ("setReportCriteria" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("rtbListOutputDto" variable (:type "RtbListOutputDto") (reparse-symbol formal_parameter) [7504 7537])
+                            ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [7539 7564]))                          
+                        :type "RptSumSearchDto")
+                        (reparse-symbol method_declaration) [7456 8465])
+                    ("getListCount" function
+                       (:typemodifiers ("protected")
+                        :type "int")
+                        (reparse-symbol method_declaration) [8488 8605])
+                    ("setReportCriteria" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("rtbCampaingId" variable (:type "Long") (reparse-symbol formal_parameter) [8754 8772])
+                            ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [8777 8802]))                          
+                        :type "RptSumSearchDto")
+                        (reparse-symbol method_declaration) [8710 9675])
+                    ("margeReportData" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("rtbSettingData" variable (:type "RtbListOutputDto") (reparse-symbol formal_parameter) [9833 9864])
+                            ("reportList" variable (:type "List<RptSumRtbPcDto>") (reparse-symbol formal_parameter) [9869 9900])
+                            ("cvId" variable (:type "int") (reparse-symbol formal_parameter) [9902 9910]))                          
+                        :type "void")
+                        (reparse-symbol method_declaration) [9802 11998])
+                    ("MargeReportData" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("rtbListOutputParam" variable (:type "RtbListOutputDto") (reparse-symbol formal_parameter) [12181 12216])
+                            ("rtbListOutput" variable (:type "List<RtbListOutputDto>") (reparse-symbol formal_parameter) [12221 12257])
+                            ("rptSumRtbPcDtoList" variable (:type "List<RptSumRtbPcDto>") (reparse-symbol formal_parameter) [12262 12301])
+                            ("key" variable (:type "String") (reparse-symbol formal_parameter) [12303 12313]))                          
+                        :type "List<RtbListOutputDto>")
+                        (reparse-symbol method_declaration) [12128 14460])
+                    ("getKeyId" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("key" variable (:type "String") (reparse-symbol formal_parameter) [14485 14495])
+                            ("dto" variable (:type "RtbListOutputDto") (reparse-symbol formal_parameter) [14497 14517]))                          
+                        :type "Long")
+                        (reparse-symbol method_declaration) [14463 14805])
+                    ("getRptKeyId" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("key" variable (:type "String") (reparse-symbol formal_parameter) [14833 14843])
+                            ("dto" variable (:type "RptSumRtbPcDto") (reparse-symbol formal_parameter) [14845 14863]))                          
+                        :type "Long")
+                        (reparse-symbol method_declaration) [14808 15152])
+                    ("getCampaignBudget" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("rtbCampaignId" variable (:type "Long") (reparse-symbol formal_parameter) [15235 15253]))                          
+                        :type "List<RtbCampaignBudgetDto>")
+                        (reparse-symbol method_declaration) [15180 15876]))                  
+                :type "class")
+                (reparse-symbol class_declaration) [1369 15879]))          
+    :file "AbstractService.java"
+    :pointmax 15880
+    :fsize 17049
+    :lastmodtime '(20452 10797)
+    :unmatched-syntax '((PROTECTED 1640 . 1649) (PROTECTED 1586 . 1595) (PROTECTED 1520 . 1529) (PRIVATE 1440 . 1447) (STRING_LITERAL 1429 . 1437))
+    )
+   )
+  :file "!Users!aono_taketoshi!Documents!workspace!dev_rtb_rtg_ameba!src!jp!co!cyberagent!adsys!service!loginClientName!adserving!rtb!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

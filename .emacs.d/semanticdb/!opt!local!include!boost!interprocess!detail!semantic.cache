@@ -1,0 +1,646 @@
+;; Object detail/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "detail/"
+  :tables (list 
+   (semanticdb-table "atomic.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_INTERPROCESS_DETAIL_ATOMIC_HPP" variable (:constant-flag t) nil [563 599])
+            ("boost/interprocess/detail/config_begin.hpp" include (:system-flag t) nil [601 654])
+            ("boost/interprocess/detail/workaround.hpp" include (:system-flag t) nil [655 706])
+            ("boost/cstdint.hpp" include (:system-flag t) nil [707 735])
+            ("boost" type
+               (:members 
+                  ( ("interprocess" type
+                       (:members 
+                          ( ("ipcdetail" type
+                               (:members 
+                                  ( ("atomic_inc32" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [962 992]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [926 993])
+                                    ("atomic_read32" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1083 1113]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1046 1114])
+                                    ("atomic_write32" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1275 1305])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1306 1326]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [1248 1327])
+                                    ("atomic_cas32" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1609 1639])
+                                            ("with" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1640 1661])
+                                            ("cmp" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1662 1682]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1569 1683]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [778 1686]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [754 1712]))                  
+                :type "namespace")
+                nil [737 1741])
+            ("boost/interprocess/detail/win32_api.hpp" include (:system-flag t) nil [1805 1855])
+            ("boost" type
+               (:members 
+                  ( ("interprocess" type
+                       (:members 
+                          ( ("ipcdetail" type
+                               (:members 
+                                  ( ("atomic_dec32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2088 2118]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2052 2205])
+                                    ("atomic_inc32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2366 2396]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2330 2481])
+                                    ("atomic_read32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2571 2601]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2534 2621])
+                                    ("atomic_write32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2782 2812])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2813 2833]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2755 2913])
+                                    ("atomic_cas32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3195 3225])
+                                            ("with" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3226 3247])
+                                            ("cmp" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3248 3268]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [3155 3369]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1898 3372]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1874 3398]))                  
+                :type "namespace")
+                nil [1857 3427])
+            ("boost" type
+               (:members 
+                  ( ("interprocess" type
+                       (:members 
+                          ( ("ipcdetail" type
+                               (:members 
+                                  ( ("atomic_cas32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3864 3894])
+                                            ("with" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3895 3916])
+                                            ("cmp" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3917 3937]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [3824 4657])
+                                    ("atomic_add32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4848 4878])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4879 4899]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [4808 5347])
+                                    ("atomic_inc32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5508 5538]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [5472 5573])
+                                    ("atomic_dec32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5743 5773]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [5707 5826])
+                                    ("atomic_read32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5916 5946]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [5879 5966])
+                                    ("atomic_write32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6127 6157])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6158 6178]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [6100 6195]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [3563 6198]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [3538 6224]))                  
+                :type "namespace")
+                nil [3520 6253])
+            ("boost" type
+               (:members 
+                  ( ("interprocess" type
+                       (:members 
+                          ( ("ipcdetail" type
+                               (:members 
+                                  ( ("atomic_add32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6592 6622])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6623 6643]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [6556 7401])
+                                    ("atomic_cas32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7682 7712])
+                                            ("with" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7713 7734])
+                                            ("cmp" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7735 7755]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [7642 8620])
+                                    ("atomic_inc32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8781 8811]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [8745 8846])
+                                    ("atomic_dec32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9016 9046]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [8980 9100])
+                                    ("atomic_read32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9190 9220]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [9153 9240])
+                                    ("atomic_write32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9401 9431])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9432 9452]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [9374 9469]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [6385 9472]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [6360 9498]))                  
+                :type "namespace")
+                nil [6342 9527])
+            ("boost" type
+               (:members 
+                  ( ("interprocess" type
+                       (:members 
+                          ( ("ipcdetail" type
+                               (:members 
+                                  ( ("atomic_add32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9874 9904])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9905 9925]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [9834 10002])
+                                    ("atomic_inc32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [10163 10193]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [10127 10228])
+                                    ("atomic_dec32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [10398 10428]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [10362 10482])
+                                    ("atomic_read32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [10572 10602]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [10535 10622])
+                                    ("atomic_cas32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [10903 10933])
+                                            ("with" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10934 10955])
+                                            ("cmp" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10956 10976]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [10863 11066])
+                                    ("atomic_write32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [11227 11257])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11258 11278]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [11200 11295]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [9663 11298]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [9638 11324]))                  
+                :type "namespace")
+                nil [9620 11353])
+            ("atomic.h" include (:system-flag t) nil [11415 11434])
+            ("boost" type
+               (:members 
+                  ( ("interprocess" type
+                       (:members 
+                          ( ("ipcdetail" type
+                               (:members 
+                                  ( ("atomic_add32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [11684 11714])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11715 11735]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [11648 11833])
+                                    ("atomic_cas32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12114 12144])
+                                            ("with" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12145 12166])
+                                            ("cmp" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12167 12187]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [12074 12271])
+                                    ("atomic_inc32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12432 12462]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [12396 12544])
+                                    ("atomic_dec32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12714 12744]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [12678 12844])
+                                    ("atomic_read32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12934 12964]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [12897 12984])
+                                    ("atomic_write32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [13145 13175])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13176 13196]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [13118 13213]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [11477 13216]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [11453 13242]))                  
+                :type "namespace")
+                nil [11436 13271])
+            ("machine/builtins.h" include (:system-flag t) nil [13338 13367])
+            ("c_asm.h" include (:system-flag t) nil [13368 13386])
+            ("boost" type
+               (:members 
+                  ( ("interprocess" type
+                       (:members 
+                          ( ("ipcdetail" type
+                               (:members 
+                                  ( ("atomic_dec32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [13656 13686]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [13620 13771])
+                                    ("atomic_inc32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [13973 14003]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [13937 14053])
+                                    ("atomic_read32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [14698 14728]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [14661 14790])
+                                    ("atomic_write32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [14993 15023])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15024 15044]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [14966 15069])
+                                    ("atomic_cas32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15392 15422])
+                                            ("with" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15423 15444])
+                                            ("cmp" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15445 15465]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [15353 16765]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [13429 16768]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [13405 16794]))                  
+                :type "namespace")
+                nil [13388 16823])
+            ("builtins.h" include (:system-flag t) nil [16914 16935])
+            ("boost" type
+               (:members 
+                  ( ("interprocess" type
+                       (:members 
+                          ( ("ipcdetail" type
+                               (:members 
+                                  ( ("lwarxu" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [17660 17690]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [17630 17787])
+                                    ("stwcxu" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [17970 18000])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18001 18021]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [17951 18118])
+                                    ("atomic_add32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [18272 18302])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18303 18323]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [18230 18473])
+                                    ("atomic_inc32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [18642 18672]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [18606 18709])
+                                    ("atomic_dec32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [18887 18917]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [18851 18973])
+                                    ("atomic_read32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [19067 19097]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [19030 19119])
+                                    ("atomic_cas32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [19416 19446])
+                                            ("with" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19447 19468])
+                                            ("cmp" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19469 19489]))                                          
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [19374 19699])
+                                    ("atomic_write32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [19868 19898])
+                                            ("val" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19899 19919]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [19841 19938]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [16986 19943]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [16959 19970]))                  
+                :type "namespace")
+                nil [16939 20000])
+            ("boost" type
+               (:members 
+                  ( ("interprocess" type
+                       (:members 
+                          ( ("ipcdetail" type
+                               (:members 
+                                  ( ("atomic_add_unless32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("mem" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :type ("boost::uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [20204 20234])
+                                            ("value" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20235 20257])
+                                            ("unless_this" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20258 20286]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [20168 20461]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [20146 20464]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [20122 20491]))                  
+                :type "namespace")
+                nil [20105 20521])
+            ("boost/interprocess/detail/config_end.hpp" include (:system-flag t) nil [20545 20596]))          
+    :file "atomic.hpp"
+    :pointmax 20646
+    :fsize 20645
+    :lastmodtime '(20448 18601)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("BOOST_INTERPROCESS_DETAIL_ATOMIC_HPP")
+          )
+
+    )
+   )
+  :file "!opt!local!include!boost!interprocess!detail!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

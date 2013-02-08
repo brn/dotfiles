@@ -1,0 +1,748 @@
+;; Object parser/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "parser/"
+  :tables (list 
+   (semanticdb-table "parser.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [1177 1194])
+            ("sstream" include (:system-flag t) nil [1195 1213])
+            ("mocha/roaster/assert/assert_def.h" include (:system-flag t) nil [1214 1258])
+            ("mocha/roaster/platform/fs/fs.h" include (:system-flag t) nil [1259 1300])
+            ("mocha/roaster/log/logging.h" include (:system-flag t) nil [1301 1339])
+            ("mocha/roaster/ast/ast.h" include (:system-flag t) nil [1340 1374])
+            ("mocha/roaster/ast/builder/ast_builder.h" include (:system-flag t) nil [1375 1425])
+            ("mocha/roaster/utils/error_reporter.h" include (:system-flag t) nil [1426 1473])
+            ("mocha/roaster/nexc/nexc.h" include (:system-flag t) nil [1474 1510])
+            ("mocha/roaster/nexc/parser/parser.h" include (:system-flag t) nil [1511 1556])
+            ("mocha/roaster/nexc/scanner/token_stream.h" include (:system-flag t) nil [1557 1609])
+            ("mocha/roaster/nexc/tokens/js_token.h" include (:system-flag t) nil [1610 1657])
+            ("mocha/roaster/nexc/tokens/symbol_list.h" include (:system-flag t) nil [1658 1708])
+            ("mocha/roaster/nexc/events/compilation_event/compilation_event.h" include (:system-flag t) nil [1709 1783])
+            ("mocha" type
+               (:members 
+                  ( ("use_strict" variable
+                       (:dereference 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [1804 1854])
+                    ("literals" variable
+                       (:dereference 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [1855 1954])
+                    ("RETURN_FLG" variable (:constant-flag t) (reparse-symbol namespacesubparts) [1963 1973])
+                    ("YIELD_FLG" variable (:constant-flag t) (reparse-symbol namespacesubparts) [1984 1993])
+                    ("SYNTAX_ERROR" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2042 2054])
+                    ("CHECK_ERROR" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2361 2372])
+                    ("ENTER" variable (:constant-flag t) (reparse-symbol namespacesubparts) [3368 3373])
+                    ("END" variable (:constant-flag t) (reparse-symbol namespacesubparts) [3388 3391])
+                    ("IsEnd" function
+                       (:arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [3521 3530]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [3510 3600])
+                    ("BlockBodyMatcher" function
+                       (:arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [3747 3756]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [3725 3782])
+                    ("CaseBodyMatcher" function
+                       (:arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [3924 3933]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [3903 4014])
+                    ("IsValidPropertyName" function
+                       (:arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [4146 4155])
+                            ("info" variable
+                               (:pointer 1
+                                :type ("TokenInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4156 4172]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [4121 4344])
+                    ("IsValidProperty" function
+                       (:arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [4465 4474]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [4444 4622])
+                    ("()" function
+                       (:operator-flag t
+                        :parent "Parser::ParseEventListener"
+                        :arguments 
+                          ( ("event" variable
+                               (:pointer 1
+                                :type ("CompilationEvent" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4669 4693]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4625 5064])
+                    ("FormalParameterConvertor" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("args" variable
+                               (:pointer 1
+                                :type ("AstNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5357 5371]))                          
+                        :type ("NodeList" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5314 7909])
+                    ("IsValidNamedDeclaration" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("node" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7970 7978]))                          
+                        :parent "Parser")
+                        (reparse-symbol namespacesubparts) [7911 8219])
+                    ("StateStack" type
+                       (:parent "Parser"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [8250 8258])
+                            ("ParserState" type
+                               (:typedef ("" type
+                                     (:members 
+                                        ( ("kClassDecl" variable
+                                             (:constant-flag t
+                                              :type "int")
+                                              (reparse-symbol enumsubparts) [8280 8291])
+                                          ("kParseBegin" variable
+                                             (:constant-flag t
+                                              :type "int")
+                                              (reparse-symbol enumsubparts) [8296 8308])
+                                          ("kFinally" variable
+                                             (:constant-flag t
+                                              :type "int")
+                                              (reparse-symbol enumsubparts) [8313 8322])
+                                          ("kFunction" variable
+                                             (:constant-flag t
+                                              :type "int")
+                                              (reparse-symbol enumsubparts) [8327 8337])
+                                          ("kModule" variable
+                                             (:constant-flag t
+                                              :type "int")
+                                              (reparse-symbol enumsubparts) [8342 8353]))                                        
+                                      :type "enum")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [8261 8366])
+                            ("StateArray" type
+                               (:typedef ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("ParserState" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "std::vector"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [8369 8413])
+                            ("Push" function
+                               (:arguments 
+                                  ( ("state" variable (:type ("ParserState" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8426 8444]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [8416 8473])
+                            ("Pop" function (:type "void") (reparse-symbol classsubparts) [8476 8509])
+                            ("Has" function
+                               (:arguments 
+                                  ( ("state" variable (:type ("ParserState" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8521 8539]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8512 8765])
+                            ("private" label nil (reparse-symbol classsubparts) [8767 8776])
+                            ("stack_" variable (:type ("StateArray" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8779 8797]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [8222 8800])
+                    ("Parser" function
+                       (:constructor-flag t
+                        :parent "Parser"
+                        :arguments 
+                          ( ("connector" variable
+                               (:pointer 1
+                                :type ("ParserConnector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8817 8844])
+                            ("reporter" variable
+                               (:pointer 1
+                                :type ("ErrorReporter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8845 8869])
+                            ("filename" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [8870 8891]))                          
+                        :type ("Parser" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [8802 9101])
+                    ("Parser" function
+                       (:destructor-flag t
+                        :parent "Parser"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9102 9121])
+                    ("Parse" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("FileRoot" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [9194 9546])
+                    ("IllegalEnd" function
+                       (:parent "Parser"
+                        :arguments 
+                          ( ("expect" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [9603 9622])
+                            ("line" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9623 9636]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9579 9770])
+                    ("ParseTerminator" function
+                       (:parent "Parser"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9773 10226])
+                    ("ParseProgram" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [10249 10420])
+                    ("ParseSourceElements" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [10624 11422])
+                    ("ParseSourceElement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [11424 14630])
+                    ("ParseStatementList" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("matcher" variable (:type ("StatementListMatcher" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14750 14779])
+                            ("expect" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [14780 14799]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [14714 15636])
+                    ("ParseStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [15658 22392])
+                    ("ParseBlockStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [22394 23418])
+                    ("ParseModuleStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [23447 24972])
+                    ("ParseExportStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [25000 26033])
+                    ("ParseImportStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [26061 29119])
+                    ("ParseImportExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [29173 29984])
+                    ("ParseDebuggerStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("token" variable
+                               (:pointer 1
+                                :type ("TokenInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [30054 30071]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [30014 30443])
+                    ("ParseVersionStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [30471 32200])
+                    ("ParseAssertStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [32227 34201])
+                    ("ParseSourceStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [34203 35134])
+                    ("ParseIncludeStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [35161 36096])
+                    ("ParseVariableStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [36125 36835])
+                    ("ParseVariableDecl" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("is_noin" variable (:type "bool") (reparse-symbol arg-sub-list) [36902 36915]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [36867 39363])
+                    ("ParseLetExpressionOrLetStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [39366 41181])
+                    ("ParseLetExpressionExp" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [41184 42025])
+                    ("ParseDestructuringLeftHandSide" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [42061 42572])
+                    ("ParseArrayPattern" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [42623 45689])
+                    ("ParseObjectPattern" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [45739 47975])
+                    ("ParseObjectPatternElement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [48083 48092])
+                            ("token" variable
+                               (:pointer 1
+                                :type ("TokenInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [48093 48110])
+                            ("object" variable
+                               (:pointer 1
+                                :type ("ObjectLikeLiteral" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [48111 48137]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [48040 48772])
+                    ("CheckLabellOrExpressionStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [48826 49595])
+                    ("ParseIFStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("is_comprehensions" variable (:type "bool") (reparse-symbol arg-sub-list) [49652 49675]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [49618 51196])
+                    ("ParseDoWhileStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("is_expression" variable (:type "bool") (reparse-symbol arg-sub-list) [51267 51286]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [51228 53927])
+                    ("ParseWhileStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [53953 55118])
+                    ("ParseForStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("is_comprehensions" variable (:type "bool") (reparse-symbol arg-sub-list) [55296 55319]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [55261 62307])
+                    ("ParseForStatementCondition" function
+                       (:parent "Parser"
+                        :arguments 
+                          ( ("list" variable
+                               (:pointer 1
+                                :type ("NodeList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [62394 62409])
+                            ("has_paren" variable (:type "bool") (reparse-symbol arg-sub-list) [62410 62425]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [62354 63362])
+                    ("ParseForInStatementCondition" function
+                       (:parent "Parser"
+                        :arguments 
+                          ( ("list" variable
+                               (:pointer 1
+                                :type ("NodeList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [63454 63469])
+                            ("has_paren" variable (:type "bool") (reparse-symbol arg-sub-list) [63470 63485]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [63412 64264])
+                    ("ParseContinueStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [64295 64858])
+                    ("ParseBreakStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [64886 65414])
+                    ("ParseReturnStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [65442 66321])
+                    ("ParseWithStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [66348 67389])
+                    ("ParseSwitchStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [67418 68407])
+                    ("ParseCaseClauses" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [68431 70980])
+                    ("ParseLabelledStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [71010 71556])
+                    ("ParseThrowStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [71583 72050])
+                    ("ParseTryStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [72075 73322])
+                    ("ParseCatchBlock" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [73344 74613])
+                    ("ParseFinallyBlock" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [74616 75193])
+                    ("ParseTrait" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [75196 76012])
+                    ("ParseTraitBody" function
+                       (:parent "Parser"
+                        :arguments 
+                          ( ("trait" variable
+                               (:pointer 1
+                                :type ("Trait" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [76043 76056]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [76015 78118])
+                    ("ParseMixin" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [78121 80141])
+                    ("ParseClassDecl" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("is_const" variable (:type "bool") (reparse-symbol arg-sub-list) [80176 80190]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [80144 81428])
+                    ("ParseInheritDecl" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [81431 81927])
+                    ("ParseClassBody" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [81930 83387])
+                    ("ParseClassMemberStatement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [83389 84327])
+                    ("ParseClassMember" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("ClassMember" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [84329 86247])
+                    ("ParseExportableDefinition" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [86250 88963])
+                    ("ParseExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("is_noin" variable (:type "bool") (reparse-symbol arg-sub-list) [88999 89012]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [88966 89588])
+                    ("IsAssignmentOp" function
+                       (:arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [89610 89619]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [89590 90018])
+                    ("ParseAssignmentExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("is_noin" variable (:type "bool") (reparse-symbol arg-sub-list) [90063 90076]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [90020 91596])
+                    ("ParseYieldExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("is_noin" variable (:type "bool") (reparse-symbol arg-sub-list) [91636 91649]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [91598 93036])
+                    ("ParseConditional" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("is_noin" variable (:type "bool") (reparse-symbol arg-sub-list) [93072 93085]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [93038 94030])
+                    ("ParseBinaryExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("is_noin" variable (:type "bool") (reparse-symbol arg-sub-list) [94072 94085]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [94033 96611])
+                    ("IsUnaryOp" function
+                       (:arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [96630 96639]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [96615 96872])
+                    ("ParseUnaryExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [96875 97413])
+                    ("ParsePostfixExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [97416 97946])
+                    ("ParseLeftHandSideExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [97949 98286])
+                    ("ParseNewExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("NewExp" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [98288 98785])
+                    ("ParseCallExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [98787 102211])
+                    ("ParseArguments" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("has_spread" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [102246 102263]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [102214 103116])
+                    ("ParseMemberExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [103119 104447])
+                    ("ParseBracketMember" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [104450 104968])
+                    ("ParseDotMember" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("is_extend" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [105003 105019]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [104971 105935])
+                    ("ParseEachMember" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [105971 105980])
+                            ("is_first" variable (:type "bool") (reparse-symbol arg-sub-list) [105981 105995])
+                            ("exp" variable
+                               (:pointer 1
+                                :type ("CallExp" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [105996 106009]))                          
+                        :type ("CallExp" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [105938 107523])
+                    ("ParsePrimaryExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [107526 111848])
+                    ("ParseGeneratorExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("exp" variable
+                               (:pointer 1
+                                :type ("AstNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [111893 111906]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [111851 112173])
+                    ("ParseObjectLiteral" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [112176 115893])
+                    ("ParseObjectElement" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [115933 115942])
+                            ("token" variable
+                               (:pointer 1
+                                :type ("TokenInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [115943 115960])
+                            ("list" variable
+                               (:pointer 1
+                                :type ("ObjectLikeLiteral" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [115961 115985]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [115897 117378])
+                    ("ParseArrayLiteral" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [117381 120440])
+                    ("ParseLiteral" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("reserved_usablity" variable (:type "bool") (reparse-symbol arg-sub-list) [120473 120496]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [120443 125176])
+                    ("IsValidFormalParameter" function
+                       (:arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [125207 125216]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [125179 125344])
+                    ("ParseFunctionDecl" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [125347 128849])
+                    ("ParseFormalParameter" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [128852 131637])
+                    ("ParseArrowFunctionExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("exp" variable
+                               (:pointer 1
+                                :type ("AstNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [131686 131699])
+                            ("type" variable (:type "int") (reparse-symbol arg-sub-list) [131700 131709]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [131640 132110])
+                    ("ParseArrowFunctionExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("member" variable
+                               (:pointer 1
+                                :type ("AstNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [132158 132174])
+                            ("args" variable
+                               (:pointer 1
+                                :type ("AstNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [132175 132189])
+                            ("type" variable (:type "int") (reparse-symbol arg-sub-list) [132190 132199]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [132112 132969])
+                    ("ParseArrowFunctionExpression" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [133017 133026]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [132971 133369])
+                    ("ParseArrowFunctionBody" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :arguments 
+                          ( ("fn" variable
+                               (:pointer 1
+                                :type ("Function" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [133411 133424]))                          
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [133371 134526])
+                    ("ParseArrayComprehensions" function
+                       (:pointer 1
+                        :parent "Parser"
+                        :type ("AstNode" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [134529 135054]))                  
+                :type "namespace")
+                nil [1785 135056]))          
+    :file "parser.cc"
+    :pointmax 135057
+    :fsize 135056
+    :lastmodtime '(20412 32267)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("END" (spp-arg-list ("mode") 3391 . 3397))
+          ("SYNTAX_ERROR" (spp-arg-list ("msg") 2054 . 2059) . ((semantic-list "{                           \\
+    std::stringstream st;                               \\
+    st << msg;                                          \\
+    reporter_->ReportSyntaxError(st.str().c_str());   \\
+  }" 2060 . 2265)))
+          ("CHECK_ERROR" (spp-arg-list ("name") 2372 . 2378) . ((semantic-list "{                     \\
+    if (reporter_->Error()) {                 \\
+      return name;                              \\
+    }                                           \\
+  }" 2379 . 2554)))
+          ("ENTER" (spp-arg-list ("mode") 3373 . 3379))
+          ("RETURN_FLG" . ((number "0" 1974 . 1975)))
+          ("YIELD_FLG" . ((number "1" 1994 . 1995)))
+          )
+
+    )
+   )
+  :file "!Users!aono_taketoshi!github!mocha!src!mocha!roaster!nexc!parser!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

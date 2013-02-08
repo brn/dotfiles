@@ -1,0 +1,179 @@
+;; Object macos/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "macos/"
+  :tables (list 
+   (semanticdb-table "fs_watcher_macos.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("fcntl.h" include (:system-flag t) nil [1 19])
+            ("unistd.h" include (:system-flag t) nil [20 39])
+            ("sys/types.h" include (:system-flag t) nil [40 62])
+            ("sys/event.h" include (:system-flag t) nil [63 85])
+            ("thread.h" include (:system-flag t) nil [86 105])
+            ("fs.h" include (:system-flag t) nil [106 121])
+            ("lib/unique_ptr.h" include (:system-flag t) nil [122 149])
+            ("lib/bind.h" include (:system-flag t) nil [150 171])
+            ("lib/foreach.h" include (:system-flag t) nil [172 196])
+            ("os" type
+               (:members 
+                  ( ("fs" type
+                       (:members 
+                          ( ("kExit" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [226 253])
+                            ("kSync" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [254 281])
+                            ("kAsync" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [282 310])
+                            ("kStop" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [311 338])
+                            ("vnode_events" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [339 397])
+                            ("KEvent" type
+                               (:typedef ("kevent" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil)
+                                :superclasses "kevent"
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [398 427])
+                            ("FSEventData" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [449 457])
+                                    ("FSEventData" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [472 479])
+                                            ("fs_event" variable
+                                               (:pointer 1
+                                                :type ("FSEvent" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [480 498]))                                          
+                                        :type ("FSEventData" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [460 545])
+                                    ("fd" function (:type "int") (reparse-symbol classsubparts) [548 576])
+                                    ("fs_event" function
+                                       (:pointer 1
+                                        :type ("FSEvent" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [579 624])
+                                    ("kevent" function
+                                       (:pointer 1
+                                        :type ("KEvent" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [627 662])
+                                    ("private" label nil (reparse-symbol classsubparts) [664 673])
+                                    ("fd_" variable (:type "int") (reparse-symbol classsubparts) [676 684])
+                                    ("fs_event_" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [708 723])
+                                    ("kevent_" variable (:type ("KEvent" type (:type "class") nil nil)) (reparse-symbol classsubparts) [726 741]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [428 744])
+                            ("FSWatcher" function
+                               (:constructor-flag t
+                                :parent "FSWatcher"
+                                :type ("FSWatcher" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [746 809])
+                            ("FSWatcher" function
+                               (:destructor-flag t
+                                :parent "FSWatcher"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [811 876])
+                            ("GetState" function
+                               (:parent "FSWatcher"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [878 981])
+                            ("AddWatch" function
+                               (:parent "FSWatcher"
+                                :arguments 
+                                  ( ("path" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1008 1025]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [983 1863])
+                            ("RemoveWatch" function
+                               (:parent "FSWatcher"
+                                :arguments 
+                                  ( ("path" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1893 1910]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1865 2421])
+                            ("RemoveWatch" function
+                               (:parent "FSWatcher"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2423 2628])
+                            ("IsWatched" function
+                               (:parent "FSWatcher"
+                                :arguments 
+                                  ( ("path" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [2656 2673]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2630 2829])
+                            ("Exit" function
+                               (:parent "FSWatcher"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2831 2959])
+                            ("Run" function
+                               (:parent "FSWatcher"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2961 3146])
+                            ("IsRunning" function
+                               (:parent "FSWatcher"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3148 3213])
+                            ("RunAsync" function
+                               (:parent "FSWatcher"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3215 3395])
+                            ("Start" function
+                               (:parent "FSWatcher"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3397 4417])
+                            ("FSWatcher::kModify" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [4419 4474])
+                            ("FSWatcher::kUpdate" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [4475 4528])
+                            ("FSWatcher::kDelete" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [4529 4582]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [211 4584]))                  
+                :type "namespace")
+                nil [197 4585]))          
+    :file "fs_watcher_macos.cc"
+    :pointmax 4576
+    :fsize 4585
+    :lastmodtime '(20459 52392)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!github!libos!src!fs!event!macos!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

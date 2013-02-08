@@ -1,0 +1,697 @@
+;; Object win32/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "win32/"
+  :tables (list 
+   (semanticdb-table "condition_variable.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_THREAD_CONDITION_VARIABLE_WIN32_HPP" variable (:constant-flag t) nil [59 100])
+            ("boost/thread/mutex.hpp" include (:system-flag t) nil [299 332])
+            ("boost/thread/win32/thread_primitives.hpp" include (:system-flag t) nil [333 384])
+            ("limits.h" include (:system-flag t) nil [385 404])
+            ("boost/assert.hpp" include (:system-flag t) nil [405 432])
+            ("algorithm" include (:system-flag t) nil [433 453])
+            ("boost/thread/thread.hpp" include (:system-flag t) nil [454 488])
+            ("boost/thread/thread_time.hpp" include (:system-flag t) nil [489 528])
+            ("boost/thread/win32/interlocked_read.hpp" include (:system-flag t) nil [529 579])
+            ("boost/thread/xtime.hpp" include (:system-flag t) nil [580 613])
+            ("vector" include (:system-flag t) nil [614 631])
+            ("boost/intrusive_ptr.hpp" include (:system-flag t) nil [632 666])
+            ("boost/config/abi_prefix.hpp" include (:system-flag t) nil [668 706])
+            ("boost" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("basic_cv_list_entry" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [761 787])
+                            ("intrusive_ptr_add_ref" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type ("basic_cv_list_entry" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [823 847]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [796 848])
+                            ("intrusive_ptr_release" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type ("basic_cv_list_entry" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [884 908]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [857 909])
+                            ("basic_cv_list_entry" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [963 971])
+                                    ("semaphore" variable (:type ("detail::win32::handle_manager" type (:type "class") nil nil)) (reparse-symbol classsubparts) [984 1024])
+                                    ("wake_sem" variable (:type ("detail::win32::handle_manager" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1037 1076])
+                                    ("waiters" variable (:type "long") (reparse-symbol classsubparts) [1089 1102])
+                                    ("notified" variable (:type "bool") (reparse-symbol classsubparts) [1115 1129])
+                                    ("references" variable (:type "long") (reparse-symbol classsubparts) [1142 1158])
+                                    ("basic_cv_list_entry" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :type ("basic_cv_list_entry" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1192 1213]))                                          
+                                        :type ("basic_cv_list_entry" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1172 1214])
+                                    ("=" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :type ("basic_cv_list_entry" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1242 1263]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1227 1264])
+                                    ("public" label nil (reparse-symbol classsubparts) [1274 1281])
+                                    ("basic_cv_list_entry" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("wake_sem_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::win32::handle_manager" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1323 1370]))                                          
+                                        :type ("explicit" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1294 1574])
+                                    ("no_waiters" function
+                                       (:typemodifiers ("static")
+                                        :arguments 
+                                          ( ("entry" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("boost::intrusive_ptr" type
+                                                     (:template-specifier 
+                                                        ( ("basic_cv_list_entry" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1611 1666]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1588 1769])
+                                    ("add_waiter" function (:type "void") (reparse-symbol classsubparts) [1783 1883])
+                                    ("remove_waiter" function (:type "void") (reparse-symbol classsubparts) [1897 2000])
+                                    ("release" function
+                                       (:arguments 
+                                          ( ("count_to_release" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2027 2053]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2014 2191])
+                                    ("release_waiters" function (:type "void") (reparse-symbol classsubparts) [2205 2324])
+                                    ("is_notified" function (:type "bool") (reparse-symbol classsubparts) [2338 2423])
+                                    ("wait" function
+                                       (:arguments 
+                                          ( ("wait_until" variable (:type ("timeout" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2447 2466]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2437 2572])
+                                    ("woken" function (:type "bool") (reparse-symbol classsubparts) [2586 2854])
+                                    ("intrusive_ptr_add_ref" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("friend")
+                                        :arguments 
+                                          ( ("p" variable
+                                               (:pointer 1
+                                                :type ("basic_cv_list_entry" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2902 2926]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2868 2927])
+                                    ("intrusive_ptr_release" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("friend")
+                                        :arguments 
+                                          ( ("p" variable
+                                               (:pointer 1
+                                                :type ("basic_cv_list_entry" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2974 2998]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2940 2999]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [919 3010])
+                            ("intrusive_ptr_add_ref" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type ("basic_cv_list_entry" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3054 3078]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3020 3155])
+                            ("intrusive_ptr_release" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type ("basic_cv_list_entry" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3199 3223]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3165 3358])
+                            ("basic_condition_variable" type
+                               (:members 
+                                  ( ("internal_mutex" variable (:type ("boost::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3421 3449])
+                                    ("total_count" variable (:type "long") (reparse-symbol classsubparts) [3462 3479])
+                                    ("active_generation_count" variable (:type "unsigned int") (reparse-symbol classsubparts) [3492 3525])
+                                    ("list_entry" type
+                                       (:typedef ("basic_cv_list_entry" type (:type "class") nil nil)
+                                        :superclasses "basic_cv_list_entry"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [3539 3578])
+                                    ("entry_ptr" type
+                                       (:typedef ("boost::intrusive_ptr" type
+                                             (:template-specifier 
+                                                ( ("list_entry" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "boost::intrusive_ptr"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [3592 3643])
+                                    ("generation_list" type
+                                       (:typedef ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("entry_ptr" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "std::vector"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [3656 3703])
+                                    ("generations" variable (:type ("generation_list" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3717 3745])
+                                    ("wake_sem" variable (:type ("detail::win32::handle_manager" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3758 3797])
+                                    ("wake_waiters" function
+                                       (:arguments 
+                                          ( ("count_to_wake" variable (:type "long") (reparse-symbol arg-sub-list) [3829 3848]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3811 4042])
+                                    ("relocker" type
+                                       (:template 
+                                          ( ("lock_type" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("lock" variable (:type ("lock_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4143 4159])
+                                            ("unlocked" variable (:type "bool") (reparse-symbol classsubparts) [4176 4190])
+                                            ("relocker" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("lock_" variable
+                                                       (:reference 1
+                                                        :type ("lock_type" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4217 4234]))                                                  
+                                                :type ("relocker" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [4208 4302])
+                                            ("unlock" function (:type "void") (reparse-symbol classsubparts) [4319 4438])
+                                            ("relocker" function
+                                               (:destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4455 4617])
+                                            ("private" label nil (reparse-symbol classsubparts) [4630 4638])
+                                            ("relocker" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:reference 1
+                                                        :type ("relocker" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4664 4674]))                                                  
+                                                :type ("relocker" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [4655 4675])
+                                            ("=" function
+                                               (:prototype-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:reference 1
+                                                        :type ("relocker" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4707 4717]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4692 4718]))                                          )
+                                        (reparse-symbol classsubparts) [4056 4733])
+                                    ("get_wait_entry" function (:type ("entry_ptr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4748 5586])
+                                    ("entry_manager" type
+                                       (:members 
+                                          ( ("entry" variable (:type ("entry_ptr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5651 5673])
+                                            ("entry_manager" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("entry_" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("entry_ptr" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5705 5729]))                                                  
+                                                :type ("entry_manager" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [5691 5783])
+                                            ("entry_manager" function
+                                               (:destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5801 5897])
+                                            ("->" function
+                                               (:operator-flag t
+                                                :pointer 1
+                                                :type ("list_entry" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [5915 6015])
+                                            ("private" label nil (reparse-symbol classsubparts) [6029 6037])
+                                            ("=" function
+                                               (:prototype-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:reference 1
+                                                        :type ("entry_manager" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [6069 6084]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6054 6085])
+                                            ("entry_manager" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:reference 1
+                                                        :type ("entry_manager" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [6116 6131]))                                                  
+                                                :type ("entry_manager" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [6102 6132]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [5600 6147])
+                                    ("protected" label nil (reparse-symbol classsubparts) [6158 6168])
+                                    ("do_wait" function
+                                       (:template 
+                                          ( ("lock_type" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("lock" variable
+                                               (:reference 1
+                                                :type ("lock_type" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6235 6251])
+                                            ("wait_until" variable (:type ("timeout" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6251 6270]))                                          )
+                                        (reparse-symbol classsubparts) [6181 6743])
+                                    ("do_wait" function
+                                       (:template 
+                                          ( ("lock_type" type (:type "class") nil nil)
+                                            ("predicate_type" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("m" variable
+                                               (:reference 1
+                                                :type ("lock_type" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6835 6848])
+                                            ("wait_until" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("timeout" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6848 6874])
+                                            ("pred" variable (:type ("predicate_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6874 6894]))                                          )
+                                        (reparse-symbol classsubparts) [6757 7106])
+                                    ("basic_condition_variable" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("other" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("basic_condition_variable" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7145 7183]))                                          
+                                        :type ("basic_condition_variable" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [7120 7184])
+                                    ("=" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("other" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("basic_condition_variable" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7233 7271]))                                          
+                                        :type ("basic_condition_variable" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [7197 7272])
+                                    ("public" label nil (reparse-symbol classsubparts) [7282 7289])
+                                    ("basic_condition_variable" function
+                                       (:constructor-flag t
+                                        :type ("basic_condition_variable" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [7302 7414])
+                                    ("basic_condition_variable" function
+                                       (:destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7428 7470])
+                                    ("notify_one" function (:type "void") (reparse-symbol classsubparts) [7484 8261])
+                                    ("notify_all" function (:type "void") (reparse-symbol classsubparts) [8275 9019]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [3368 9031]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [730 9037])
+                    ("condition_variable" type
+                       (:superclasses 
+                          ( ("detail::basic_condition_variable" type
+                               (:protection "private"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("private" label nil (reparse-symbol classsubparts) [9128 9136])
+                            ("condition_variable" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("condition_variable" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9164 9184]))                                  
+                                :type ("condition_variable" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9145 9185])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("condition_variable" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9209 9229]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9194 9230])
+                            ("public" label nil (reparse-symbol classsubparts) [9235 9242])
+                            ("condition_variable" function
+                               (:constructor-flag t
+                                :type ("condition_variable" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9251 9282])
+                            ("detail::basic_condition_variable::notify_one" variable (:type "int") (reparse-symbol classsubparts) [9298 9343])
+                            ("detail::basic_condition_variable::notify_all" variable (:type "int") (reparse-symbol classsubparts) [9358 9403])
+                            ("wait" function
+                               (:arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("unique_lock" type
+                                             (:template-specifier 
+                                                ( ("mutex" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9423 9445]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9413 9517])
+                            ("wait" function
+                               (:template 
+                                  ( ("predicate_type" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("unique_lock" type
+                                             (:template-specifier 
+                                                ( ("mutex" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9579 9601])
+                                    ("pred" variable (:type ("predicate_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9601 9621]))                                  )
+                                (reparse-symbol classsubparts) [9527 9677])
+                            ("timed_wait" function
+                               (:arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("unique_lock" type
+                                             (:template-specifier 
+                                                ( ("mutex" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9704 9726])
+                                    ("wait_until" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("boost::system_time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9726 9763]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [9688 9825])
+                            ("timed_wait" function
+                               (:arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("unique_lock" type
+                                             (:template-specifier 
+                                                ( ("mutex" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9851 9873])
+                                    ("wait_until" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("boost::xtime" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9873 9904]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [9835 9979])
+                            ("timed_wait" function
+                               (:template 
+                                  ( ("duration_type" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("unique_lock" type
+                                             (:template-specifier 
+                                                ( ("mutex" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10045 10067])
+                                    ("wait_duration" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("duration_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10067 10102]))                                  )
+                                (reparse-symbol classsubparts) [9988 10188])
+                            ("timed_wait" function
+                               (:template 
+                                  ( ("predicate_type" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("unique_lock" type
+                                             (:template-specifier 
+                                                ( ("mutex" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10256 10278])
+                                    ("wait_until" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("boost::system_time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10278 10315])
+                                    ("pred" variable (:type ("predicate_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10315 10335]))                                  )
+                                (reparse-symbol classsubparts) [10198 10402])
+                            ("timed_wait" function
+                               (:template 
+                                  ( ("predicate_type" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("unique_lock" type
+                                             (:template-specifier 
+                                                ( ("mutex" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10469 10491])
+                                    ("wait_until" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("boost::xtime" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10491 10522])
+                                    ("pred" variable (:type ("predicate_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10522 10542]))                                  )
+                                (reparse-symbol classsubparts) [10411 10622])
+                            ("timed_wait" function
+                               (:template 
+                                  ( ("duration_type" type (:type "class") nil nil)
+                                    ("predicate_type" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("unique_lock" type
+                                             (:template-specifier 
+                                                ( ("mutex" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10712 10734])
+                                    ("wait_duration" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("duration_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10734 10769])
+                                    ("pred" variable (:type ("predicate_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10769 10789]))                                  )
+                                (reparse-symbol classsubparts) [10631 10880]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [9043 10887])
+                    ("condition_variable_any" type
+                       (:superclasses 
+                          ( ("detail::basic_condition_variable" type
+                               (:protection "private"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("private" label nil (reparse-symbol classsubparts) [10982 10990])
+                            ("condition_variable_any" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("condition_variable_any" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11022 11046]))                                  
+                                :type ("condition_variable_any" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10999 11047])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("condition_variable_any" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11071 11095]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [11056 11096])
+                            ("public" label nil (reparse-symbol classsubparts) [11101 11108])
+                            ("condition_variable_any" function
+                               (:constructor-flag t
+                                :type ("condition_variable_any" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [11117 11152])
+                            ("detail::basic_condition_variable::notify_one" variable (:type "int") (reparse-symbol classsubparts) [11168 11213])
+                            ("detail::basic_condition_variable::notify_all" variable (:type "int") (reparse-symbol classsubparts) [11228 11273])
+                            ("wait" function
+                               (:template 
+                                  ( ("lock_type" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("lock_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11330 11343]))                                  )
+                                (reparse-symbol classsubparts) [11283 11415])
+                            ("wait" function
+                               (:template 
+                                  ( ("lock_type" type (:type "class") nil nil)
+                                    ("predicate_type" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("lock_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11496 11509])
+                                    ("pred" variable (:type ("predicate_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11509 11529]))                                  )
+                                (reparse-symbol classsubparts) [11425 11585])
+                            ("timed_wait" function
+                               (:template 
+                                  ( ("lock_type" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("lock_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11648 11661])
+                                    ("wait_until" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("boost::system_time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11661 11698]))                                  )
+                                (reparse-symbol classsubparts) [11595 11760])
+                            ("timed_wait" function
+                               (:template 
+                                  ( ("lock_type" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("lock_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11823 11836])
+                                    ("wait_until" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("boost::xtime" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11836 11867]))                                  )
+                                (reparse-symbol classsubparts) [11770 11942])
+                            ("timed_wait" function
+                               (:template 
+                                  ( ("lock_type" type (:type "class") nil nil)
+                                    ("duration_type" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("lock_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12028 12041])
+                                    ("wait_duration" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("duration_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12041 12076]))                                  )
+                                (reparse-symbol classsubparts) [11952 12162])
+                            ("timed_wait" function
+                               (:template 
+                                  ( ("lock_type" type (:type "class") nil nil)
+                                    ("predicate_type" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("lock_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12249 12262])
+                                    ("wait_until" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("boost::system_time" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12262 12299])
+                                    ("pred" variable (:type ("predicate_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12299 12319]))                                  )
+                                (reparse-symbol classsubparts) [12172 12386])
+                            ("timed_wait" function
+                               (:template 
+                                  ( ("lock_type" type (:type "class") nil nil)
+                                    ("predicate_type" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("lock_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12473 12486])
+                                    ("wait_until" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("boost::xtime" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12486 12517])
+                                    ("pred" variable (:type ("predicate_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12517 12537]))                                  )
+                                (reparse-symbol classsubparts) [12396 12617])
+                            ("timed_wait" function
+                               (:template 
+                                  ( ("lock_type" type (:type "class") nil nil)
+                                    ("duration_type" type (:type "class") nil nil)
+                                    ("predicate_type" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("m" variable
+                                       (:reference 1
+                                        :type ("lock_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12727 12740])
+                                    ("wait_duration" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("duration_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12740 12775])
+                                    ("pred" variable (:type ("predicate_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12775 12795]))                                  )
+                                (reparse-symbol classsubparts) [12627 12886]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [10893 12893]))                  
+                :type "namespace")
+                nil [708 12896])
+            ("boost/config/abi_suffix.hpp" include (:system-flag t) nil [12898 12936]))          
+    :file "condition_variable.hpp"
+    :pointmax 12945
+    :fsize 12944
+    :lastmodtime '(20448 18635)
+    :unmatched-syntax '((USING 11222 . 11227) (USING 11162 . 11167) (USING 9352 . 9357) (USING 9292 . 9297))
+    :lexical-table 
+        '(("BOOST_THREAD_CONDITION_VARIABLE_WIN32_HPP")
+          )
+
+    )
+   )
+  :file "!opt!local!include!boost!thread!win32!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

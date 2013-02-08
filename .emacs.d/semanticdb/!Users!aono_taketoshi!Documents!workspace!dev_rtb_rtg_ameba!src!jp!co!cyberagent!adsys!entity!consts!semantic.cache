@@ -1,0 +1,59 @@
+;; Object consts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "consts/"
+  :tables (list 
+   (semanticdb-table "RtbUserDataSearchType.java"
+    :major-mode 'malabar-mode
+    :tags 
+        '( ("jp.co.cyberagent.adsys.entity.consts" package nil (reparse-symbol package_declaration) [1 46])
+            ("java.util.Collections" include nil (reparse-symbol import_declaration) [48 77])
+            ("java.util.LinkedHashMap" include nil (reparse-symbol import_declaration) [78 109])
+            ("java.util.Map" include nil (reparse-symbol import_declaration) [110 131])
+            ("RtbUserDataSearchType" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("USER_LIST_NAME" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "int")
+                        (reparse-symbol field_declaration) [227 270])
+                    ("MARK_COUNT" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "int")
+                        (reparse-symbol field_declaration) [272 311])
+                    ("URL" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "int")
+                        (reparse-symbol field_declaration) [313 345])
+                    ("USER_LIST_GROUP_NAME" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "int")
+                        (reparse-symbol field_declaration) [347 396])
+                    ("TARGETING_DATA_TYPE" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "int")
+                        (reparse-symbol field_declaration) [398 446])
+                    ("rtbUserDataSearchTypeMap" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "Map<Integer,String>")
+                        (reparse-symbol field_declaration) [449 515])
+                    ("block" block (:members 
+                      ( ("map" variable (:type "Map<Integer,String>") (reparse-symbol local_variable_declaration) [528 591]))                      ) (reparse-symbol block_statements) [528 839])
+                    ("isRtbSearchType" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("value" variable (:type "String") (reparse-symbol formal_parameter) [883 895]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [845 1042]))                  
+                :type "class")
+                (reparse-symbol class_declaration) [188 1044]))          
+    :file "RtbUserDataSearchType.java"
+    :pointmax 1045
+    :fsize 1114
+    :lastmodtime '(20458 52196)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!Documents!workspace!dev_rtb_rtg_ameba!src!jp!co!cyberagent!adsys!entity!consts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

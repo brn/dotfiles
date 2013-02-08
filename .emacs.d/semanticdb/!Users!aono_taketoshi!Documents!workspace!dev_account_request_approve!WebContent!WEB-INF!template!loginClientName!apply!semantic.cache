@@ -1,0 +1,30 @@
+;; Object apply/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "apply/"
+  :tables (list 
+   (semanticdb-table "applyUser.html"
+    :major-mode 'html-mode
+    :tags nil
+    :file "applyUser.html"
+    :pointmax 19207
+    :fsize 20213
+    :lastmodtime '(20511 25460)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "applyUserConfirm.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("ユーザーアカウント発行・関連付け申請- CA Marketing Platform" section nil nil [586 846])
+            ("ユーザーアカウント発行申請確認" section (:members 
+              ( ("ユーザーアカウント発行申請確認" section nil nil [901 6013]))              ) nil [846 6013]))          
+    :file "applyUserConfirm.html"
+    :pointmax 6013
+    :fsize 6700
+    :lastmodtime '(20511 25600)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!Documents!workspace!dev_account_request_approve!WebContent!WEB-INF!template!loginClientName!apply!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

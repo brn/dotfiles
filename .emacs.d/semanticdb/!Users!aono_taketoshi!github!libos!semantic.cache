@@ -1,0 +1,36 @@
+;; Object libos/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "libos/"
+  :tables (list 
+   (semanticdb-table "run_gyp"
+    :major-mode 'python-mode
+    :tags 
+        '( ("glob" include nil nil [23 34])
+            ("os" include nil nil [35 44])
+            ("shlex" include nil nil [45 57])
+            ("sys" include nil nil [58 68])
+            ("gyp" include nil nil [69 79])
+            ("script_dir" variable nil nil [80 118])
+            ("root" variable nil nil [119 154])
+            ("sys" code nil nil [155 203])
+            ("config_builder" include nil nil [206 227])
+            ("output_dir" variable nil nil [321 376])
+            ("CheckThreads" function (:arguments 
+              ( ("builder" variable nil (reparse-symbol function_parameters) [395 402])
+                ("args" variable nil (reparse-symbol function_parameters) [404 408]))              ) nil [378 5830])
+            ("BuildConfig" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [5847 5851]))              ) nil [5831 9676])
+            ("run_gyp" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [9689 9693]))              ) nil [9677 9779])
+            ("if" code nil nil [9780 11305]))          
+    :file "run_gyp"
+    :pointmax 11199
+    :fsize 11305
+    :lastmodtime '(20461 857)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!github!libos!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

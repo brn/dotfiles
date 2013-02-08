@@ -1,0 +1,24 @@
+;; Object detail/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "detail/"
+  :tables (list 
+   (semanticdb-table "atomic_count.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_DETAIL_ATOMIC_COUNT_HPP_INCLUDED" variable (:constant-flag t) nil [56 94])
+            ("boost/smart_ptr/detail/atomic_count.hpp" include (:system-flag t) nil [510 560]))          
+    :file "atomic_count.hpp"
+    :pointmax 619
+    :fsize 618
+    :lastmodtime '(20448 18543)
+    :unmatched-syntax '((symbol 198 . 202) (symbol 191 . 197) (punctuation 189 . 190))
+    :lexical-table 
+        '(("BOOST_DETAIL_ATOMIC_COUNT_HPP_INCLUDED")
+          )
+
+    )
+   )
+  :file "!opt!local!include!boost!detail!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

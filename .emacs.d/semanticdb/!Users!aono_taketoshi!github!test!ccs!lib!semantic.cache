@@ -1,0 +1,18 @@
+;; Object lib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lib/"
+  :tables (list 
+   (semanticdb-table "token.js"
+    :major-mode 'js-mode
+    :tags nil
+    :file "token.js"
+    :pointmax 3609
+    :fsize 3608
+    :lastmodtime '(20501 54352)
+    :unmatched-syntax '((VAR 1255 . 1258) (BRACK_BLOCK 1270 . 3606) (BRACK_BLOCK 16 . 1252))
+    )
+   )
+  :file "!Users!aono_taketoshi!github!test!ccs!lib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,83 @@
+;; Object lib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lib/"
+  :tables (list 
+   (semanticdb-table "type_traits.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("INCLUDE_TYPE_TRAITS_H_" variable (:constant-flag t) nil [40 62])
+            ("../libos_config.h" include nil nil [63 91]))          
+    :file "type_traits.h"
+    :pointmax 689
+    :fsize 718
+    :lastmodtime '(20458 37579)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("INCLUDE_TYPE_TRAITS_H_")
+          )
+
+    )
+   (semanticdb-table "pp.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("INCLUDE_LIB_PP_H_" variable (:constant-flag t) nil [35 52]))          
+    :file "pp.h"
+    :pointmax 452
+    :fsize 451
+    :lastmodtime '(20459 43757)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("INCLUDE_LIB_PP_H_")
+          )
+
+    )
+   (semanticdb-table "unique_ptr.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("INCLUDE_LIB_UNIQUE_PTR_H_" variable (:constant-flag t) nil [43 68])
+            ("../libos_config.h" include nil nil [69 97]))          
+    :file "unique_ptr.h"
+    :pointmax 609
+    :fsize 608
+    :lastmodtime '(20457 9983)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("INCLUDE_LIB_UNIQUE_PTR_H_")
+          )
+
+    )
+   (semanticdb-table "foreach.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("INCLUDE_LIB_FOREACH_H_" variable (:constant-flag t) nil [40 62])
+            ("../libos_config.h" include nil nil [63 91]))          
+    :file "foreach.h"
+    :pointmax 284
+    :fsize 292
+    :lastmodtime '(20459 52239)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("INCLUDE_LIB_FOREACH_H_")
+          )
+
+    )
+   (semanticdb-table "atomic.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("INCLUDE_LIB_ATOMIC_H_" variable (:constant-flag t) nil [39 60])
+            ("../libos_config.h" include nil nil [61 89]))          
+    :file "atomic.h"
+    :pointmax 246
+    :fsize 245
+    :lastmodtime '(20461 1038)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("INCLUDE_LIB_ATOMIC_H_")
+          )
+
+    )
+   )
+  :file "!Users!aono_taketoshi!github!libos!include!lib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

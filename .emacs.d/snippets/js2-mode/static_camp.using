@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: static camp.using
+# key: smd
+# --
+var $2 = camp.using("$1").$2

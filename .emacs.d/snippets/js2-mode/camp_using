@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: camp_using
+# key: using
+# --
+var $2 = camp.using("$1.$2");

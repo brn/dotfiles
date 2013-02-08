@@ -1,0 +1,24 @@
+;; Object thread/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "thread/"
+  :tables (list 
+   (semanticdb-table "condition_variable.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_THREAD_CONDITION_VARIABLE_HPP" variable (:constant-flag t) nil [53 88])
+            ("boost/thread/detail/platform.hpp" include (:system-flag t) nil [324 367]))          
+    :file "condition_variable.hpp"
+    :pointmax 635
+    :fsize 634
+    :lastmodtime '(20448 18571)
+    :unmatched-syntax '((string 575 . 619) (symbol 569 . 574) (punctuation 568 . 569))
+    :lexical-table 
+        '(("BOOST_THREAD_CONDITION_VARIABLE_HPP")
+          )
+
+    )
+   )
+  :file "!opt!local!include!boost!thread!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

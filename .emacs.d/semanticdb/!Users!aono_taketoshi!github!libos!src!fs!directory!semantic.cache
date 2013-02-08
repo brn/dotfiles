@@ -1,0 +1,174 @@
+;; Object directory/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "directory/"
+  :tables (list 
+   (semanticdb-table "directory.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("string.h" include (:system-flag t) nil [1151 1170])
+            ("vector" include (:system-flag t) nil [1171 1188])
+            ("utilities.h" include (:system-flag t) nil [1189 1211])
+            ("fs.h" include (:system-flag t) nil [1212 1227])
+            ("os" type
+               (:members 
+                  ( ("fs" type
+                       (:members 
+                          ( ("ChangeDirectory" function
+                               (:arguments 
+                                  ( ("path" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1774 1798]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1753 1835])
+                            ("Chmod" function
+                               (:arguments 
+                                  ( ("path" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1848 1872])
+                                    ("permiss" variable (:type "int") (reparse-symbol arg-sub-list) [1873 1885]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1837 1921])
+                            ("DirectoryIterator" function
+                               (:constructor-flag t
+                                :parent "DirectoryIterator"
+                                :arguments 
+                                  ( ("path" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1960 1977])
+                                    ("recursive" variable (:type "bool") (reparse-symbol arg-sub-list) [1978 1993]))                                  
+                                :type ("DirectoryIterator" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1923 2092])
+                            ("DirectoryIterator" function
+                               (:constructor-flag t
+                                :parent "DirectoryIterator"
+                                :arguments 
+                                  ( ("path" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2131 2155])
+                                    ("recursive" variable (:type "bool") (reparse-symbol arg-sub-list) [2156 2171]))                                  
+                                :type ("DirectoryIterator" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2094 2278])
+                            ("DirectoryIterator" function
+                               (:constructor-flag t
+                                :parent "DirectoryIterator"
+                                :arguments 
+                                  ( ("path_info" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Path" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2317 2339])
+                                    ("recursive" variable (:type "bool") (reparse-symbol arg-sub-list) [2340 2355]))                                  
+                                :type ("DirectoryIterator" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2280 2522])
+                            ("DirectoryIterator" function
+                               (:constructor-flag t
+                                :parent "DirectoryIterator"
+                                :type ("DirectoryIterator" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2524 2640])
+                            ("DirectoryIterator" function
+                               (:constructor-flag t
+                                :parent "DirectoryIterator"
+                                :arguments 
+                                  ( ("iterator" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("DirectoryIterator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2679 2713]))                                  
+                                :type ("DirectoryIterator" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2642 2973])
+                            ("DirectoryIterator" function
+                               (:destructor-flag t
+                                :parent "DirectoryIterator"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2975 3161])
+                            ("Initialize" function
+                               (:parent "DirectoryIterator"
+                                :arguments 
+                                  ( ("path" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [3198 3215]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3163 3362])
+                            ("=" function
+                               (:operator-flag t
+                                :parent "DirectoryIterator"
+                                :constant-flag t
+                                :arguments 
+                                  ( ("iterator" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("DirectoryIterator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3420 3454]))                                  
+                                :type ("DirectoryIterator" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3364 3677])
+                            ("" variable
+                               (:functionpointer-flag t
+                                :type ("DirEntry" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3679 3760])
+                            ("->" function
+                               (:operator-flag t
+                                :pointer 1
+                                :parent "DirectoryIterator"
+                                :constant-flag t
+                                :type ("DirEntry" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3762 3844])
+                            ("++" function
+                               (:operator-flag t
+                                :parent "DirectoryIterator"
+                                :type ("DirectoryIterator" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3846 3987])
+                            ("!=" function
+                               (:operator-flag t
+                                :parent "DirectoryIterator"
+                                :arguments 
+                                  ( ("iter" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("DirectoryIterator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4026 4056]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3989 4114])
+                            ("CreateDirEnt" function
+                               (:parent "DirectoryIterator"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4116 4328])
+                            ("ReadDirectory" function
+                               (:parent "DirectoryIterator"
+                                :arguments 
+                                  ( ("success" variable (:type "bool") (reparse-symbol arg-sub-list) [4369 4382]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4331 5074])
+                            ("it" variable
+                               (:typemodifiers ("static")
+                                :type ("DirectoryIterator" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [5075 5103])
+                            ("end" function
+                               (:parent "DirectoryIterator"
+                                :constant-flag t
+                                :type ("DirectoryIterator" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [5104 5166]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1401 5168]))                  
+                :type "namespace")
+                nil [1387 5169]))          
+    :file "directory.cc"
+    :pointmax 5336
+    :fsize 5169
+    :lastmodtime '(20459 49075)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!github!libos!src!fs!directory!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

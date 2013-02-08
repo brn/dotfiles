@@ -1,0 +1,18 @@
+;; Object misc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "misc/"
+  :tables (list 
+   (semanticdb-table "deps.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "deps.json"
+    :pointmax 70
+    :fsize 74
+    :lastmodtime '(20497 2933)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!github!jsbuild_utils!misc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

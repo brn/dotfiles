@@ -1,0 +1,27 @@
+;; Object rtb/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "rtb/"
+  :tables (list 
+   (semanticdb-table "createGroup.html"
+    :major-mode 'html-mode
+    :tags nil
+    :file "createGroup.html"
+    :pointmax 11456
+    :fsize 15089
+    :lastmodtime '(20458 45747)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "editGroup.html"
+    :major-mode 'html-mode
+    :tags nil
+    :file "editGroup.html"
+    :pointmax 11173
+    :fsize 11906
+    :lastmodtime '(20452 10819)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!Documents!workspace!dev_rtb_rtg_ameba!WebContent!WEB-INF!template!loginClientName!adserving!rtb!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

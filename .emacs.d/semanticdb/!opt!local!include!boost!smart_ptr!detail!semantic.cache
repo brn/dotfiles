@@ -1,0 +1,41 @@
+;; Object detail/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "detail/"
+  :tables (list 
+   (semanticdb-table "atomic_count.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_SMART_PTR_DETAIL_ATOMIC_COUNT_HPP_INCLUDED" variable (:constant-flag t) nil [66 114])
+            ("boost/config.hpp" include (:system-flag t) nil [2301 2328])
+            ("boost/smart_ptr/detail/sp_has_sync.hpp" include (:system-flag t) nil [2329 2378])
+            ("boost" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("atomic_count" type
+                               (:typedef ("long")
+                                :superclasses "long"
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [2446 2472]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [2426 2475]))                  
+                :type "namespace")
+                nil [2407 2478])
+            ("boost/smart_ptr/detail/atomic_count_gcc_x86.hpp" include (:system-flag t) nil [2658 2718])
+            ("boost/smart_ptr/detail/atomic_count_win32.hpp" include (:system-flag t) nil [2805 2863])
+            ("boost/smart_ptr/detail/atomic_count_gcc.hpp" include (:system-flag t) nil [3010 3066]))          
+    :file "atomic_count.hpp"
+    :pointmax 3376
+    :fsize 3375
+    :lastmodtime '(20448 18626)
+    :unmatched-syntax '((symbol 3291 . 3299) (symbol 3281 . 3290) (symbol 3268 . 3280) (symbol 3262 . 3267) (punctuation 3261 . 3262) (symbol 218 . 222) (symbol 211 . 217) (punctuation 209 . 210))
+    :lexical-table 
+        '(("BOOST_SMART_PTR_DETAIL_ATOMIC_COUNT_HPP_INCLUDED")
+          )
+
+    )
+   )
+  :file "!opt!local!include!boost!smart_ptr!detail!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

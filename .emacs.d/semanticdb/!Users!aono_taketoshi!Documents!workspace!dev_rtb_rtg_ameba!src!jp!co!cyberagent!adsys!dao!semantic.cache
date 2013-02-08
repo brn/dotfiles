@@ -1,0 +1,380 @@
+;; Object dao/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dao/"
+  :tables (list 
+   (semanticdb-table "RtbRtgUlistGroupDao.java"
+    :major-mode 'malabar-mode
+    :tags 
+        '( ("jp.co.cyberagent.adsys.dao" package nil (reparse-symbol package_declaration) [1 36])
+            ("java.util.HashMap" include nil (reparse-symbol import_declaration) [38 63])
+            ("java.util.List" include nil (reparse-symbol import_declaration) [64 86])
+            ("java.util.Map" include nil (reparse-symbol import_declaration) [87 108])
+            ("javax.annotation.Resource" include nil (reparse-symbol import_declaration) [110 143])
+            ("jp.co.cyberagent.adsys.dto.LoginUserDto" include nil (reparse-symbol import_declaration) [145 192])
+            ("jp.co.cyberagent.adsys.dto.adserving.rtb.RtbGroupDto" include nil (reparse-symbol import_declaration) [193 253])
+            ("jp.co.cyberagent.adsys.dto.adserving.rtb.userdata.RtbRtgUlistGroupDto" include nil (reparse-symbol import_declaration) [254 331])
+            ("jp.co.cyberagent.adsys.entity.RtbRtgUlistGroup" include nil (reparse-symbol import_declaration) [332 386])
+            ("org.seasar.extension.jdbc.JdbcManager" include nil (reparse-symbol import_declaration) [388 433])
+            ("RtbRtgUlistGroupDao" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("jdbcManager" variable (:type "JdbcManager") (reparse-symbol field_declaration) [536 560])
+                    ("insert" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlistGroup" variable (:type "RtbRtgUlistGroup") (reparse-symbol formal_parameter) [631 664]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [613 1022])
+                    ("update" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlistGroup" variable (:type "RtbRtgUlistGroup") (reparse-symbol formal_parameter) [1093 1126]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [1075 1284])
+                    ("selectById" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlistGroup" variable (:type "RtbRtgUlistGroup") (reparse-symbol formal_parameter) [1372 1405]))                          
+                        :type "RtbRtgUlistGroup")
+                        (reparse-symbol method_declaration) [1337 1580])
+                    ("select" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [1666 1691]))                          
+                        :type "List<RtbRtgUlistGroup>")
+                        (reparse-symbol method_declaration) [1629 1856])
+                    ("selectJoinGroupCntById" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlistGroupDto" variable (:type "RtbRtgUlistGroupDto") (reparse-symbol formal_parameter) [1966 2005]))                          
+                        :type "RtbRtgUlistGroupDto")
+                        (reparse-symbol method_declaration) [1912 2214])
+                    ("selectJoinGroupCnt" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlistGroupDto" variable (:type "RtbRtgUlistGroupDto") (reparse-symbol formal_parameter) [2348 2387]))                          
+                        :type "List<RtbRtgUlistGroupDto>")
+                        (reparse-symbol method_declaration) [2292 2590])
+                    ("getLastSelectRowsCount" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol method_declaration) [2593 2724])
+                    ("deleteByRtbRtgUlistGroupList" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [2820 2845])
+                            ("rtbRtgUlistGroupIds" variable (:type "List<Long>") (reparse-symbol formal_parameter) [2850 2880]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [2780 3350])
+                    ("selectByRtbRtgUlistId" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlistGroupDto" variable (:type "RtbRtgUlistGroupDto") (reparse-symbol formal_parameter) [3456 3495]))                          
+                        :type "List<RtbRtgUlistGroupDto>")
+                        (reparse-symbol method_declaration) [3397 3770])
+                    ("selectByIds" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbGroupDto" variable (:type "RtbGroupDto") (reparse-symbol formal_parameter) [3863 3886]))                          
+                        :type "List<RtbRtgUlistGroupDto>")
+                        (reparse-symbol method_declaration) [3818 4057]))                  
+                :type "class")
+                (reparse-symbol class_declaration) [478 4059]))          
+    :file "RtbRtgUlistGroupDao.java"
+    :pointmax 4060
+    :fsize 4274
+    :lastmodtime '(20452 10803)
+    :unmatched-syntax '((PROTECTED 526 . 535))
+    )
+   (semanticdb-table "RtbGroupDao.java"
+    :major-mode 'malabar-mode
+    :tags 
+        '( ("jp.co.cyberagent.adsys.dao" package nil (reparse-symbol package_declaration) [1 36])
+            ("java.util.HashMap" include nil (reparse-symbol import_declaration) [38 63])
+            ("java.util.List" include nil (reparse-symbol import_declaration) [64 86])
+            ("java.util.Map" include nil (reparse-symbol import_declaration) [87 108])
+            ("javax.annotation.Resource" include nil (reparse-symbol import_declaration) [110 143])
+            ("jp.co.cyberagent.adsys.dto.adserving.rtb.RtbGroupDto" include nil (reparse-symbol import_declaration) [145 205])
+            ("jp.co.cyberagent.adsys.dto.adserving.rtb.RtbListOutputDto" include nil (reparse-symbol import_declaration) [206 271])
+            ("jp.co.cyberagent.adsys.dto.adserving.rtb.userdata.SettingRtbGroupDto" include nil (reparse-symbol import_declaration) [272 348])
+            ("jp.co.cyberagent.adsys.dto.rpt.RptSumSearchDto" include nil (reparse-symbol import_declaration) [349 403])
+            ("jp.co.cyberagent.adsys.entity.RtbGroup" include nil (reparse-symbol import_declaration) [404 450])
+            ("org.seasar.extension.jdbc.JdbcManager" include nil (reparse-symbol import_declaration) [452 497])
+            ("RtbGroupDao" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("jdbcManager" variable (:type "JdbcManager") (reparse-symbol field_declaration) [548 572])
+                    ("selectById" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbGroupId" variable (:type "Long") (reparse-symbol formal_parameter) [605 620]))                          
+                        :type "RtbGroupDto")
+                        (reparse-symbol method_declaration) [575 833])
+                    ("selectById" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("mstClientId" variable (:type "Integer") (reparse-symbol formal_parameter) [866 885])
+                            ("mstAgentId" variable (:type "Integer") (reparse-symbol formal_parameter) [887 905])
+                            ("rtbGroupId" variable (:type "Long") (reparse-symbol formal_parameter) [910 925]))                          
+                        :type "RtbGroupDto")
+                        (reparse-symbol method_declaration) [836 1206])
+                    ("selectByIdWithTargetingType" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbGroupId" variable (:type "Long") (reparse-symbol formal_parameter) [1256 1271]))                          
+                        :type "RtbGroupDto")
+                        (reparse-symbol method_declaration) [1209 1500])
+                    ("select" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbCampaignId" variable (:type "Long") (reparse-symbol formal_parameter) [1535 1553]))                          
+                        :type "List<RtbGroupDto>")
+                        (reparse-symbol method_declaration) [1503 1830])
+                    ("selectByRtbList" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbListOutputDto" variable (:type "RtbListOutputDto") (reparse-symbol formal_parameter) [1883 1916]))                          
+                        :type "List<RtbListOutputDto>")
+                        (reparse-symbol method_declaration) [1833 2068])
+                    ("selectGroupByName" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("bean" variable (:type "RptSumSearchDto") (reparse-symbol formal_parameter) [2111 2131]))                          
+                        :type "List<RtbGroup>")
+                        (reparse-symbol method_declaration) [2071 2257])
+                    ("getLastSelectRowsCount" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol method_declaration) [2260 2391])
+                    ("insert" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbGroup" variable (:type "RtbGroup") (reparse-symbol formal_parameter) [2412 2429]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [2394 2692])
+                    ("update" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbGroup" variable (:type "RtbGroup") (reparse-symbol formal_parameter) [2713 2730]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [2695 2840])
+                    ("deleteCreativeCheck" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbGroupIds" variable (:type "Long") (reparse-symbol formal_parameter) [2874 2890]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [2843 3136])
+                    ("delete" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("mstLoginUserId" variable (:type "Integer") (reparse-symbol formal_parameter) [3157 3179])
+                            ("rtbCampaignId" variable (:type "Long") (reparse-symbol formal_parameter) [3181 3199])
+                            ("rtbGroupIds" variable (:type "List<Long>") (reparse-symbol formal_parameter) [3204 3226]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [3139 3520])
+                    ("updateStatus" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("mstLoginUserId" variable (:type "Integer") (reparse-symbol formal_parameter) [3551 3573])
+                            ("rtbCampaignId" variable (:type "Long") (reparse-symbol formal_parameter) [3575 3593])
+                            ("rtbGroupIds" variable (:type "List<Long>") (reparse-symbol formal_parameter) [3598 3620])
+                            ("activeFlag" variable (:type "String") (reparse-symbol formal_parameter) [3622 3639]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [3523 4005])
+                    ("updateByUpdating" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbGroupId" variable (:type "Long") (reparse-symbol formal_parameter) [4036 4051])
+                            ("mstLoginUserId" variable (:type "Integer") (reparse-symbol formal_parameter) [4053 4075]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [4008 4338])
+                    ("updateByUpdatingComplete" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbGroupId" variable (:type "Long") (reparse-symbol formal_parameter) [4377 4392])
+                            ("mstLoginUserId" variable (:type "Integer") (reparse-symbol formal_parameter) [4394 4416]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [4341 4692])
+                    ("selectByIdAndAuthCheck" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("mstClientId" variable (:type "Integer") (reparse-symbol formal_parameter) [4733 4752])
+                            ("mstAgentId" variable (:type "Integer") (reparse-symbol formal_parameter) [4757 4775])
+                            ("rtbGroupId" variable (:type "Long") (reparse-symbol formal_parameter) [4777 4792]))                          
+                        :type "boolean")
+                        (reparse-symbol method_declaration) [4695 5150])
+                    ("selectByRtbRtgUlistGroupId" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("settingRtbGroupDto" variable (:type "SettingRtbGroupDto") (reparse-symbol formal_parameter) [5260 5297]))                          
+                        :type "List<SettingRtbGroupDto>")
+                        (reparse-symbol method_declaration) [5197 5554]))                  
+                :type "class")
+                (reparse-symbol class_declaration) [499 5557]))          
+    :file "RtbGroupDao.java"
+    :pointmax 5558
+    :fsize 5617
+    :lastmodtime '(20452 10801)
+    :unmatched-syntax '((PROTECTED 538 . 547))
+    )
+   (semanticdb-table "RtbRtgUlistGroupCntDao.java"
+    :major-mode 'malabar-mode
+    :tags 
+        '( ("jp.co.cyberagent.adsys.dao" package nil (reparse-symbol package_declaration) [1 36])
+            ("javax.annotation.Resource" include nil (reparse-symbol import_declaration) [38 71])
+            ("jp.co.cyberagent.adsys.entity.RtbRtgUlistGroupCnt" include nil (reparse-symbol import_declaration) [73 130])
+            ("org.seasar.extension.jdbc.JdbcManager" include nil (reparse-symbol import_declaration) [132 177])
+            ("RtbRtgUlistGroupCntDao" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("jdbcManager" variable (:type "JdbcManager") (reparse-symbol field_declaration) [276 300])
+                    ("insert" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlistGroupCnt" variable (:type "RtbRtgUlistGroupCnt") (reparse-symbol formal_parameter) [374 413]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [356 789])
+                    ("update" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlistGroupCnt" variable (:type "RtbRtgUlistGroupCnt") (reparse-symbol formal_parameter) [863 902]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [845 1066]))                  
+                :type "class")
+                (reparse-symbol class_declaration) [215 1068]))          
+    :file "RtbRtgUlistGroupCntDao.java"
+    :pointmax 1069
+    :fsize 1115
+    :lastmodtime '(20452 10803)
+    :unmatched-syntax '((PROTECTED 266 . 275))
+    )
+   (semanticdb-table "RtbRtgUlistDao.java"
+    :major-mode 'malabar-mode
+    :tags 
+        '( ("jp.co.cyberagent.adsys.dao" package nil (reparse-symbol package_declaration) [1 36])
+            ("java.util.HashMap" include nil (reparse-symbol import_declaration) [38 63])
+            ("java.util.List" include nil (reparse-symbol import_declaration) [64 86])
+            ("java.util.Map" include nil (reparse-symbol import_declaration) [87 108])
+            ("javax.annotation.Resource" include nil (reparse-symbol import_declaration) [110 143])
+            ("jp.co.cyberagent.adsys.dto.LoginUserDto" include nil (reparse-symbol import_declaration) [145 192])
+            ("jp.co.cyberagent.adsys.dto.adserving.rtb.userdata.RtbRtgUlistDto" include nil (reparse-symbol import_declaration) [193 265])
+            ("jp.co.cyberagent.adsys.entity.RtbRtgUlist" include nil (reparse-symbol import_declaration) [266 315])
+            ("org.seasar.extension.jdbc.JdbcManager" include nil (reparse-symbol import_declaration) [317 362])
+            ("RtbRtgUlistDao" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("jdbcManager" variable (:type "JdbcManager") (reparse-symbol field_declaration) [460 484])
+                    ("insert" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlist" variable (:type "RtbRtgUlist") (reparse-symbol formal_parameter) [550 573]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [532 903])
+                    ("update" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlist" variable (:type "RtbRtgUlist") (reparse-symbol formal_parameter) [969 992]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [951 1140])
+                    ("updateSegmentTargeting" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlist" variable (:type "RtbRtgUlist") (reparse-symbol formal_parameter) [1222 1245]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [1188 1416])
+                    ("selectById" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlist" variable (:type "RtbRtgUlist") (reparse-symbol formal_parameter) [1494 1517]))                          
+                        :type "RtbRtgUlist")
+                        (reparse-symbol method_declaration) [1464 1677])
+                    ("selectJoinCntById" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlistDto" variable (:type "RtbRtgUlistDto") (reparse-symbol formal_parameter) [1768 1797]))                          
+                        :type "RtbRtgUlistDto")
+                        (reparse-symbol method_declaration) [1728 1970])
+                    ("select" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [2051 2076]))                          
+                        :type "List<RtbRtgUlist>")
+                        (reparse-symbol method_declaration) [2019 2231])
+                    ("selectJoinListCnt" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rtbRtgUlistDto" variable (:type "RtbRtgUlistDto") (reparse-symbol formal_parameter) [2326 2355]))                          
+                        :type "List<RtbRtgUlistDto>")
+                        (reparse-symbol method_declaration) [2280 2526])
+                    ("selectByRtbRtgUlistGroupId" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("RtbRtgUlistGroupDto" variable (:type "RtbRtgUlistDto") (reparse-symbol formal_parameter) [2634 2668]))                          
+                        :type "List<RtbRtgUlistDto>")
+                        (reparse-symbol method_declaration) [2575 2870])
+                    ("selectListByRtbRtgUlistGroupId" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [2982 3007])
+                            ("rtbRtgUlistGroupId" variable (:type "Long") (reparse-symbol formal_parameter) [3009 3032]))                          
+                        :type "List<RtbRtgUlistDto>")
+                        (reparse-symbol method_declaration) [2919 3452])
+                    ("selectByRtbRtgUlistList" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [3668 3693])
+                            ("rtbRtgUlistIds" variable (:type "List<Long>") (reparse-symbol formal_parameter) [3695 3720]))                          
+                        :type "List<RtbRtgUlistDto>")
+                        (reparse-symbol method_declaration) [3612 3809])
+                    ("selectByUlistIds" function
+                       (:template-specifier "<T>"
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [3941 3966])
+                            ("rtbRtgUlistIds" variable (:type "List<Long>") (reparse-symbol formal_parameter) [3971 3996])
+                            ("baseClass" variable (:type "Class<T>") (reparse-symbol formal_parameter) [3998 4016]))                          
+                        :type "List<T>")
+                        (reparse-symbol method_declaration) [3904 4412])
+                    ("selectByUlistIds" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [4666 4691])
+                            ("rtbRtgUlistIds" variable (:type "List<Long>") (reparse-symbol formal_parameter) [4696 4721]))                          
+                        :type "List<RtbRtgUlist>")
+                        (reparse-symbol method_declaration) [4624 4803])
+                    ("selectNotListByRtbRtgUlistGroupId" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [4918 4943])
+                            ("rtbRtgUlistGroupId" variable (:type "Long") (reparse-symbol formal_parameter) [4945 4968]))                          
+                        :type "List<RtbRtgUlistDto>")
+                        (reparse-symbol method_declaration) [4852 5388])
+                    ("deleteByRtbRtgUlistList" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("loginUserDto" variable (:type "LoginUserDto") (reparse-symbol formal_parameter) [5502 5527])
+                            ("rtbRtgUlistIds" variable (:type "List<Long>") (reparse-symbol formal_parameter) [5532 5557]))                          
+                        :type "int")
+                        (reparse-symbol method_declaration) [5467 6007])
+                    ("countByMstSegmentSequenceId" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("mstClientId" variable (:type "Integer") (reparse-symbol formal_parameter) [6053 6072])
+                            ("mstAgentId" variable (:type "Integer") (reparse-symbol formal_parameter) [6074 6092])
+                            ("rtbRtgUlistId" variable (:type "Long") (reparse-symbol formal_parameter) [6097 6115])
+                            ("mstSegmentSequenceId" variable (:type "Long") (reparse-symbol formal_parameter) [6117 6142]))                          
+                        :type "Integer")
+                        (reparse-symbol method_declaration) [6010 6569]))                  
+                :type "class")
+                (reparse-symbol class_declaration) [407 6572]))          
+    :file "RtbRtgUlistDao.java"
+    :pointmax 6573
+    :fsize 6906
+    :lastmodtime '(20452 10802)
+    :unmatched-syntax '((PROTECTED 450 . 459))
+    )
+   )
+  :file "!Users!aono_taketoshi!Documents!workspace!dev_rtb_rtg_ameba!src!jp!co!cyberagent!adsys!dao!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

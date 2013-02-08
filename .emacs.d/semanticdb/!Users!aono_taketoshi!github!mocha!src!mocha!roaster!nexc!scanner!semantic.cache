@@ -1,0 +1,436 @@
+;; Object scanner/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scanner/"
+  :tables (list 
+   (semanticdb-table "scanner.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("string.h" include (:system-flag t) nil [1177 1196])
+            ("string" include (:system-flag t) nil [1197 1214])
+            ("sstream" include (:system-flag t) nil [1215 1233])
+            ("unicode/ucnv.h" include (:system-flag t) nil [1258 1283])
+            ("mocha/roaster/memory/pool.h" include (:system-flag t) nil [1291 1329])
+            ("mocha/roaster/misc/bits.h" include (:system-flag t) nil [1330 1366])
+            ("mocha/roaster/misc/int_types.h" include (:system-flag t) nil [1367 1408])
+            ("mocha/roaster/utils/error_reporter.h" include (:system-flag t) nil [1409 1456])
+            ("mocha/roaster/nexc/nexc.h" include (:system-flag t) nil [1457 1493])
+            ("mocha/roaster/nexc/scanner/scanner.h" include (:system-flag t) nil [1494 1541])
+            ("mocha/roaster/nexc/scanner/token_stream.h" include (:system-flag t) nil [1542 1594])
+            ("mocha/roaster/nexc/scanner/source_stream.h" include (:system-flag t) nil [1595 1648])
+            ("mocha/roaster/nexc/tokens/js_token.h" include (:system-flag t) nil [1649 1696])
+            ("mocha/roaster/nexc/tokens/token_info.h" include (:system-flag t) nil [1697 1746])
+            ("mocha/roaster/nexc/binding/parser_connector.h" include (:system-flag t) nil [1747 1803])
+            ("mocha/roaster/nexc/events/compilation_event/compilation_event.h" include (:system-flag t) nil [1804 1878])
+            ("mocha" type
+               (:members 
+                  ( ("FLAG_LB" variable (:constant-flag t) (reparse-symbol namespacesubparts) [1906 1913])
+                    ("FLAG_REST" variable (:constant-flag t) (reparse-symbol namespacesubparts) [1924 1933])
+                    ("FLAG_NUMERIC" variable (:constant-flag t) (reparse-symbol namespacesubparts) [1944 1956])
+                    ("FLAG_REGEXP" variable (:constant-flag t) (reparse-symbol namespacesubparts) [1967 1978])
+                    ("kUnicodeMap" variable
+                       (:pointer 1
+                        :dereference 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [1982 2052])
+                    ("kByteOrderMark" variable
+                       (:dereference 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2053 2107])
+                    ("EscapeUnicode" function
+                       (:arguments 
+                          ( ("ustr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("icu::UnicodeString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2151 2182])
+                            ("buffer" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2183 2203]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2132 2617])
+                    ("()" function
+                       (:operator-flag t
+                        :parent "Scanner::ScannerEventListener"
+                        :arguments 
+                          ( ("e" variable
+                               (:pointer 1
+                                :type ("CompilationEvent" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2672 2692]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2625 3141])
+                    ("InternalScanner" type
+                       (:parent "Scanner"
+                        :superclasses 
+                          ( ("memory::Allocated" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3204 3212])
+                            ("InternalScanner" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("source" variable
+                                       (:pointer 1
+                                        :type ("SourceStream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3231 3252])
+                                    ("reporter" variable
+                                       (:pointer 1
+                                        :type ("ErrorReporter" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3253 3277])
+                                    ("filename" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [3278 3299]))                                  
+                                :type ("InternalScanner" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3215 3527])
+                            ("CollectToken" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3606 4946])
+                            ("GetStream" function
+                               (:pointer 1
+                                :typemodifiers ("inline")
+                                :type ("TokenStream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4950 5013])
+                            ("private" label nil (reparse-symbol classsubparts) [5048 5057])
+                            ("IsByteOrderMark" function
+                               (:arguments 
+                                  ( ("data" variable (:type "char") (reparse-symbol arg-sub-list) [5161 5171]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [5140 5246])
+                            ("IsEof" function
+                               (:typemodifiers ("inline")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [5338 5454])
+                            ("Seek" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("len" variable (:type "int") (reparse-symbol arg-sub-list) [5475 5483]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [5459 5527])
+                            ("Advance" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("len" variable (:type "int") (reparse-symbol arg-sub-list) [5608 5617]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [5589 5723])
+                            ("Undo" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("len" variable (:type "int") (reparse-symbol arg-sub-list) [5799 5808]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5782 5848])
+                            ("Skip" function (:type "void") (reparse-symbol classsubparts) [5986 6749])
+                            ("IsWhiteSpace" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [6877 6884]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [6852 7012])
+                            ("IsBreak" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [7134 7141]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [7114 7212])
+                            ("SkipMultiLineComment" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [7303 7647])
+                            ("SkipComment" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [7735 7957])
+                            ("IsIdentStart" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [8129 8136])
+                                    ("is_begin" variable (:type "bool") (reparse-symbol arg-sub-list) [8137 8151]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8104 8433])
+                            ("CaseIdent" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [8530 8537]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [8508 8750])
+                            ("CaseDigit" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [8855 8862]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [8833 9237])
+                            ("CaseDigitFloat" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [9331 9338]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9304 10053])
+                            ("IsHex" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [10076 10083]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [10058 10292])
+                            ("CaseDigitHex" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [10322 10329]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [10297 10644])
+                            ("CaseDigitNumber" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [10677 10684]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [10649 11490])
+                            ("CaseDigitBeginWithDot" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [11529 11536]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [11495 12677])
+                            ("IsSingleOperator" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [12917 12924]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [12888 13376])
+                            ("IsNotSingleOperator" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [13542 13549]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [13510 13885])
+                            ("CaseNotSingleOperator" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [13924 13931]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [13890 15852])
+                            ("CaseStringLiteral" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [15919 15926]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [15889 17231])
+                            ("CaseEqualitiesORFunGlyph" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [17236 17610])
+                            ("CaseAddAndSubORFunGlyph" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [17684 17691]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17648 17953])
+                            ("CaseRegExpLiteral" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [18022 18856])
+                            ("CaseRegExpFlag" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [18919 18926]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [18892 19853])
+                            ("CheckRegExpFlags" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:pointer 1
+                                        :type ("BitVector8" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19919 19937])
+                                    ("flag" variable (:type "char") (reparse-symbol arg-sub-list) [19938 19948])
+                                    ("flag_list" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19949 19972]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [19890 20253])
+                            ("SetRegExpFlags" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:pointer 1
+                                        :type ("BitVector8" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20317 20335])
+                                    ("flag" variable (:type "char") (reparse-symbol arg-sub-list) [20336 20346])
+                                    ("flag_list" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20347 20370])
+                                    ("pos" variable (:type "int") (reparse-symbol arg-sub-list) [20371 20379]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [20290 20575])
+                            ("CaseUnary" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [20612 20796])
+                            ("CaseLogical" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [20825 20832]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [20801 21372])
+                            ("CaseShiftRight" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [21377 21931])
+                            ("SetNumericAfter" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [21936 22733])
+                            ("SetRegExpAfter" function
+                               (:typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [22738 23597])
+                            ("PushBack" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ctoken" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [23784 23803])
+                                    ("opt_type" variable (:type "int") (reparse-symbol arg-sub-list) [23804 23818]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [23763 24100])
+                            ("PushBack" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ch" variable (:type "int") (reparse-symbol arg-sub-list) [24220 24227]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [24199 24660])
+                            ("DoPushBack" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("ctoken" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [24813 24832])
+                                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [24833 24842]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [24790 25042])
+                            ("line_" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [25046 25060])
+                            ("filename_" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [25063 25085])
+                            ("flags_" variable (:type ("BitVector8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [25088 25106])
+                            ("token_stream_" variable
+                               (:pointer 1
+                                :type ("TokenStream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [25109 25136])
+                            ("source_stream_" variable
+                               (:pointer 1
+                                :type ("SourceStream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [25139 25168])
+                            ("token_str_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [25171 25194])
+                            ("reporter_" variable
+                               (:pointer 1
+                                :type ("ErrorReporter" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [25197 25222]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3143 25225])
+                    ("New" function
+                       (:pointer 1
+                        :parent "Scanner"
+                        :arguments 
+                          ( ("stream" variable
+                               (:pointer 1
+                                :type ("SourceStream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [25249 25270])
+                            ("reporter" variable
+                               (:pointer 1
+                                :type ("ErrorReporter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [25271 25295])
+                            ("filename" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [25296 25317]))                          
+                        :type ("Scanner" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [25227 25515])
+                    ("Scanner" function
+                       (:constructor-flag t
+                        :parent "Scanner"
+                        :arguments 
+                          ( ("source" variable
+                               (:pointer 1
+                                :type ("SourceStream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [25534 25555])
+                            ("reporter" variable
+                               (:pointer 1
+                                :type ("ErrorReporter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [25556 25580])
+                            ("filename" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [25581 25602]))                          
+                        :type ("Scanner" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [25517 25718])
+                    ("Scanner" function
+                       (:destructor-flag t
+                        :parent "Scanner"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [25719 25740])
+                    ("Advance" function
+                       (:pointer 1
+                        :parent "Scanner"
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [25770 25780]))                          
+                        :type ("TokenInfo" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [25742 25824])
+                    ("Undo" function
+                       (:pointer 1
+                        :parent "Scanner"
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [25851 25861]))                          
+                        :type ("TokenInfo" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [25826 25902])
+                    ("Seek" function
+                       (:pointer 1
+                        :parent "Scanner"
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [25929 25939]))                          
+                        :type ("TokenInfo" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [25904 25980])
+                    ("CreateTokenStream" function
+                       (:parent "Scanner"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [25982 26047])
+                    ("Scanner::kEmpty" variable
+                       (:pointer 1
+                        :type ("TokenInfo" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [26049 26080]))                  
+                :type "namespace")
+                nil [1879 26083]))          
+    :file "scanner.cc"
+    :pointmax 26084
+    :fsize 26083
+    :lastmodtime '(20400 20095)
+    :unmatched-syntax '((number 23819 . 23820) (punctuation 23817 . 23818) (number 5809 . 5810) (punctuation 5807 . 5808) (number 5618 . 5619) (punctuation 5616 . 5617))
+    :lexical-table 
+        '(("FLAG_REGEXP" . ((number "3" 1979 . 1980)))
+          ("FLAG_REST" . ((number "1" 1934 . 1935)))
+          ("FLAG_NUMERIC" . ((number "2" 1957 . 1958)))
+          ("FLAG_LB" . ((number "0" 1914 . 1915)))
+          )
+
+    )
+   )
+  :file "!Users!aono_taketoshi!github!mocha!src!mocha!roaster!nexc!scanner!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

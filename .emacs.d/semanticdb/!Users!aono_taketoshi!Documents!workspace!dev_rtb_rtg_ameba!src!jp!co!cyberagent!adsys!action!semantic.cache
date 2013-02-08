@@ -1,0 +1,53 @@
+;; Object action/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "action/"
+  :tables (list 
+   (semanticdb-table "ApplyAction.java"
+    :major-mode 'malabar-mode
+    :tags 
+        '( ("jp.co.cyberagent.adsys.action" package nil (reparse-symbol package_declaration) [1 39])
+            ("java.util.TreeMap" include nil (reparse-symbol import_declaration) [41 66])
+            ("javax.annotation.Resource" include nil (reparse-symbol import_declaration) [68 101])
+            ("javax.servlet.http.HttpServletRequest" include nil (reparse-symbol import_declaration) [102 147])
+            ("jp.co.cyberagent.adsys.form.ApplyForm" include nil (reparse-symbol import_declaration) [149 194])
+            ("jp.co.cyberagent.adsys.service.ApplyService" include nil (reparse-symbol import_declaration) [195 246])
+            ("jp.co.cyberagent.adsys.util.JsonUtil" include nil (reparse-symbol import_declaration) [247 291])
+            ("org.apache.struts.util.TokenProcessor" include nil (reparse-symbol import_declaration) [293 338])
+            ("org.seasar.struts.annotation.ActionForm" include nil (reparse-symbol import_declaration) [339 386])
+            ("org.seasar.struts.annotation.Execute" include nil (reparse-symbol import_declaration) [387 431])
+            ("ApplyAction" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("applyForm" variable
+                       (:typemodifiers ("@ActionForm" "@Resource" "public")
+                        :type "ApplyForm")
+                        (reparse-symbol field_declaration) [462 513])
+                    ("applyService" variable
+                       (:typemodifiers ("@Resource" "protected")
+                        :type "ApplyService")
+                        (reparse-symbol field_declaration) [516 563])
+                    ("request" variable
+                       (:typemodifiers ("@Resource" "protected")
+                        :type "HttpServletRequest")
+                        (reparse-symbol field_declaration) [566 614])
+                    ("agent" function
+                       (:typemodifiers ("@Execute" "public")
+                        :type "String")
+                        (reparse-symbol method_declaration) [618 1043])
+                    ("media" function
+                       (:typemodifiers ("@Execute" "public")
+                        :type "String")
+                        (reparse-symbol method_declaration) [1046 1471]))                  
+                :type "class")
+                (reparse-symbol class_declaration) [433 1474]))          
+    :file "ApplyAction.java"
+    :pointmax 1475
+    :fsize 1536
+    :lastmodtime '(20452 10806)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!aono_taketoshi!Documents!workspace!dev_rtb_rtg_ameba!src!jp!co!cyberagent!adsys!action!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )
