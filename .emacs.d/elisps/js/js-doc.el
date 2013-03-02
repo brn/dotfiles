@@ -160,7 +160,7 @@ Format will be replaced its value in `js-doc-format-string'")
  %p will be replaced with the parameter name."
   :group 'js-doc)
 
-(defcustom js-doc-return-line " * @returns {} \n"
+(defcustom js-doc-return-line " * @return {} \n"
   "return line."
   :group 'js-doc)
 
