@@ -15,12 +15,41 @@
     (setenv "PATH" (concat dir path-separator (getenv "PATH")))
     (setq exec-path (append (list dir) exec-path))))
 
+(defvar os-type nil)
+
+(cond ((string-match "apple-darwin" system-configuration) ;; Mac
+       (setq os-type 'mac))
+      ((string-match "linux" system-configuration)        ;; Linux
+       (setq os-type 'linux))
+      ((string-match "freebsd" system-configuration)      ;; FreeBSD
+       (setq os-type 'bsd))
+      ((string-match "mingw" system-configuration)        ;; Windows
+       (setq os-type 'win)))
+
+(defun mac? ()
+  (eq os-type 'mac))
+
+(defun linux? ()
+  (eq os-type 'linux))
+
+(defun bsd? ()
+  (eq os-type 'freebsd))
+
+(defun win? ()
+  (eq os-type 'win))
+
 ;;言語設定
 (coding-system-put 'utf-8 'category 'utf-8)
 (set-language-info
  "Japanese"
  'coding-priority (cons 'utf-8
                         (get-language-info "Japanese" 'coding-priority)))
+
+(if (win?)
+  (add-to-list 'default-frame-alist
+               '(font . "-outline-Monaco-normal-normal-normal-mono-12-*-*-*-c-*-iso8859-1"))
+)
+
 (set-language-environment "Japanese")
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)

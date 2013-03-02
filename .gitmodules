@@ -1,0 +1,3 @@
+[submodule ".emacs.d/elisps/yasnippet"]
+	path = .emacs.d/elisps/yasnippet
+	url = git@github.com:capitaomorte/yasnippet.git
