@@ -9,35 +9,11 @@
               (expand-file-name "~/bin")
               (expand-file-name "~/.emacs.d/bin")
               ))
-  (delete-selection-mode t)
   (when (and (file-exists-p dir) (not (member dir exec-path)))
     (setenv "PATH" (concat dir path-separator (getenv "PATH")))
     (setq exec-path (append (list dir) exec-path))))
 
-(defun skt:shell ()
-  (or (executable-find "zsh")
-      (executable-find "bash")
-      ;; (executable-find "f_zsh") ;; Emacs + Cygwin を利用する人は Zsh の代りにこれにしてください
-      ;; (executable-find "f_bash") ;; Emacs + Cygwin を利用する人は Bash の代りにこれにしてください
-      (executable-find "cmdproxy")
-      (error "can't find 'shell' command in PATH!!")))
-
-;; Shell 名の設定
-(setq shell-file-name (skt:shell))
-(setenv "SHELL" shell-file-name)
-(setq explicit-shell-file-name shell-file-name)
-
-;;言語設定
-(coding-system-put 'utf-8 'category 'utf-8)
-(set-language-info
- "Japanese"
- 'coding-priority (cons 'utf-8
-                        (get-language-info "Japanese" 'coding-priority)))
-(set-language-environment "Japanese")
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-buffer-file-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
+(delete-selection-mode t)
 
 ;;vc-consultの停止
 ;;gitを使うと重くなる
