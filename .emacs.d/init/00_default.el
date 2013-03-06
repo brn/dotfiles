@@ -4,7 +4,6 @@
               "/usr/sbin"
               "/bin"
               "/usr/bin"
-              "/opt/local/bin"
               "/sw/bin"
               "/usr/local/bin"
               (expand-file-name "~/bin")
@@ -15,28 +14,18 @@
     (setenv "PATH" (concat dir path-separator (getenv "PATH")))
     (setq exec-path (append (list dir) exec-path))))
 
-(defvar os-type nil)
+(defun skt:shell ()
+  (or (executable-find "zsh")
+      (executable-find "bash")
+      ;; (executable-find "f_zsh") ;; Emacs + Cygwin を利用する人は Zsh の代りにこれにしてください
+      ;; (executable-find "f_bash") ;; Emacs + Cygwin を利用する人は Bash の代りにこれにしてください
+      (executable-find "cmdproxy")
+      (error "can't find 'shell' command in PATH!!")))
 
-(cond ((string-match "apple-darwin" system-configuration) ;; Mac
-       (setq os-type 'mac))
-      ((string-match "linux" system-configuration)        ;; Linux
-       (setq os-type 'linux))
-      ((string-match "freebsd" system-configuration)      ;; FreeBSD
-       (setq os-type 'bsd))
-      ((string-match "mingw" system-configuration)        ;; Windows
-       (setq os-type 'win)))
-
-(defun mac? ()
-  (eq os-type 'mac))
-
-(defun linux? ()
-  (eq os-type 'linux))
-
-(defun bsd? ()
-  (eq os-type 'freebsd))
-
-(defun win? ()
-  (eq os-type 'win))
+;; Shell 名の設定
+(setq shell-file-name (skt:shell))
+(setenv "SHELL" shell-file-name)
+(setq explicit-shell-file-name shell-file-name)
 
 ;;言語設定
 (coding-system-put 'utf-8 'category 'utf-8)
@@ -44,12 +33,6 @@
  "Japanese"
  'coding-priority (cons 'utf-8
                         (get-language-info "Japanese" 'coding-priority)))
-
-(if (win?)
-  (add-to-list 'default-frame-alist
-               '(font . "-outline-Monaco-normal-normal-normal-mono-12-*-*-*-c-*-iso8859-1"))
-)
-
 (set-language-environment "Japanese")
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
@@ -59,15 +42,18 @@
 ;;vc-consultの停止
 ;;gitを使うと重くなる
 (setq vc-consult-headers nil)
-
-;;同じフレームで開く
-(setq ns-pop-up-frames nil)
 ;;バックアップファイルを作らない
 (setq make-backup-files nil)
 ;;自動保存を行わない
 (setq auto-save-default nil)
 ;;保存時にバックアップしない
 (setq backup-inhibited t)
+;;自動保存リストの無効化　
+(setq auto-save-list-file-prefix nil)
+;;lockファイルを作成しない
+(setq create-lockfiles nil)
+;;同じフレームで開く
+(setq ns-pop-up-frames nil)
 ;;メニューバーとツールバー非表示
 (menu-bar-mode 0)
 (tool-bar-mode 0)

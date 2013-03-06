@@ -16,3 +16,5 @@
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'moccur-edit)
+(require 'multi-term)
+

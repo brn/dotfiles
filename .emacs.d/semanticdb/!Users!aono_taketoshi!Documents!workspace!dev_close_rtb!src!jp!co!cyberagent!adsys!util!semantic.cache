@@ -1,9 +1,0 @@
-;; Object util/
-;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "util/"
-  :tables (list 
-    )
-  :file "!Users!aono_taketoshi!Documents!workspace!dev_close_rtb!src!jp!co!cyberagent!adsys!util!semantic.cache"
-  :semantic-tag-version "2.0"
-  :semanticdb-version "2.0"
-  )
