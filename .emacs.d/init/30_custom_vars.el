@@ -7,8 +7,6 @@
  '(c-hanging-semi&comma-criteria (quote set-from-style))
  '(c-report-syntactic-errors t)
  '(indent-tabs-mode nil)
- '(js-doc-author "Taketshi Aono")
- '(js-doc-url "your url")
  '(js-indent-level 2)
  '(js2-always-indent-assigned-expr-in-decls-p t)
  '(js2-auto-indent-p t)
