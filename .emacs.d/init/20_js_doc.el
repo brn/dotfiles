@@ -1,2 +1,14 @@
-(require 'js-doc)
+;;js-doc.elのfile-docを上書き
+(defvar js-doc-file-doc-lines
+  '(js-doc-top-line
+    " * @fileoverview\n"
+    " * @author %a\n"
+    js-doc-bottom-line)
+  "JsDoc style file document format.
+When the `js-doc-insert-file-doc' is called,
+each lines in a list will be formatted by `js-doc-format-string'
+and inserted to the top of current buffer.")
+
+;;authorだけ設定
+(setq js-doc-author "Taketshi Aono")
 

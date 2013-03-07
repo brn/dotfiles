@@ -11,11 +11,11 @@
 (require 'auto-install)
 (require 'google-c-style)
 (require 'zencoding-mode)
-(require 'js-doc)
 (require 'textile-mode)
 (require 'yasnippet)
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/init/cmp")
+(require 'js-doc)
 (require 'moccur-edit)
 (require 'multi-term)
 
