@@ -4,3 +4,6 @@
 [submodule ".emacs.d/elisps/zencoding"]
 	path = .emacs.d/elisps/zencoding
 	url = git@github.com:rooney/zencoding.git
+[submodule ".emacs.d/elisps/js-doc"]
+	path = .emacs.d/elisps/js-doc
+	url = git@github.com:brn/js-doc
