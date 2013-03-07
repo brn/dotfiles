@@ -1,11 +1,9 @@
 ;; js2-mode
-(autoload 'js-mode "js")
-(require 'js)
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '(".js$" . js2-mode))
 (add-to-list 'auto-mode-alist '(".mayaa$" . xml-mode))
 (add-to-list 'auto-mode-alist '(".as$" . javascript-mode))
-(setq js2-strict-missing-semi-warning nil)
+(setq js2-strict-missing-semi-warning t)
 (add-hook 'js2-mode-hook
           '(lambda ()
              (local-set-key "\C-ci" 'js-doc-insert-function-doc)
@@ -21,24 +19,3 @@
                    indent-tabs-mode nil)
              )
           )
-
-;; (defun my-js-indent-line-function ()
-;;   (save-restriction
-;;     (widen)
-;;     (interactive)
-;;     (let* ((inhibit-point-motion-hooks t)
-;;            (parse-status (save-excursion (syntax-ppss (point-at-bol))))
-;;            (offset (- (current-column) (current-indentation)))
-;;            (indentation (js-proper-indentation parse-status))
-;;            node)
-;;       (save-excursion
-;;         ;; I like to indent case and labels to half of the tab width
-;;         (back-to-indentation)
-;;         (if (looking-at "case\\s-")
-;;             (indent-line-to (+ indentation (/ js-indent-level 2))))
-;;         (when (> offset 0) (forward-char offset))
-;;         )
-;;       )
-;;     )
-;;   )
-;; (set (make-local-variable 'indent-line-function) 'my-js-indent-line-function)
