@@ -10,6 +10,7 @@
 (require 'auto-complete)
 (require 'auto-install)
 (require 'google-c-style)
+(require 'zencoding-mode)
 (require 'js-doc)
 (require 'textile-mode)
 (require 'yasnippet)
