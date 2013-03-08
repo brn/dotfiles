@@ -7,3 +7,12 @@
 [submodule ".emacs.d/elisps/js-doc"]
 	path = .emacs.d/elisps/js-doc
 	url = git@github.com:brn/js-doc
+[submodule ".emacs.d/elisps/dash"]
+	path = .emacs.d/elisps/dash
+	url = git://github.com/magnars/dash.el.git
+[submodule ".emacs.d/elisps/multiple-cursors"]
+	path = .emacs.d/elisps/multiple-cursors
+	url = git://github.com/magnars/multiple-cursors.el.git
+[submodule ".emacs.d/elisps/js2-refactor"]
+	path = .emacs.d/elisps/js2-refactor
+	url = git://github.com/magnars/js2-refactor.el.git

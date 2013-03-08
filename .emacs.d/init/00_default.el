@@ -15,9 +15,6 @@
 
 (delete-selection-mode t)
 
-;;vc-consultの停止
-;;gitを使うと重くなる
-(setq vc-consult-headers nil)
 ;;バックアップファイルを作らない
 (setq make-backup-files nil)
 ;;自動保存を行わない
@@ -56,21 +53,6 @@
 (modify-all-frames-parameters
  (list (cons 'alpha  '(85 100 100 100))))
 
-;;入力メソッド
-(if (boundp 'input-method-alist)
-    (progn
-      (if (assoc "japanese-egg-wnn" input-method-alist)
-          (activate-input-method "japanese-egg-wnn")
-        )
-
-      (and
-       default-input-method
-       (assoc default-input-method input-method-alist)
-       (activate-input-method default-input-method)
-       )
-      (inactivate-input-method)
-      ))
-
 ;;略語展開の大文字小文字の区別
 (setq dabbrev-case-fold-search nil)
 
@@ -92,11 +74,21 @@
 ;;背景色
 (set-background-color "black")
 
+;;入力メソッド
+(if (boundp 'input-method-alist)
+    (progn
+      (if (assoc "japanese-egg-wnn" input-method-alist)
+          (activate-input-method "japanese-egg-wnn")
+        )
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::
-::コメント
-:::::::::::::::::::::::::::::::::::::::::::::::::::::
-(setq comment-style 'multi-line)
+      (and
+       default-input-method
+       (assoc default-input-method input-method-alist)
+       (activate-input-method default-input-method)
+       )
+      (inactivate-input-method)
+      ))
+
 
 (setq nxml-mode-hook
       '(lambda ()
@@ -118,4 +110,4 @@
       (append '((".h$" . c++-mode))
               auto-mode-alist))
 (setq inhibit-startup-screen -1)
-(setq vc-handled-backends ())
+

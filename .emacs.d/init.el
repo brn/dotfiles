@@ -13,6 +13,7 @@
 (require 'zencoding-mode)
 (require 'textile-mode)
 (require 'yasnippet)
+(require 'js2-refactor)
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
