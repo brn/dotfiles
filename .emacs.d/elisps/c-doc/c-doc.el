@@ -124,6 +124,7 @@ e.g. '   float array[]' => 'array'"
 	(params '())
 	(head-of-func (point))
 	(from nil)
+  (from-indent nil)
 	(to nil))
     (save-excursion
       ;; Trail backward and add arguments to the list
@@ -142,10 +143,12 @@ e.g. '   float array[]' => 'array'"
       ;; How awful ...
       (setq params (reverse params))
       )
+    (beginning-of-line)
+    (setq from-indent (point))
     (insert c-doc-top-line)
     ;; Insert description line
     (insert (format c-doc-description-line
-		    (c-doc-pick-symbol-name func-name)))
+		    (c-doc-pick-symbol-name func-name)))    
     ;; Insert parameter lines
     (while params
       (insert (format c-doc-parameter-line
@@ -154,8 +157,7 @@ e.g. '   float array[]' => 'array'"
     ;; Insert return value line
     (insert c-doc-return-line)
     (insert c-doc-bottom-line)
-    )
-  )
+    (indent-region from-indent (point))))
 
 (defun c-doc-insert ()
   "Check if the current point is in the function block;
