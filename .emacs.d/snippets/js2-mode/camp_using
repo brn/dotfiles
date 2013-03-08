@@ -2,4 +2,4 @@
 # name: camp_using
 # key: using
 # --
-var $2 = camp.using('$1.$2');
+var ${1:$(car (last (split-string text "\\\\.")))} = camp.using('$1');

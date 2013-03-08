@@ -2,6 +2,6 @@
 # name: camp_module
 # key: md
 # --
-camp.module("$1", function (exports) {
+camp.module("`(get-module-path)`", function (exports) {
   $0
 });

@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
 # name: static camp.using
-# key: smd
+# key: susing
 # --
-var $2 = camp.using('$1').$2
+var $2 = camp.using('$1').$2;

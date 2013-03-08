@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: properties
+# key: prop
+# --
+/**
+ * @param {$3} ${2:$(downcase text)}
+ */
+exports.$1.prototype.set$2 = function(${2:$(downcase text)}) {
+  this._${2:$(downcase text)} = ${2:$(downcase text)}
+};
+
+
+/**
+ * @return {$3}
+ */
+exports.$1.prototype.get$2 = function() {
+  return this._${2:$(downcase text)};
+};

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: get-module-path
+# key: gmp
+# --
+'`(get-module-path)`'
