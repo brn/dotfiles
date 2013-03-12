@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: nrequire
+# key: nrequire
+# --
+var ${1:$(if (string-match "/" text) (car (last (split-string text "/"))) text)} = require('$1');

@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: common-properties
+# key: cprop
+# --
+/**
+ * @param {$3} ${2:$(if (/= (length text) 0) (concat (downcase (char-to-string (car (string-to-list text)))) (coerce (cdr (string-to-list text)) 'string)))}
+ */
+$1.prototype.set$2 = function(${2:$(if (/= (length text) 0) (concat (downcase (char-to-string (car (string-to-list text)))) (coerce (cdr (string-to-list text)) 'string)))}) {
+  this._${2:$(if (/= (length text) 0) (concat (downcase (char-to-string (car (string-to-list text)))) (coerce (cdr (string-to-list text)) 'string)))} = ${2:$(if (/= (length text) 0) (concat (downcase (char-to-string (car (string-to-list text)))) (coerce (cdr (string-to-list text)) 'string)))};
+};
+
+
+/**
+ * @return {$3}
+ */
+$1.prototype.get$2 = function() {
+  return this._${2:$(if (/= (length text) 0) (concat (downcase (char-to-string (car (string-to-list text)))) (coerce (cdr (string-to-list text)) 'string)))};
+};

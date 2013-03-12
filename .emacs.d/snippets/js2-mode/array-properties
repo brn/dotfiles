@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: array-properties
+# key: aprop
+# --
+/**
+ * @param {$3} ${2:$(downcase text)}
+ */
+$1.prototype.add$2 = function(${2:$(downcase text)}) {
+  this._${2:$(downcase text)}.push(${2:$(downcase text)});
+};
+
+
+/**
+ * @return {$3}
+ */
+$1.prototype.get$2 = function() {
+  return this._${2:$(downcase text)};
+};
