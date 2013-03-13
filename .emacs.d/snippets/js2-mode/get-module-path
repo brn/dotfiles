@@ -2,4 +2,4 @@
 # name: get-module-path
 # key: gmp
 # --
-'`(get-module-path)`'
+'`(yas-util-get-module-path)`'
