@@ -1,4 +1,3 @@
-(require 'org-install)
 ;; キーバインド
 (add-to-list 'auto-mode-alist '(".org$" . org-mode))
 (global-set-key "\C-cl" 'org-store-link)

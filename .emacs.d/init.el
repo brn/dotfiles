@@ -16,6 +16,7 @@
 (require 'js2-refactor)
 (require 'init-loader)
 (require 'c-doc)
+(require 'color-moccur)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
 (require 'moccur-edit)
