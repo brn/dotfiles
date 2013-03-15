@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: getter
+# key: get
+# --
+/**
+ * $4
+ * @return {$3} ${2:$(yas-util-upper-to-lower-camel text)}
+ */
+exports.$1.prototype.get$2 = function() {
+  return ${2:$(yas-util-upper-to-lower-camel text)}
+};

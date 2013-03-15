@@ -52,6 +52,19 @@
     text))
 
 
+;;ローワーキャメルからアッパーキャメルに変換
+(defun yas-util-lower-to-upper-camel(text)
+  (if (/= (length text) 0)
+      (concat
+       (upcase
+        (char-to-string
+         (car (string-to-list text))))
+       (coerce
+        (cdr (string-to-list text))
+        'string))
+    text))
+
+
 ;;パスからクラス名を取得
 (defun yas-util-get-class-from-module(text sep)
   (if (string-match (concat "\\" sep) text) (car (last (split-string text (concat "\\" sep)))) text))

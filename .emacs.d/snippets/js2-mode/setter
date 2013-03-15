@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: setter
+# key: set
+# --
+/**
+ * $4
+ * @param {$3} ${2:$(yas-util-upper-to-lower-camel text)}
+ */
+exports.$1.set$2(${2:$(yas-util-upper-to-lower-camel text)}) = function(${2:$(yas-util-upper-to-lower-camel text)}) {
+  this._${2:$(yas-util-upper-to-lower-camel text)} = ${2:$(yas-util-upper-to-lower-camel text)};
+};

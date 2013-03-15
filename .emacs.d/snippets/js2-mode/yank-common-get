@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: yank-common-get
+# key: ycget
+# --
+/**
+ * $2
+ * @return {$1}
+ */
+`(car (cdr kill-ring-yank-pointer))`.prototype.get`(yas-util-lower-to-upper-camel (car kill-ring-yank-pointer))` = function() {
+  return this._`(car kill-ring-yank-pointer)`;
+};

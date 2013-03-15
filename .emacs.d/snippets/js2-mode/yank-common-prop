@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: yank-common-prop
+# key: ycprop
+# --
+/**
+ * $2
+ * @param {$1} `(car kill-ring-yank-pointer)`
+ */
+`(car (cdr kill-ring-yank-pointer))`.prototype.set`(yas-util-lower-to-upper-camel (car kill-ring-yank-pointer))` = function(`(car kill-ring-yank-pointer)`) {
+  this._`(car kill-ring-yank-pointer)` = `(car kill-ring-yank-pointer)`;
+};
+
+
+/**
+ * $2
+ * @return {$1}
+ */
+`(car (cdr kill-ring-yank-pointer))`.prototype.get`(yas-util-lower-to-upper-camel (car kill-ring-yank-pointer))` = function() {
+  return this._`(car kill-ring-yank-pointer)`;
+};
