@@ -68,3 +68,12 @@
 ;;パスからクラス名を取得
 (defun yas-util-get-class-from-module(text sep)
   (if (string-match (concat "\\" sep) text) (car (last (split-string text (concat "\\" sep)))) text))
+
+
+(defun get-last-constructor()
+  "Return the most closest constructor"
+  (save-excursion
+    (if (search-backward "(exports\\.\\([a-zA-Z_$][\w$_]*\\)\\|\\(function \\([A-Z][a-z$_]*\\)\\)" nil t)
+        (let ((point point))
+          (buffer-substring point (1- (point))))
+      nil)))
