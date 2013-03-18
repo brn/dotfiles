@@ -70,10 +70,18 @@
   (if (string-match (concat "\\" sep) text) (car (last (split-string text (concat "\\" sep)))) text))
 
 
-(defun get-last-constructor()
+;;現在の位置から最も近いコンストラクタ名を取得
+(defun yas-util-get-last-constructor()
   "Return the most closest constructor"
   (save-excursion
-    (if (search-backward "(exports\\.\\([a-zA-Z_$][\w$_]*\\)\\|\\(function \\([A-Z][a-z$_]*\\)\\)" nil t)
-        (let ((point point))
-          (buffer-substring point (1- (point))))
-      nil)))
+    (progn
+      (let ((case-fold (setq case-fold-search nil))
+            (match ""))
+        (if (re-search-backward "\\(exports\\.\\([A-Z][a-zA-Z0-9$_]*\\)\\)\\|\\(function \\([A-Z][a-zA-Z0-9$_]*\\)\\)" nil t)
+            (progn
+              (re-search-forward "\\(exports.[A-Z][a-zA-Z0-9$_]+\\|[A-Z][a-zA-Z0-9_$]+\\)" nil t)
+              (setq match (match-string 0))
+              (setq case-fold-search case-fold))
+          (progn
+            (setq case-fold case-fold-search)))
+        match))))

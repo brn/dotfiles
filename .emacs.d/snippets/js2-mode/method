@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: method
+# key: me
+# binding: C-x y m
+# --
+`(yas-util-get-last-constructor)`.prototype.$1 = function($2) {
+  $0
+};

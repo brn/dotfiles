@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: proto
+# key: proto
+# binding: C-x y C-p
+# --
+`(yas-util-get-last-constructor)`.prototype.$1 = $2;

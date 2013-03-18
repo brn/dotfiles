@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: echo
+# key: echo
+# binding: C-x y m
+# --
+<m:echo m:id="$1">
+$2
+</m:echo>

@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: yank-properties
+# key: yprop
+# --
+/**
+ * `(car (cdr kill-ring-yank-pointer))`の取得
+ * @param {$3} `(car (cdr kill-ring-yank-pointer))`
+ */
+`(yas-util-get-last-constructor)`.prototype.set`(yas-util-lower-to-upper-camel (car (cdr kill-ring-yank-pointer)))` = function(`(car (cdr kill-ring-yank-pointer))`) {
+  this._`(car (cdr kill-ring-yank-pointer))` = `(car (cdr kill-ring-yank-pointer))`;
+};
+
+
+/**
+ * `(car (cdr kill-ring-yank-pointer))`の設定
+ * @return {$3}
+ */
+`(yas-util-get-last-constructor)`.prototype.get`(yas-util-lower-to-upper-camel (car (cdr kill-ring-yank-pointer)))` = function() {
+  return this._`(car (cdr kill-ring-yank-pointer))`;
+};

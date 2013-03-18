@@ -6,6 +6,6 @@
  * $4
  * @return {$3} ${2:$(yas-util-upper-to-lower-camel text)}
  */
-exports.$1.prototype.get$2 = function() {
+`(yas-util-get-last-constructor)`.prototype.get$2 = function() {
   return ${2:$(yas-util-upper-to-lower-camel text)}
 };

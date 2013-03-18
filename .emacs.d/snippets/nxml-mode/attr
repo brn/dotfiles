@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: attr
+# key: attr
+# binding: C-x y a
+# --
+<m:attribute name="$1" value="$2" />
