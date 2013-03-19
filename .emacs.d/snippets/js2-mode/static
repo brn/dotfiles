@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: static
+# key: st
+# binding: C-x y s
+# --
+`(yas-util-get-last-constructor)`.$1 = function() {
+  $0
+};

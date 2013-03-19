@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: static-property
+# key: stp
+# binding: C-x y C-s
+# --
+`(yas-util-get-last-constructor)`.$1 = $2;

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: consts
+# key: consts
+# binding: C-x y C-c
+# --
+/**
+ * @const {$3}
+ */
+`(yas-util-get-last-constructor)`.prototype.${1:$$(upcase text)} = $2;

@@ -5,7 +5,7 @@
 #
 # LANG
 # http://curiousabt.blog27.fc2.com/blog-entry-65.html
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:~/bin:/Application:/Users/aono_taketoshi/.rbenv/shims:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:~/bin:/Application:/Users/aono_taketoshi/.rbenv/shims:~/bin:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=$PATH:/usr/local/Cellar/tmux/1.7/bin:/usr/local/Cellar/ncurses/5.9/share/terminfo
 export LANG=ja_JP.UTF-8
