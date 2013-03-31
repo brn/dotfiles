@@ -12,6 +12,5 @@
 
 ;;windowsの際のフォントサイズ修正
 (if (os-type-is-win?)
-    (add-to-list 'default-frame-alist
-                 '(font . "-outline-Monaco-normal-normal-normal-mono-12-*-*-*-c-*-iso8859-1"))
+    (set-face-attribute 'default nil :font "Bitstream Vera Sans Mono-10")
   )

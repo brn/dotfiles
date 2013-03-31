@@ -21,4 +21,3 @@
 (require 'js-doc)
 (require 'moccur-edit)
 (require 'multi-term)
-
