@@ -9,8 +9,3 @@
 (set-keyboard-coding-system 'utf-8)
 (set-buffer-file-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
-
-;;windowsの際のフォントサイズ修正
-(if (os-type-is-win?)
-    (set-face-attribute 'default nil :font "Bitstream Vera Sans Mono-10")
-  )

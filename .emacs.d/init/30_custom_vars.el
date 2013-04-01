@@ -37,3 +37,10 @@
  '(vhdl-speedbar-architecture-selected-face ((((min-colors 88) (class color) (background light)) (:foreground "brightblue" :underline t)))))
 
 (setq-default line-spacing 2)
+
+;;windowsの際のフォントサイズ修正
+(if (os-type-is-win?)
+    (set-face-attribute 'default nil :font "Bitstream Vera Sans Mono-10")
+  )
+(if (os-type-is-mac?)
+    (set-face-attribute 'default nil :font "Bitstream Vera Sans Mono-12"))

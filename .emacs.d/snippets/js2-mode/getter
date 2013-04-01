@@ -3,9 +3,10 @@
 # key: get
 # --
 /**
- * $4
+ * ${2:$(yas-util-upper-to-lower-camel text)}の取得
  * @return {$3} ${2:$(yas-util-upper-to-lower-camel text)}
  */
 `(yas-util-get-last-constructor)`.prototype.get$2 = function() {
-  return ${2:$(yas-util-upper-to-lower-camel text)}
+  return this._${2:$(yas-util-upper-to-lower-camel text)};
 };
+$0

@@ -77,7 +77,7 @@
     (progn
       (let ((case-fold (setq case-fold-search nil))
             (match ""))
-        (if (re-search-backward "\\(exports\\.\\([A-Z][a-zA-Z0-9$_]*\\)\\)\\|\\(function \\([A-Z][a-zA-Z0-9$_]*\\)\\)" nil t)
+        (if (re-search-backward "\\(exports\\.\\([A-Z][a-zA-Z0-9$_]*\\)\\)\\|\\(function \\([A-Z][a-zA-Z0-9$_]*\\)\\)\\|\\(var \\([A-Z][a-zA-Z0-9$_]*\\)\\)\\|\\(\\([A-Z][a-zA-Z0-9$_]*\\) = \\)" nil t)
             (progn
               (re-search-forward "\\(exports.[A-Z][a-zA-Z0-9$_]+\\|[A-Z][a-zA-Z0-9_$]+\\)" nil t)
               (setq match (match-string 0))

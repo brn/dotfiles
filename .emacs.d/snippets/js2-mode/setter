@@ -3,9 +3,10 @@
 # key: set
 # --
 /**
- * $4
+ * ${2:$(yas-util-upper-to-lower-camel text)}の設定
  * @param {$3} ${2:$(yas-util-upper-to-lower-camel text)}
  */
-exports.$1.set$2(${2:$(yas-util-upper-to-lower-camel text)}) = function(${2:$(yas-util-upper-to-lower-camel text)}) {
+`(yas-util-get-last-constructor)`.prototype.set$2 = function(${2:$(yas-util-upper-to-lower-camel text)}) {
   this._${2:$(yas-util-upper-to-lower-camel text)} = ${2:$(yas-util-upper-to-lower-camel text)};
 };
+$0

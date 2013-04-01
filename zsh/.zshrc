@@ -11,7 +11,7 @@ export PATH=$PATH:/usr/local/Cellar/tmux/1.7/bin:/usr/local/Cellar/ncurses/5.9/s
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 export PHANTOM_INSTALL_DIR=~/.mocha/phantom/osx
-export NODE_PATH=~/node_modules
+export NODE_PATH=~/.nodebrew/node/v${CURRENT_NODE_VERSION}/lib/node_modules
 export MAVEN_OPTS=-Dfile.encoding=UTF-8
 export CLASS_PATH=$CLASSPATH:/Users/aono_taketoshi/dev/apache-tomcat-6.0.32/lib/mysql-connector-java-5.1.21-bin.jar
 export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20120710/libexec
@@ -21,6 +21,13 @@ alias emacs="TERM=xterm-256color emacs"
 alias refresh_p='source ~/.zshrc'
 alias ll='ls -l'
 eval "$(rbenv init -)"
+
+function node-use {
+    nodebrew use $@
+    export CURRENT_NODE_VERSION=$@
+}
+
+node-use 0.9.9
 
 ## Backspace key
 #

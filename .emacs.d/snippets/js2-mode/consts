@@ -6,4 +6,4 @@
 /**
  * @const {$3}
  */
-`(yas-util-get-last-constructor)`.prototype.${1:$$(upcase text)} = $2;
+`(yas-util-get-last-constructor)`.${1:$$(upcase text)} = $2;
