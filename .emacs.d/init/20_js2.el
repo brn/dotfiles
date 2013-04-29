@@ -21,7 +21,7 @@
 '(js2-indent-on-enter-key t)
 '(js2-missing-semi-one-line-override t)
 '(js2-rebind-eol-bol-keys nil)
-'(js2-skip-preprocessor-directives t)
+'(js2-skip-preprocessor-directives nil)
 '(js2-strict-inconsistent-return-warning nil)
 '(js2-use-ast-for-indentation-p t)
 '(js2-auto-insert-semicolon t))
