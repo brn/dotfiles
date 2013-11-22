@@ -1,34 +1,5 @@
 # users generic .zshrc file for zsh(1)
 
-
-## Environment variable configuration
-#
-# LANG
-# http://curiousabt.blog27.fc2.com/blog-entry-65.html
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:~/bin:/Application:/Users/aono_taketoshi/.rbenv/shims:~/bin:$PATH
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-export PATH=$PATH:/usr/local/Cellar/tmux/1.7/bin:/usr/local/Cellar/ncurses/5.9/share/terminfo
-export LANG=ja_JP.UTF-8
-export LESSCHARSET=utf-8
-export PHANTOM_INSTALL_DIR=~/.mocha/phantom/osx
-export NODE_PATH=~/.nodebrew/node/v${CURRENT_NODE_VERSION}/lib/node_modules
-export MAVEN_OPTS=-Dfile.encoding=UTF-8
-export CLASS_PATH=$CLASSPATH:/Users/aono_taketoshi/dev/apache-tomcat-6.0.32/lib/mysql-connector-java-5.1.21-bin.jar
-export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20120710/libexec
-export ANT_OPTS=-Dfile.encoding=UTF8
-export TERMINFO_DIRS=/usr/local/Cellar/ncurses/5.9/share/terminfo:/usr/share/terminfo:/usr/local/share/terminfo
-alias emacs="TERM=xterm-256color emacs"
-alias refresh_p='source ~/.zshrc'
-alias ll='ls -l'
-eval "$(rbenv init -)"
-
-function node-use {
-    nodebrew use $@
-    export CURRENT_NODE_VERSION=$@
-}
-
-node-use 0.9.9
-
 ## Backspace key
 #
 bindkey "^?" backward-delete-char

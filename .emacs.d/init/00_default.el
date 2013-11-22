@@ -13,6 +13,11 @@
     (setenv "PATH" (concat dir path-separator (getenv "PATH")))
     (setq exec-path (append (list dir) exec-path))))
 
+(setenv "HOME" (getenv "HOME"))
+
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 (delete-selection-mode t)
 
 ;;バックアップファイルを作らない
@@ -110,4 +115,3 @@
       (append '((".h$" . c++-mode))
               auto-mode-alist))
 (setq inhibit-startup-screen -1)
-
