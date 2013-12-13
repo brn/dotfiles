@@ -7,6 +7,7 @@
  '(c-hanging-semi&comma-criteria (quote set-from-style))
  '(c-report-syntactic-errors t)
  '(indent-tabs-mode nil)
+ '(typescript-indent-level 2)
  '(nxml-attribute-indent 4)
  '(nxml-child-indent 4)
  '(nxml-outline-child-indent 4)
