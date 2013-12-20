@@ -106,11 +106,13 @@
 
 (setq nxml-mode-hook
       '(lambda ()
-         (setq indent-tabs-mode t)))
+         (setq indent-tabs-mode t)
+         (setq tab-width 4)))
 
 (setq sgml-mode-hook
       '(lambda ()
-         (setq indent-tabs-mode t)))
+         (setq indent-tabs-mode t)
+         (setq tab-width 4)))
 
 (setq java-mode-hook
       '(lambda ()

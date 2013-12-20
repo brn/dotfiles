@@ -1,5 +1,10 @@
 (require 'typescript)
+
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+
+(add-hook 'typescript-mode-hook
+          '(lambda ()
+             (auto-complete-mode 1)))
 
 ;;(require 'tss)
 
@@ -11,3 +16,4 @@
 
 ;; 推奨設定を行う
 ;;(tss-config-default)
+
