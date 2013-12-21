@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: contest
+# key: contest
+# --
+#include <cstdio>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  $0
+  return 0;
+}

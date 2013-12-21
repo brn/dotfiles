@@ -16,3 +16,21 @@
 [submodule ".emacs.d/elisps/js2-refactor"]
 	path = .emacs.d/elisps/js2-refactor
 	url = git://github.com/magnars/js2-refactor.el.git
+[submodule ".emacs.d/elisps/foreign-regexp"]
+	path = .emacs.d/elisps/foreign-regexp
+	url = https://github.com/k-talo/foreign-regexp.el.git
+[submodule ".emacs.d/elisps/exec-path-from-shell"]
+	path = .emacs.d/elisps/exec-path-from-shell
+	url = https://github.com/purcell/exec-path-from-shell.git
+[submodule ".emacs.d/elisps/json-mode"]
+	path = .emacs.d/elisps/json-mode
+	url = https://github.com/joshwnj/json-mode.git
+[submodule ".emacs.d/elisps/less-mode"]
+	path = .emacs.d/elisps/less-mode
+	url = https://github.com/myfreeweb/less-mode.git
+[submodule ".emacs.d/elisps/popup-el"]
+	path = .emacs.d/elisps/popup-el
+	url = https://github.com/auto-complete/popup-el.git
+[submodule ".emacs.d/elisps/scss-mode"]
+	path = .emacs.d/elisps/scss-mode
+	url = https://github.com/antonj/scss-mode.git
