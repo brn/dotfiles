@@ -8,6 +8,7 @@
 var pathutil = require('path');
 var exec = require('child_process').exec;
 var log = require('./log');
+var fs = require('fs');
 
 
 module.exports = function(grunt) {
@@ -31,13 +32,25 @@ module.exports = function(grunt) {
       }).join(' ');
   var elisps = grunt.file.expand('./elisps/**/*.el');
   var init = grunt.file.expand('./init/*.el');
-  var command = 'emacs --batch ' + loadPath +  ' -f batch-byte-compile ';
+  var command = 'emacs -Q --batch ' + loadPath +  ' -f batch-byte-compile ';
 
   log.info('load path : %s', loadPath);
+
+  function isUpdated(src, dest) {
+    if (!fs.existsSync(dest)) {
+      return true;
+    }
+    return fs.statSync(src).mtime > fs.statSync(dest).mtime;
+  }
 
   grunt.registerTask('byte-compile-elisps', '', function() {
     var done = this.async();
     grunt.util.async.forEachSeries(elisps, function(file, next) {
+      if (!isUpdated(file, file.replace(/\.el$/, '.elc'))) {
+        log.info('[%s] is not updated. skip.'.cyan, file);
+        return next();
+      }
+      log.info('Byte-compile [%s].'.cyan, file);
       proc(command + file, function() {
         next();
       });
@@ -47,6 +60,11 @@ module.exports = function(grunt) {
   grunt.registerTask('byte-compile-init', '', function() {
     var done = this.async();
     grunt.util.async.forEachSeries(init, function(file, next) {
+      var dest = file.replace(/\/init\//, '/init/cmp/') + 'c';
+      if (!isUpdated(file, dest)) {
+        log.info('[%s] is not updated. skip.'.cyan, file);
+        return next();
+      }
       proc(command + file, function() {
         next();
       });
@@ -57,6 +75,7 @@ module.exports = function(grunt) {
         grunt.file.copy(file, dest);
         grunt.file['delete'](file);
       });
+      done();
     });
   });
 
