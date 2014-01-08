@@ -70,6 +70,7 @@
 ;;ボックス選択のキー
 ;;ターミナルから起動した時用
 (global-set-key "\C-c\C-m" 'cua-set-rectangle-mark)
+(global-set-key "\C-c\C-o" 'anything-filelist+)
 ;;tabifyしない
 (setq cua-auto-tabify-rectangles nil)
 ;;選択領域のハイライト

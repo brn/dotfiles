@@ -1,4 +1,7 @@
 (global-set-key [?\C-;] 'jump-to-file)
+(global-set-key (kbd "C-c C-;") 'insert-file-name)
+(global-set-key "\C-c\C-u" 'insert-uuid-4)
+(global-set-key "\M-y" 'anything-show-kill-ring)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

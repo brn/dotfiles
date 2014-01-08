@@ -1,7 +1,7 @@
 (let ((default-directory (expand-file-name "~/.emacs.d/elisps")))
   (add-to-list 'load-path default-directory)
   (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-      (normal-top-level-add-subdirs-to-load-path)))
+       (normal-top-level-add-subdirs-to-load-path)))
 
 (require 'exec-path-from-shell)
 (require 'tramp)
@@ -24,6 +24,7 @@
 (require 'powershell-mode)
 (require 'log4e)
 (require 'yaxception)
+(require 'uuid)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
 (require 'moccur-edit)
