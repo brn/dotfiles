@@ -10,12 +10,11 @@
 
 (defun extname-from(filepath nil?)
   "Extract extname from file path"
-  (let (ext pos)
-    (setq pos (string-match "\\.[a-z]+$" filepath))
-    (if pos
-        (setq ext (substring filepath (match-beginning 0) (match-end 0)))
-      (setq ext (if nil nil ""))
-    ext)))
+  (let ((pos (string-match "\\.[a-z]+$" filepath)))
+    (let ((ext (if pos
+                   (substring filepath (match-beginning 0) (match-end 0))
+                 (if nil? nil ""))))
+      ext)))
 
 
 ;; 現在の位置からファイル名を取得、バッファ入れ替え
@@ -32,9 +31,9 @@
                      (progn
                        (setq match (expand-file-name (match-string 0)))
                        (if (> (length match) 2)
-                           (progn
+                           (let ((extension (extname-from match t)))
                              (setq fullpath
-                                   (if (null (extname-from match t))
+                                   (if (null extension)
                                        (concat match ext)
                                      match))
                              (setq case-fold-search case-fold)
