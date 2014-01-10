@@ -4,6 +4,7 @@
 
 (add-hook 'typescript-mode-hook
           '(lambda ()
+             (define-key typescript-mode-map  "{" 'brace-ret-brace)
              (auto-complete-mode 1)))
 
 ;;(require 'tss)
