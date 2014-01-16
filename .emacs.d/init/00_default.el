@@ -127,3 +127,5 @@
       (append '((".h$" . c++-mode))
               auto-mode-alist))
 (setq inhibit-startup-screen -1)
+
+(setq font-lock-maximum-decoration '((c++-mode . 2)))
