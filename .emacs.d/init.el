@@ -25,6 +25,7 @@
 (require 'log4e)
 (require 'yaxception)
 (require 'uuid)
+(require 'ftl)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
 (require 'moccur-edit)

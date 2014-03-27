@@ -10,7 +10,7 @@ each lines in a list will be formatted by `js-doc-format-string'
 and inserted to the top of current buffer.")
 
 ;;authorだけ設定
-(setq js-doc-author "Taketshi Aono")
+(setq js-doc-author "Taketoshi Aono")
 
 (add-hook 'typescript-mode-hook
           '(lambda ()

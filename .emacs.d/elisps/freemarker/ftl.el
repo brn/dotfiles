@@ -45,8 +45,8 @@
 ;;;###autoload
 (defcustom ftl-mode nil
   "*If non-nil, fontify ftl code"
-  :type 'boolean) 
-(make-variable-buffer-local 'ftl-mode) 
+  :type 'boolean)
+(make-variable-buffer-local 'ftl-mode)
 
 ;;;###autoload
 (defcustom ftl-minor-mode-string " FTL"
@@ -196,4 +196,3 @@ the mode, respectively."
 ;;      (list comment   '(0 font-lock-comment-face t)))))
 
 (provide 'ftl)
-
