@@ -31,7 +31,7 @@
              (local-set-key "\C-ci" 'js-doc-insert-function-doc)
              (local-set-key "\C-c@" 'js-doc-insert-tag)
              (local-set-key "\C-cf" 'js-doc-insert-file-doc)
-             (setq js2-additional-externs '("jQuery" "$" "goog" "ko" "camp" "describe" "it" "before" "beforeEach" "after" "afterEach" "assert"))
+             (setq js2-additional-externs '("jQuery" "$" "goog" "ko" "camp" "describe" "it" "before" "beforeEach" "after" "afterEach" "assert", "cats"))
              (setq javascript-indent-level 2
                    javascript-expr-indent-offset 2
                    indent-tabs-mode nil)
