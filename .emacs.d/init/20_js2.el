@@ -24,7 +24,8 @@
 '(js2-skip-preprocessor-directives nil)
 '(js2-strict-inconsistent-return-warning nil)
 '(js2-use-ast-for-indentation-p t)
-'(js2-auto-insert-semicolon t))
+'(js2-auto-insert-semicolon t)
+'(js2-allow-keywords-as-property-names t))
 
 (add-hook 'js2-mode-hook
           '(lambda ()
