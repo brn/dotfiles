@@ -23,6 +23,7 @@
     auto-complete
     actionscript-mode
     color-moccur
+    nodejs-repl
     log4e
     powershell-mode
     coffee-mode
