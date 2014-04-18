@@ -45,17 +45,7 @@
 
 
 
-;;windowsの際のフォントサイズ修正
-(if (os-type-is-win?)
-    (progn
-      (create-fontset-from-ascii-font "-apple-Bitstream_Vera_Sans_Mono-medium-normal-normal-*-10-*-*-*-m-0-iso10646-1" nil "BitstreamMarugo")
-      (set-frame-font "fontset-bitstreammarugo")
-      (set-fontset-font (frame-parameter nil 'font)
-                        'unicode
-                        (font-spec :family "A-OTF Shin Go Pro" :size 8)
-                        nil
-                        'append)))
-
+;;macの際のフォントサイズ修正
 (if (os-type-is-mac?)
     (progn
       (create-fontset-from-ascii-font "-apple-Bitstream_Vera_Sans_Mono-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1" nil "BitstreamMarugo")
