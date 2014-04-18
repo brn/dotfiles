@@ -1,8 +1,9 @@
 ;; js2-mode
-(autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '(".js$" . js2-mode))
 (add-to-list 'auto-mode-alist '(".mayaa$" . xml-mode))
 (add-to-list 'auto-mode-alist '(".as$" . javascript-mode))
+
+(js2r-add-keybindings-with-prefix "C-c C-m")
 
 (custom-set-variables
 '(js2-strict-missing-semi-warning t)
@@ -32,6 +33,7 @@
              (local-set-key "\C-ci" 'js-doc-insert-function-doc)
              (local-set-key "\C-c@" 'js-doc-insert-tag)
              (local-set-key "\C-cf" 'js-doc-insert-file-doc)
+             (local-set-key (kbd "RET") (key-binding (kbd "M-j")))
              (setq js2-additional-externs '("jQuery" "$" "goog" "ko" "camp" "describe" "it" "before" "beforeEach" "after" "afterEach" "assert" "cats"))
              (setq javascript-indent-level 2
                    javascript-expr-indent-offset 2

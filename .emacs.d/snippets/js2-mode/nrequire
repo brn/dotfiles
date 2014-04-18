@@ -2,4 +2,4 @@
 # name: nrequire
 # key: nrequire
 # --
-var ${1:$(yas-util-get-class-from-module text "/")} = require('$1');
+var ${1:$(yas-util-get-class-from-module yas-text "/")} = require('$1');

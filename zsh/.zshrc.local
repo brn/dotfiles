@@ -46,4 +46,13 @@ function pass-of {
   cat ~/camp-pass/pass.txt | jq --raw-output '.["'$1'"]'
 }
 
+function update-closure-compiler {
+  local dir=$(mktemp -d "/tmp/closure-compiler.XXXXXXXXX")
+  local tmpfile=`basename $dir`.tar.gz
+  local save_path=/tmp/$tmpfile
+  wget -O $save_path http://dl.google.com/closure-compiler/compiler-latest.tar.gz
+  tar -xvzf $save_path -C $dir &&\
+  sudo mv $dir/compiler.jar /usr/local/bin/closure-compiler.jar && rm -rf $save_path && rm -rf $dir
+}
+
 node-use

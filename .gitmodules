@@ -1,39 +1,9 @@
-[submodule ".emacs.d/elisps/yasnippet"]
-	path = .emacs.d/elisps/yasnippet
-	url = git@github.com:capitaomorte/yasnippet.git
-[submodule ".emacs.d/elisps/zencoding"]
-	path = .emacs.d/elisps/zencoding
-	url = git@github.com:rooney/zencoding.git
-[submodule ".emacs.d/elisps/js-doc"]
-	path = .emacs.d/elisps/js-doc
-	url = git@github.com:brn/js-doc
-[submodule ".emacs.d/elisps/dash"]
-	path = .emacs.d/elisps/dash
-	url = git://github.com/magnars/dash.el.git
-[submodule ".emacs.d/elisps/multiple-cursors"]
-	path = .emacs.d/elisps/multiple-cursors
-	url = git://github.com/magnars/multiple-cursors.el.git
-[submodule ".emacs.d/elisps/js2-refactor"]
-	path = .emacs.d/elisps/js2-refactor
-	url = git://github.com/magnars/js2-refactor.el.git
 [submodule ".emacs.d/elisps/foreign-regexp"]
 	path = .emacs.d/elisps/foreign-regexp
 	url = https://github.com/k-talo/foreign-regexp.el.git
-[submodule ".emacs.d/elisps/exec-path-from-shell"]
-	path = .emacs.d/elisps/exec-path-from-shell
-	url = https://github.com/purcell/exec-path-from-shell.git
-[submodule ".emacs.d/elisps/json-mode"]
-	path = .emacs.d/elisps/json-mode
-	url = https://github.com/joshwnj/json-mode.git
 [submodule ".emacs.d/elisps/less-mode"]
 	path = .emacs.d/elisps/less-mode
 	url = https://github.com/myfreeweb/less-mode.git
-[submodule ".emacs.d/elisps/popup-el"]
-	path = .emacs.d/elisps/popup-el
-	url = https://github.com/auto-complete/popup-el.git
 [submodule ".emacs.d/elisps/scss-mode"]
 	path = .emacs.d/elisps/scss-mode
 	url = https://github.com/antonj/scss-mode.git
-[submodule ".emacs.d/elisps/js2-mode"]
-	path = .emacs.d/elisps/js2-mode
-	url = git@github.com:mooz/js2-mode.git

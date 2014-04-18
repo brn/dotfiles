@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: lamba
+# key: lamba
+# binding: C-c C-l
+# --
+function($1) {
+  $0
+}
