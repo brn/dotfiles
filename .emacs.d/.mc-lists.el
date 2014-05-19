@@ -4,6 +4,7 @@
 (setq mc/cmds-to-run-for-all
       '(
         anything-exit-minibuffer
+        yas-expand
         ))
 
 (setq mc/cmds-to-run-once

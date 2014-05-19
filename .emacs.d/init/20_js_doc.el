@@ -14,7 +14,7 @@ and inserted to the top of current buffer.")
 
 (add-hook 'typescript-mode-hook
           '(lambda ()
-             (local-set-key "\C-ci" 'js-doc-insert-function-doc)
+             (local-set-key "\C-ci" 'java-doc-like)
              (local-set-key "\C-c@" 'js-doc-insert-tag)
              (local-set-key "\C-cf" 'js-doc-insert-file-doc)
              )

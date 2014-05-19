@@ -5,6 +5,7 @@
 (add-hook 'typescript-mode-hook
           '(lambda ()
              (define-key typescript-mode-map  "{" 'brace-ret-brace)
+             (define-key typescript-mode-map  "\C-c\C-j" 'java-doc-ret)
              (auto-complete-mode 1)))
 
 ;;(require 'tss)
