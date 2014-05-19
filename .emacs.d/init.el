@@ -75,6 +75,8 @@
 (require 'yaxception)
 (require 'uuid)
 (require 'ftl)
+(require 'haskell-mode)
+(require 'haskell-cabal)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
 (require 'moccur-edit)
