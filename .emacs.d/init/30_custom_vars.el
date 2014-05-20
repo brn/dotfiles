@@ -28,7 +28,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "outline" :family "Bitstream Vera Sans Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "outline" :family "DejaVu Sans Mono"))))
  '(dired-symlink ((t (:foreground "brightblue"))))
  '(font-lock-builtin-face ((((class color) (min-colors 88) (background dark)) (:foreground "#0000ff"))))
  '(font-lock-function-name-face ((t (:foreground "#66ff00"))))
@@ -48,12 +48,14 @@
 ;;macの際のフォントサイズ修正
 (if (os-type-is-mac?)
     (progn
-      (create-fontset-from-ascii-font "-apple-Bitstream_Vera_Sans_Mono-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1" nil "BitstreamMarugo")
-      (set-frame-font "fontset-bitstreammarugo")
+      (create-fontset-from-ascii-font "-apple-DejaVu_Sans_Mono-medium-normal-normal-*-*-*-*-*-m-0-iso10646-1" nil "dejavumarugo")
       (set-fontset-font (frame-parameter nil 'font)
                         'unicode
                         (font-spec :family "A-OTF Shin Go Pro" :size 10)
                         nil
-                        'append)))
+                        'append)
+      (add-to-list 'default-frame-alist
+                   '(font . "dejavumarugo"))
+      ))
 
 (setq face-font-rescale-alist '(("A-OTF.*" . 1.2)))

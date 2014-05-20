@@ -10,4 +10,5 @@
 (if (os-type-is-win?) (setq haskell-program-name "ghci"))
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (add-hook 'haskell-mode-hook 'haskell-mode-delete-key)
-  
+(add-hook 'haskell-mode-hook (lambda () (set-input-method "haskell-unicode")))
+(setq haskell-program-name "/usr/local/bin/ghci")

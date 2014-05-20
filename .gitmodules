@@ -7,3 +7,6 @@
 [submodule ".emacs.d/elisps/scss-mode"]
 	path = .emacs.d/elisps/scss-mode
 	url = https://github.com/antonj/scss-mode.git
+[submodule ".emacs.d/elisps/emacs-haskell-unicode-input-method"]
+	path = .emacs.d/elisps/emacs-haskell-unicode-input-method
+	url = git@github.com:roelvandijk/emacs-haskell-unicode-input-method.git

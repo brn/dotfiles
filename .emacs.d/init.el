@@ -42,6 +42,7 @@
     yaml-mode
     open-junk-file
     haskell-mode
+    pretty-symbols
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -52,6 +53,7 @@
     (dolist (pkg not-installed)
         (package-install pkg))))
 
+(require 'haskell-unicode-input-method)
 (require 'exec-path-from-shell)
 (require 'coffee-mode)
 (require 'anything-startup)
