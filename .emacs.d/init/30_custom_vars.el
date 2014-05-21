@@ -21,41 +21,34 @@
  '(sr-speedbar-auto-refresh t)
  '(sr-speedbar-max-width 200)
  '(sr-speedbar-width 60 t)
- '(sr-speedbar-width-console 150))
+ '(sr-speedbar-width-console 150)
  '(speedbar-add-supported-extension '(".js" ".as" ".html" ".css" ".php"))
+ '(haskell-font-lock-symbols t))
+
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "outline" :family "DejaVu Sans Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal))))
  '(dired-symlink ((t (:foreground "brightblue"))))
  '(font-lock-builtin-face ((((class color) (min-colors 88) (background dark)) (:foreground "#0000ff"))))
  '(font-lock-function-name-face ((t (:foreground "#66ff00"))))
  '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "#22aaff" :weight bold))))
  '(hi-blue-b ((((min-colors 88)) (:foreground "brightblue" :weight bold))))
  '(js2-instance-member-face ((t (:foreground "green"))))
- '(link ((((class color) (min-colors 88) (background light)) (:foreground "green
-" :underline t))))
+ '(link ((((class color) (min-colors 88) (background light)) (:foreground "green" :underline t))))
  '(minibuffer-prompt ((t (:foreground "yellow"))))
  '(speedbar-directory-face ((((class color) (background light)) (:foreground "yellow"))))
  '(vhdl-speedbar-architecture-selected-face ((((min-colors 88) (class color) (background light)) (:foreground "brightblue" :underline t)))))
 
 (setq-default line-spacing 2)
 
-
-
 ;;macの際のフォントサイズ修正
 (if (os-type-is-mac?)
-    (progn
-      (create-fontset-from-ascii-font "-apple-DejaVu_Sans_Mono-medium-normal-normal-*-*-*-*-*-m-0-iso10646-1" nil "dejavumarugo")
-      (set-fontset-font (frame-parameter nil 'font)
-                        'unicode
-                        (font-spec :family "A-OTF Shin Go Pro" :size 10)
-                        nil
-                        'append)
-      (add-to-list 'default-frame-alist
-                   '(font . "dejavumarugo"))
-      ))
+    (let* ((fontset-name "dejavumarugo")
+           (jp-fontspec (font-spec :family "A-OTF Shin Maru Go Pro" :size 10))
+           (fsn (create-fontset-from-ascii-font "-apple-DejaVu_Sans_Mono-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1" nil fontset-name)))
+      (set-fontset-font fsn 'japanese-jisx0213.2004-1 jp-fontspec)
+      (set-fontset-font fsn 'japanese-jisx0213-2 jp-fontspec)
+      (set-fontset-font fsn 'katakana-jisx0201 jp-fontspec)
+      (add-to-list 'default-frame-alist '(font . "fontset-dejavumarugo"))
+      (set-face-font 'default "fontset-dejavumarugo")))
 
 (setq face-font-rescale-alist '(("A-OTF.*" . 1.2)))
