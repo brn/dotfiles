@@ -71,6 +71,19 @@
 ;;ターミナルから起動した時用
 (global-set-key "\C-c\C-m" 'cua-set-rectangle-mark)
 (global-set-key "\C-c\C-o" 'anything-filelist+)
+
+;;コピーせずに削除
+(defun delete-word (arg)
+  (interactive "p")
+  (delete-region (point) (progn (forward-word arg) (point))))
+
+(defun backward-delete-word (arg)
+  (interactive "p")
+  (delete-word (- arg)))
+
+(global-set-key (kbd "\C-v") 'delete-word)
+(global-set-key [C-backspace] 'backward-delete-word)
+
 ;;tabifyしない
 (setq cua-auto-tabify-rectangles nil)
 ;;選択領域のハイライト
