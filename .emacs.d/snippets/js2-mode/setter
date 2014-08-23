@@ -3,10 +3,10 @@
 # key: set
 # --
 /**
- * ${2:$(yas-util-upper-to-lower-camel text)}の設定
- * @param {$3} ${2:$(yas-util-upper-to-lower-camel text)}
+ * ${2:$(yas-util-upper-to-lower-camel yas-text)}の設定
+ * @param {$3} ${2:$(yas-util-upper-to-lower-camel yas-text)}
  */
-`(yas-util-get-last-constructor)`.prototype.set$2 = function(${2:$(yas-util-upper-to-lower-camel text)}) {
-  this._${2:$(yas-util-upper-to-lower-camel text)} = ${2:$(yas-util-upper-to-lower-camel text)};
+`(yas-util-get-last-constructor)`.prototype.set$2 = function(${2:$(yas-util-upper-to-lower-camel yas-text)}) {
+  this._${2:$(yas-util-upper-to-lower-camel yas-text)} = ${2:$(yas-util-upper-to-lower-camel yas-text)};
 };
 $0

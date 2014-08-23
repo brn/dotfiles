@@ -4,18 +4,18 @@
 # binding: C-x y p
 # --
 /**
- * ${2:$(yas-util-upper-to-lower-camel text)}の取得
- * @param {$3} ${2:$(yas-util-upper-to-lower-camel text)}
+ * ${2:$(yas-util-upper-to-lower-camel yas-text)}の取得
+ * @param {$3} ${2:$(yas-util-upper-to-lower-camel yas-text)}
  */
-`(yas-util-get-last-constructor)`.prototype.set$2 = function(${2:$(yas-util-upper-to-lower-camel text)}) {
-  this._${2:$(yas-util-upper-to-lower-camel text)} = ${2:$(yas-util-upper-to-lower-camel text)};
+`(yas-util-get-last-constructor)`.prototype.set$2 = function(${2:$(yas-util-upper-to-lower-camel yas-text)}) {
+  this._${2:$(yas-util-upper-to-lower-camel yas-text)} = ${2:$(yas-util-upper-to-lower-camel yas-text)};
 };
 
 
 /**
- * ${2:$(yas-util-upper-to-lower-camel text)}の設定
+ * ${2:$(yas-util-upper-to-lower-camel yas-text)}の設定
  * @return {$3}
  */
 `(yas-util-get-last-constructor)`.prototype.get$2 = function() {
-  return this._${2:$(yas-util-upper-to-lower-camel text)};
+  return this._${2:$(yas-util-upper-to-lower-camel yas-text)};
 };

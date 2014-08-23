@@ -4,4 +4,5 @@
               (lambda ()
                 (setq css-indent-offset 2)
                 (define-key css-mode-map "{" 'brace-ret-brace)
+                (flymake-mode-off)
                 ))

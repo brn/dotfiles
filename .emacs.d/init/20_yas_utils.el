@@ -76,10 +76,11 @@
   (save-excursion
     (progn
       (let ((case-fold (setq case-fold-search nil))
-            (match ""))
-        (if (re-search-backward "\\(exports\\.\\([A-Z][a-zA-Z0-9$_]*\\)\\)\\|\\(function \\([A-Z][a-zA-Z0-9$_]*\\)\\)\\|\\(var \\([A-Z][a-zA-Z0-9$_]*\\)\\)\\|\\(\\([A-Z][a-zA-Z0-9$_]*\\) \\= \\)" nil t)
+            (match "")
+            (regexp "\\(exports\\.\\([A-Z][a-zA-Z0-9$_]*\\)\\)\\|\\(function \\([A-Z][a-zA-Z0-9$_]*\\)\\)\\|\\(var \\([A-Z][a-zA-Z0-9$_]*\\)\\)\\|\\(\\([A-Z][a-zA-Z0-9$_]*\\) \\= \\)\\|\\(^[a-zA-Z0-9$_.]*\\.[A-Z][a-zA-Z0-9$_]*\\)"))
+        (if (re-search-backward regexp nil t)
             (progn
-              (re-search-forward "\\(exports.[A-Z][a-zA-Z0-9$_]+\\|[A-Z][a-zA-Z0-9_$]+\\)" nil t)
+              (re-search-forward "\\(exports.[A-Z][a-zA-Z0-9$_]+\\|[A-Z][a-zA-Z0-9_$]+\\|^[a-zA-Z][a-zA-Z0-9$_.]*\\.[A-Z][a-zA-Z0-9$_]*\\)" nil t)
               (setq match (match-string 0))
               (setq case-fold-search case-fold))
           (progn
