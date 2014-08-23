@@ -36,6 +36,10 @@ alias ssh-tagmng-dev='ssh -i ~/Desktop/aono_taketoshi/devtag/id_rsa devtag@10.12
 alias serve='zsh -c "cd ~/github/simple_dev_env/ && node server.js"'
 eval "$(rbenv init -)"
 
+function tssh() {
+  panewrap $1 && ssh $@
+}
+
 function java_use() {
     export JAVA_HOME=$(/usr/libexec/java_home -v $1)
     export PATH=$JAVA_HOME/bin:$PATH
@@ -81,3 +85,5 @@ function update-closure-compiler {
 node-use
 
 compdef _pass-of pass-of
+
+panewrap () { printf '\033k%s\033\\' "$1"; }
