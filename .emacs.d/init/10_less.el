@@ -1,4 +1,3 @@
-(require 'less-mode)
 (add-to-list 'auto-mode-alist '("\\.less$" . less-mode))
 (add-hook 'css-mode-hook
               (lambda ()

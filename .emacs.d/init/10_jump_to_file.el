@@ -54,15 +54,15 @@
 
 ;; 現在の位置に選択されたファイル名を相対パスで挿入する
 (defun insert-file-name()
-  "Insert the file path which is specified through the `anything-find-file`."
+  "Insert the file path which is specified through the `helm-find-file`."
   (interactive)
-  (let ((file-name buffer-file-name) set-current-dot target-filename (target (car (anything-find-file))))
+  (let ((file-name buffer-file-name) set-current-dot target-filename (target (buffer-file-name (helm-find-files nil))))
     (if target
         (progn
           (setq target-filename (file-relative-name target (file-name-directory file-name)))
           (setq set-current-dot (string= (file-name-directory target-filename) (file-name-directory file-name)))
           (message "%s" set-current-dot)
-          (anything-run-after-quit
+          (helm-run-after-quit
            '(lambda(target-filename file-name set-current-dot)
               (find-file file-name)
               (if set-current-dot

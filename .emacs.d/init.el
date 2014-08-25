@@ -20,6 +20,7 @@
   '(
     ;; ここに使っているパッケージを書く。
     init-loader
+    helm
     auto-complete
     actionscript-mode
     color-moccur
@@ -43,6 +44,7 @@
     open-junk-file
     haskell-mode
     pretty-symbols
+    mark-multiple
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -56,10 +58,10 @@
 (require 'haskell-unicode-input-method)
 (require 'exec-path-from-shell)
 (require 'coffee-mode)
-(require 'anything-startup)
-(require 'anything-config)
 (require 'auto-complete)
 (require 'auto-complete-config)
+(require 'typescript)
+(require 'less-mode)
 (ac-config-default)
 (setq ac-auto-start 3)
 (require 'auto-install)
@@ -79,7 +81,10 @@
 (require 'ftl)
 (require 'haskell-mode)
 (require 'haskell-cabal)
+(require 'inline-string-rectangle)
+(require 'mark-more-like-this)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
 (require 'moccur-edit)
 (require 'multi-term)
+

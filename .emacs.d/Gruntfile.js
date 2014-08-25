@@ -26,15 +26,10 @@ module.exports = function(grunt) {
     });
     p.on('exit', done);
   }
-
-  var loadPath = grunt.file.expand('./elisps/*').map(function(path) {
-        return '-L ' + pathutil.resolve(path).replace(/\\/g, '/');
-      }).join(' ');
+  
   var elisps = grunt.file.expand('./elisps/**/*.el');
   var init = grunt.file.expand('./init/*.el');
-  var command = 'emacs -Q --batch ' + loadPath +  ' -f batch-byte-compile ';
-
-  log.info('load path : %s', loadPath);
+  var command = 'emacs -Q --batch  -f batch-byte-compile ';
 
   function isUpdated(src, dest) {
     if (!fs.existsSync(dest)) {

@@ -27,16 +27,23 @@
 
 (custom-set-faces
  '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal))))
- '(dired-symlink ((t (:foreground "brightblue"))))
- '(font-lock-builtin-face ((((class color) (min-colors 88) (background dark)) (:foreground "#0000ff"))))
+ '(font-lock-builtin-face ((t (:bold t :foreground "#00AAFF"))))
+ '(dired-symlink ((t (:foreground "#00AAFF"))))
  '(font-lock-function-name-face ((t (:foreground "#66ff00"))))
  '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "#22aaff" :weight bold))))
- '(hi-blue-b ((((min-colors 88)) (:foreground "brightblue" :weight bold))))
+ '(hi-blue-b ((((min-colors 88)) (:foreground "#00AAFF" :weight bold))))
  '(js2-instance-member-face ((t (:foreground "green"))))
  '(link ((((class color) (min-colors 88) (background light)) (:foreground "green" :underline t))))
  '(minibuffer-prompt ((t (:foreground "yellow"))))
  '(speedbar-directory-face ((((class color) (background light)) (:foreground "yellow"))))
- '(vhdl-speedbar-architecture-selected-face ((((min-colors 88) (class color) (background light)) (:foreground "brightblue" :underline t)))))
+ '(helm-ff-file ((t (:inherit font-lock-builtin-face :foreground "#00AAff"))))
+ '(vhdl-speedbar-architecture-selected-face ((((min-colors 88) (class color) (background light)) (:foreground "#00AAFF" :underline t)))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(minibuffer-prompt ((t (:foreground "#00AAFF")))))
 
 (setq-default line-spacing 2)
 
