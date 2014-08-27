@@ -10,3 +10,6 @@
 [submodule ".emacs.d/elisps/emacs-haskell-unicode-input-method"]
 	path = .emacs.d/elisps/emacs-haskell-unicode-input-method
 	url = git@github.com:roelvandijk/emacs-haskell-unicode-input-method.git
+[submodule "tmux/tmux-powerline"]
+	path = tmux/tmux-powerline
+	url = https://github.com/erikw/tmux-powerline.git

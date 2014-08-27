@@ -1,7 +1,6 @@
 (global-set-key [?\C-;] 'jump-to-file)
 (global-set-key (kbd "C-c C-;") 'insert-file-name)
 (global-set-key "\C-c\C-u" 'insert-uuid-4)
-(global-set-key "\M-y" 'anything-show-kill-ring)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -36,7 +35,8 @@
  '(link ((((class color) (min-colors 88) (background light)) (:foreground "green" :underline t))))
  '(minibuffer-prompt ((t (:foreground "yellow"))))
  '(speedbar-directory-face ((((class color) (background light)) (:foreground "yellow"))))
- '(helm-ff-file ((t (:inherit font-lock-builtin-face :foreground "#00AAff"))))
+ '(helm-ff-file ((t (:inherit font-lock-builtin-face :foreground "#FFFFFF"))))
+ '(helm-ff-directory ((t (:inherit font-lock-builtin-face :foreground "#0099FF"))))
  '(vhdl-speedbar-architecture-selected-face ((((min-colors 88) (class color) (background light)) (:foreground "#00AAFF" :underline t)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

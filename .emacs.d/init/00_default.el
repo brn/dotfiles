@@ -101,6 +101,9 @@
   (other-window 1))
 (global-set-key (kbd "C-t") 'other-window-or-split)
 
+;; trampの設定
+(setq tramp-default-method "ssh")
+
 
 ;;入力メソッド
 (if (boundp 'input-method-alist)

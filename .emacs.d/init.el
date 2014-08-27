@@ -20,7 +20,7 @@
   '(
     ;; ここに使っているパッケージを書く。
     init-loader
-    helm
+    helm 
     auto-complete
     actionscript-mode
     color-moccur
@@ -45,6 +45,7 @@
     haskell-mode
     pretty-symbols
     mark-multiple
+    powerline
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -55,7 +56,10 @@
     (dolist (pkg not-installed)
         (package-install pkg))))
 
+(require 'tramp)
+(require 'helm-config)
 (require 'haskell-unicode-input-method)
+(require 'powerline)
 (require 'exec-path-from-shell)
 (require 'coffee-mode)
 (require 'auto-complete)
