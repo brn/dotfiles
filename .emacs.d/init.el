@@ -46,6 +46,7 @@
     pretty-symbols
     mark-multiple
     powerline
+    jaunte
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -87,6 +88,7 @@
 (require 'haskell-cabal)
 (require 'inline-string-rectangle)
 (require 'mark-more-like-this)
+(require 'jaunte)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
 (require 'moccur-edit)

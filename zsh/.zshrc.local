@@ -33,7 +33,6 @@ alias refresh_p='source ~/.zshrc'
 alias ll='ls -l'
 alias ssh-tag-server-dev='ssh -i ~/Desktop/aono_taketoshi/devtag/id_rsa devtag@10.123.195.11'
 alias ssh-tagmng-dev='ssh -i ~/Desktop/aono_taketoshi/devtag/id_rsa devtag@10.123.195.21'
-alias serve='zsh -c "cd ~/github/simple_dev_env/ && node server.js"'
 eval "$(rbenv init -)"
 
 function tssh() {
@@ -44,6 +43,12 @@ function java_use() {
     export JAVA_HOME=$(/usr/libexec/java_home -v $1)
     export PATH=$JAVA_HOME/bin:$PATH
     java -version
+}
+
+
+function serve {
+  cd ~/github/simple_dev_env/
+  node server.js $@
 }
 
 reattach-to-user-namespace launchctl setenv NODE_HOME $HOME/.nodebrew/current/bin
