@@ -89,6 +89,7 @@
 (require 'inline-string-rectangle)
 (require 'mark-more-like-this)
 (require 'jaunte)
+(require 'gyp)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
 (require 'moccur-edit)
