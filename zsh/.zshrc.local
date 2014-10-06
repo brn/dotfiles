@@ -47,8 +47,10 @@ function java_use() {
 
 
 function serve {
+  local cwd=`pwd`
   cd ~/github/simple_dev_env/
   node server.js $@
+  cd $cwd;
 }
 
 reattach-to-user-namespace launchctl setenv NODE_HOME $HOME/.nodebrew/current/bin
