@@ -9,3 +9,6 @@
          (local-set-key "\M-s" 'gtags-find-symbol)
          (local-set-key "\C-t" 'gtags-pop-stack)
          ))
+(add-hook 'java-mode-hook (lambda () (gtags-mode 1))) 
+(add-hook 'c-mode-hook (lambda () (gtags-mode 1))) 
+(add-hook 'c++-mode-hook (lambda () (gtags-mode 1))) 

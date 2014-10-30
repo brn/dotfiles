@@ -47,6 +47,7 @@
     mark-multiple
     powerline
     jaunte
+    gtags
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -93,5 +94,4 @@
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
 (require 'moccur-edit)
-(require 'multi-term)
 

@@ -1,7 +1,9 @@
 (1
- (livecoder .
-	    [(0 0 2)
-	     nil "tools for live coders" single])
+ (git-draft .
+	    [(0 0 1)
+	     ((dash
+	       (2 9 0)))
+	     "draft git commit messages" single])
  (zone-matrix .
 	      [(0 0 1)
 	       nil "Matrix themed Zone mode" tar])
@@ -1466,7 +1468,7 @@
 	      (1 6 8)))
 	    "Blog from Org mode to wordpress" tar])
  (org-trello .
-	     [(0 6 1)
+	     [(0 6 2)
 	      ((request-deferred
 		(0 1 0))
 	       (deferred
@@ -1993,6 +1995,9 @@
  (livescript-mode .
 		  [(0 0 1)
 		   nil "Major mode for LiveScript files in Emacs" single])
+ (livecoder .
+	    [(0 0 2)
+	     nil "tools for live coders" single])
  (list-utils .
 	     [(0 4 2)
 	      nil "List-manipulation utility functions" single])
@@ -2548,7 +2553,7 @@
 	   [(1 6)
 	    nil "goto last change" single])
  (google-translate .
-		   [(0 10 2)
+		   [(0 10 4)
 		    nil "Emacs interface to Google Translate." tar])
  (god-mode .
 	   [(2 12 0)
@@ -2662,6 +2667,9 @@
  (gather .
 	 [(1 0 4)
 	  nil "Gather string in buffer." single])
+ (garoon .
+	 [(0 0 1)
+	  nil "A Garoon client." single])
  (gandalf-theme .
 		[(0 1)
 		 nil "Gandalf color theme" single])
@@ -3237,7 +3245,7 @@
 	      [(1 0 0)
 	       nil "Major mode for editing Elixir files" single])
  (elixir-mix .
-	     [(0 3 0)
+	     [(1 0 0)
 	      nil "Emacs integration for Elixir's mix" single])
  (elisp-slime-nav .
 		  [(0 7)
@@ -3490,14 +3498,14 @@
 	(0 0 11)))
       "A database for EmacsLisp" single])
  (dash-functional .
-		  [(1 1 0)
+		  [(1 2 0)
 		   ((dash
 		     (2 0 0))
 		    (emacs
 		     (24)))
 		   "Collection of useful combinators for Emacs Lisp" single])
  (dash .
-       [(2 8 0)
+       [(2 9 0)
 	nil "A modern list library for Emacs" single])
  (dart-mode .
 	    [(0 9)
