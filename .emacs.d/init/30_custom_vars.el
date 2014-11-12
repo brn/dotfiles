@@ -22,6 +22,8 @@
  '(sr-speedbar-width 60 t)
  '(sr-speedbar-width-console 150)
  '(speedbar-add-supported-extension '(".js" ".as" ".html" ".css" ".php"))
+ '(foreign-regexp/regexp-type 'javascript)    ; perl や javascript も指定可能
+ '(reb-re-syntax 'foreign-regexp))
  '(haskell-font-lock-symbols t))
 
 (custom-set-faces

@@ -48,6 +48,7 @@
     powerline
     jaunte
     gtags
+    foreign-regexp
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -91,6 +92,7 @@
 (require 'mark-more-like-this)
 (require 'jaunte)
 (require 'gyp)
+(require 'foreign-regexp)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
 (require 'moccur-edit)
