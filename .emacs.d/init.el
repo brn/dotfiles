@@ -49,6 +49,8 @@
     jaunte
     gtags
     foreign-regexp
+    popwin
+    direx
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -93,7 +95,10 @@
 (require 'jaunte)
 (require 'gyp)
 (require 'foreign-regexp)
+(require 'popwin)
+(require 'direx)
+(require 'direx-project)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
 (require 'moccur-edit)
-
+(setq debug-on-error nil)

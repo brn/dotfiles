@@ -28,6 +28,7 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.54/libexec
 export _WK=$WORKSPACE
 export PATH=${JAVA_HOME}/bin:${PATH}
+
 alias emacs="TERM=xterm-256color emacs"
 alias refresh_p='source ~/.zshrc'
 alias ll='ls -l'

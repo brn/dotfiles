@@ -23,7 +23,8 @@
  '(sr-speedbar-width-console 150)
  '(speedbar-add-supported-extension '(".js" ".as" ".html" ".css" ".php"))
  '(foreign-regexp/regexp-type 'javascript)    ; perl や javascript も指定可能
- '(reb-re-syntax 'foreign-regexp))
+ '(reb-re-syntax 'foreign-regexp)
+ '(direx-project:project-root-predicate-functions '(my/direx-root-p))
  '(haskell-font-lock-symbols t))
 
 (custom-set-faces
