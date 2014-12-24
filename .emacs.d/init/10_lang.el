@@ -11,4 +11,7 @@
 (prefer-coding-system 'utf-8)
 
 (if (os-type-is-mac?)
-(mac-set-input-method-parameter "com.google.inputmethod.Japanese.base" `title "あ"))
+    (progn
+      (setq mac-option-modifier 'meta)
+      (setq mac-command-modifier nil)
+      (global-set-key "\C-cf" 'toggle-frame-maximized)))

@@ -51,6 +51,7 @@
     foreign-regexp
     popwin
     direx
+    company
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -69,6 +70,8 @@
 (require 'coffee-mode)
 (require 'auto-complete)
 (require 'auto-complete-config)
+(require 'company)
+(require 'ac-company)
 (require 'typescript)
 (require 'less-mode)
 (ac-config-default)
@@ -98,6 +101,7 @@
 (require 'popwin)
 (require 'direx)
 (require 'direx-project)
+(require 'auto-complete-clang)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
 (require 'moccur-edit)

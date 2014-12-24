@@ -54,7 +54,7 @@
 (if (os-type-is-mac?)
     (let* ((fontset-name "dejavumarugo")
            (jp-fontspec (font-spec :family "Hiragino Kaku Gothic ProN"))
-           (fsn (create-fontset-from-ascii-font "-apple-DejaVu_Sans_Mono-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1" nil fontset-name)))
+           (fsn (create-fontset-from-ascii-font "-*-DejaVu Sans Mono-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1" nil fontset-name)))
       (set-fontset-font fsn 'japanese-jisx0213.2004-1 jp-fontspec)
       (set-fontset-font fsn 'japanese-jisx0213-2 jp-fontspec)
       (set-fontset-font fsn 'katakana-jisx0201 jp-fontspec)

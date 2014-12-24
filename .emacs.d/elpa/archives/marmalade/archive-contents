@@ -3017,7 +3017,7 @@
 			      (24 1)))
 			    "Change mode line color with Flycheck status" single])
  (flycheck-cask .
-		[(0 2)
+		[(0 2 1)
 		 ((emacs
 		   (24 1))
 		  (flycheck
@@ -4242,7 +4242,7 @@
 		      (1 2 0)))
 		    "Yasnippets for AngularJS" tar])
  (android-mode .
-	       [(0 3 3)
+	       [(0 4 0)
 		nil "Minor mode for Android application development" single])
  (anaphora .
 	   [(1 0 0)
