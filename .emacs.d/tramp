@@ -1,10 +1,10 @@
-;; -*- emacs-lisp -*- <14/12/09 23:50:20 /Users/aono_taketoshi/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <15/01/05 21:36:17 /Users/aono_taketoshi/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["ssh" nil "m" nil nil]
-  nil)
- (["ssh" nil "tgm-deploy01a.in.tgmm.jp" nil nil]
+((["ssh" nil "tgm-deploy01a.in.tgmm.jp" nil nil]
   nil)
  (["ssh" nil "stg-ads-ath-dbm01" nil nil]
+  nil)
+ (["ssh" nil "m" nil nil]
   nil))

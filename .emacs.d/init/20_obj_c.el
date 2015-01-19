@@ -9,6 +9,11 @@
 ;;   (setq flymake-check-was-interrupted t))
 ;; (ad-activate 'flymake-post-syntax-check)
 
+(add-hook 'objc-mode-hook
+          (lambda ()
+            (define-key c-mode-base-map (kbd "C-c o") 'ff-find-other-file)
+            ))
+
 (defvar flymake-objc-compile-default-options (list "-fsyntax-only" "-x" "objective-c" "-Weverything" "-std=c99"))
 
 (defun flymake-display-err-minibuffer ()

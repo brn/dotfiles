@@ -14,4 +14,4 @@
     (progn
       (setq mac-option-modifier 'meta)
       (setq mac-command-modifier nil)
-      (global-set-key "\C-cf" 'toggle-frame-maximized)))
+      (global-set-key "\C-c\C-cf" 'toggle-frame-maximized)))
