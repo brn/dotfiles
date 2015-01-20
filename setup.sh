@@ -9,4 +9,4 @@ ln -s ./zsh/.zshrc.osx ~/.zshrc.osx
 ln -s ./tmux/.tmux.conf ~/.tmux.conf
 ln -s ./.emacs ~/
 
-
+cd karabiner && sh setting.sh 
