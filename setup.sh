@@ -1,5 +1,7 @@
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-sudo brew bundle
+brew tap homebrew/boneyard
+brew bundle
+mv '/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app' /Applications/
 
 git submodule update --init
 
