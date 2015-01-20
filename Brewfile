@@ -8,3 +8,6 @@ cask install firefox
 cask install google-chrome
 cask install karabiner
 cask install tunnelblick
+cask install google-japanese-ime
+cask install sharemouse
+cask install clipmenu
