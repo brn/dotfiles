@@ -20,7 +20,7 @@ mv '/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app' /Applica
 git submodule update --init
 
 ## Compile all Emacs lisp
-cd ./.emacs.d/ && grunt
+cd ./.emacs.d/ && npm install && grunt
 cd ../
 
 ## Create the symbolic links for all configuration files.
