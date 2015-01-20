@@ -97,7 +97,7 @@ alias perl='/opt/local/bin/perl'
 
 
 # Ruby
-if [[ -s /Users/aono_taketoshi/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
+if [[ -s /Users/$(whoami)/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 
 export REFE_DATA_DIR=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/share/refe
 
