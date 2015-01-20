@@ -7,3 +7,4 @@ cask install iterm2
 cask install firefox
 cask install google-chrome
 cask install karabiner
+cask install tunnelblick
