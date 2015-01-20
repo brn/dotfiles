@@ -1,9 +1,0 @@
-tmux
-exit
-ll
-ls
-rm /usr/local/bin/zsh
-ls /usr/local/bin/zsh
-ls /usr/local/bin/
-ls
-sh
