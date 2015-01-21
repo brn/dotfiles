@@ -69,6 +69,7 @@
 (setq cua-enable-cua-keys nil)
 (global-set-key "\C-v" 'forward-page)
 (global-set-key "\M-v" 'backward-page)
+(global-set-key "\C-z" 'undo)
 
 ;;ボックス選択のキー
 ;;ターミナルから起動した時用
