@@ -66,6 +66,9 @@
 
 ;;通常のコピペができる
 (cua-mode t)
+(setq cua-enable-cua-keys nil)
+(global-set-key "\C-v" 'forward-page)
+(global-set-key "\M-v" 'backward-page)
 
 ;;ボックス選択のキー
 ;;ターミナルから起動した時用
@@ -81,7 +84,6 @@
   (interactive "p")
   (delete-word (- arg)))
 
-(global-set-key (kbd "\C-v") 'delete-word)
 (global-set-key [C-backspace] 'backward-delete-word)
 
 ;;tabifyしない
