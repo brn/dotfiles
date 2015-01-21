@@ -11,3 +11,4 @@ cask install tunnelblick
 cask install google-japanese-ime
 cask install sharemouse
 cask install clipmenu
+cask install virtualbox
