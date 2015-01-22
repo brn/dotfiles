@@ -6,8 +6,15 @@
 ## Setup homebrew itself.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+## In the first, install git for the other modules.
+brew install git
+
 ## Install 'brew bundle' command.
 brew tap homebrew/boneyard
+## Load font.
+brew tap caskroom/fonts
+## Load java
+brew tap caskroom/versions
 
 ## Install all bundles.
 brew bundle

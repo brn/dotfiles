@@ -2,7 +2,7 @@ update
 upgrade
 
 install brew-cask
-install wget zsh tmux rbenv jq awscli git mysql nodebrew reattach-to-user-namespace pandoc
+install wget zsh tmux rbenv jq awscli mysql nodebrew reattach-to-user-namespace pandoc tig
 cask install iterm2
 cask install firefox
 cask install google-chrome
@@ -13,4 +13,5 @@ cask install sharemouse
 cask install clipmenu
 cask install virtualbox
 cask install alfred
-cask install mactubes
+cask install font-dejavu-sans
+cask install java7
