@@ -45,9 +45,17 @@ function java_use() {
 }
 
 
+function push-dotfiles {
+    local cwd=`pwd`
+    cd ~/GitHub/dotfiles
+    git add . && git commit -m 'UPDATED.' && git push
+    cd cwd
+}
+
+
 function serve {
   local cwd=`pwd`
-  cd ~/github/simple_dev_env/
+  cd ~/GitHub/simple_dev_env/
   node server.js $@
   cd $cwd;
 }
