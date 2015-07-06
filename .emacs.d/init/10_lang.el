@@ -10,8 +10,9 @@
 (set-buffer-file-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-(if (os-type-is-mac?)
-    (progn
-      (setq mac-option-modifier 'meta)
-      (setq mac-command-modifier nil)
-      (global-set-key "\C-c\C-cf" 'toggle-frame-maximized)))
+(if (eq window-system 'mac)
+    (if (os-type-is-mac?)
+        (progn
+          (setq mac-option-modifier 'meta)
+          (setq mac-command-modifier nil)
+          (global-set-key "\C-c\C-cf" 'toggle-frame-maximized))))

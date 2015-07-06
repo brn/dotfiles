@@ -3,12 +3,16 @@
 # LANG
 # http://curiousabt.blog27.fc2.com/blog-entry-65.html
 
+export PYENV_ROOT=$HOME/.pyenv
+
 ## PATH
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:~/bin:/Application:/Users/`whoami`/.rbenv/shims:~/bin:$PATH
+export PATH=$PYENV_ROOT/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:~/bin:/Application:/Users/`whoami`/.rbenv/shims:~/bin:$PATH
 export PATH=~/.nodebrew/current/bin:$PATH
 export PATH=~/.cabal/bin/:$PATH
 export PATH=$PATH:/usr/local/Cellar/tmux/1.7/bin:/usr/local/Cellar/ncurses/5.9/share/terminfo
 export PATH=${JAVA_HOME}/bin:${PATH}
+export PATH=$HOME/.rust/bin:$PATH
+export DYLD_LIBRARY_PATH=$HOME/.rust/lib:$HOME/.rust/lib/rustlib/x86_64-apple-darwin/lib:$DYLD_LIBRARY_PATH
 ## PATH
 
 export LANG=ja_JP.UTF-8
@@ -27,12 +31,13 @@ export INCLUDE=/usr/local/include/
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.54/libexec
 export _WK=$WORKSPACE
-export PATH=${JAVA_HOME}/bin:${PATH}
 
-alias emacs="TERM=xterm-256color emacs"
+alias emacs='TERM=xterm-256color /usr/local/bin/emacsclient -nw -a ""'
 alias refresh_p='source ~/.zshrc'
 alias ll='ls -l'
+alias git-c='git checkout'
 eval "$(rbenv init -)"
+eval "$(pyenv init -)"
 
 function tssh() {
   panewrap $1 && ssh $@
@@ -112,3 +117,7 @@ compdef _pass-of pass-of
 panewrap () { printf '\033k%s\033\\' "$1"; }
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+check_merge() {
+git format-patch `git rev-parse --abbrev-ref HEAD`..`git rev-parse --abbrev-ref @{-1}` --stdout | git apply --check
+}

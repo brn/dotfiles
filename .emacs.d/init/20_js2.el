@@ -6,6 +6,15 @@
 (js2r-add-keybindings-with-prefix "C-c C-m")
 (setq ac-js2-evaluate-calls t)
 
+(add-hook 'js2-mode-hook
+          (lambda ()
+            (tern-mode t)))
+
+(eval-after-load 'tern
+  '(progn
+     (require 'tern-auto-complete)
+     (tern-ac-setup)))
+
 (custom-set-variables
 '(js2-strict-missing-semi-warning t)
 '(js2-mirror-mode t)

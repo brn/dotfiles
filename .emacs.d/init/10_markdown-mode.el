@@ -18,7 +18,15 @@
     (insert (concat (concat "<a name=\"" cw) "\"> "))
     ))
 
+
+(defun markdown-custom ()
+  "markdown-mode-hook"
+  (setq markdown-command-needs-filename t)
+  )
+
+
 (add-hook 'markdown-mode-hook '(lambda() 
                                  (local-set-key "\C-c\C-ah" 'markdown-insert-hash-link)
                                  (local-set-key "\C-c\C-ak" 'markdown-insert-hook-link)
+                                 (markdown-custom)
                                  ))

@@ -6,7 +6,7 @@
 (let ((default-directory (expand-file-name "~/.emacs.d/elpa")))
   (add-to-list 'load-path default-directory)
   (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-       (normal-top-level-add-subdirs-to-load-path)))
+      (normal-top-level-add-subdirs-to-load-path)))
 
 (require 'package)
 
@@ -102,6 +102,8 @@
 (require 'direx)
 (require 'direx-project)
 (require 'auto-complete-clang)
+(require 'whitespace)
+(require 'tern)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
 (require 'moccur-edit)
