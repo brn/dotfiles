@@ -54,7 +54,7 @@ function push-dotfiles {
     local cwd=`pwd`
     cd ~/GitHub/dotfiles
     git add . && git commit -m 'UPDATED.' && git push
-    cd cwd
+    cd $cwd
 }
 
 
