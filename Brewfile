@@ -16,3 +16,4 @@ cask install alfred
 cask install font-dejavu-sans
 cask install java7
 cask install vagrant
+cask install emacs-mac

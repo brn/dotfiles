@@ -39,3 +39,6 @@ ln -s ./.emacs.d ~/
 
 ## Setup karabiner.
 cd karabiner && sh setting.sh 
+
+## Setup rust(1.0.0)
+cd rust && sh setup.sh
