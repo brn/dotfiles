@@ -40,7 +40,7 @@ eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 
 function tssh() {
-  panewrap $1 && ssh $@
+    panewrap $1 && ssh $@
 }
 
 function java_use() {
@@ -59,10 +59,10 @@ function push-dotfiles {
 
 
 function serve {
-  local cwd=`pwd`
-  cd ~/GitHub/simple_dev_env/
-  node server.js $@
-  cd $cwd;
+    local cwd=`pwd`
+    cd ~/GitHub/simple_dev_env/
+    node server.js $@
+    cd $cwd;
 }
 
 reattach-to-user-namespace launchctl setenv NODE_HOME $HOME/.nodebrew/current/bin
@@ -76,25 +76,25 @@ function node-use {
 }
 
 function pids {
-  ps aux | grep $1 | grep -v grep | awk '{print $2}'
+    ps aux | grep $1 | grep -v grep | awk '{print $2}'
 }
 
 function pass-of {
-  if [ "$1" = "" ]
-  then
-      cat ~/camp-pass/pass.txt | jq --raw-output 'keys'
-  else
-      cat ~/camp-pass/pass.txt | jq --raw-output '.["'$1'"]["pass"]' | pbcopy
-  fi
+    if [ "$1" = "" ]
+    then
+        cat ~/camp-pass/pass.txt | jq --raw-output 'keys'
+    else
+        cat ~/camp-pass/pass.txt | jq --raw-output '.["'$1'"]["pass"]' | pbcopy
+    fi
 }
 
 function id-of {
-  if [ "$1" = "" ]
-  then
-      cat ~/camp-pass/pass.txt | jq --raw-output 'keys'
-  else
-      cat ~/camp-pass/pass.txt | jq --raw-output '.["'$1'"]["id"]' | pbcopy
-  fi
+    if [ "$1" = "" ]
+    then
+        cat ~/camp-pass/pass.txt | jq --raw-output 'keys'
+    else
+        cat ~/camp-pass/pass.txt | jq --raw-output '.["'$1'"]["id"]' | pbcopy
+    fi
 }
 
 function _pass-of {
@@ -102,12 +102,12 @@ function _pass-of {
 }
 
 function update-closure-compiler {
-  local dir=$(mktemp -d "/tmp/closure-compiler.XXXXXXXXX")
-  local tmpfile=`basename $dir`.tar.gz
-  local save_path=/tmp/$tmpfile
-  wget -O $save_path http://dl.google.com/closure-compiler/compiler-latest.tar.gz
-  tar -xvzf $save_path -C $dir &&\
-  sudo mv $dir/compiler.jar /usr/local/bin/closure-compiler.jar && rm -rf $save_path && rm -rf $dir
+    local dir=$(mktemp -d "/tmp/closure-compiler.XXXXXXXXX")
+    local tmpfile=`basename $dir`.tar.gz
+    local save_path=/tmp/$tmpfile
+    wget -O $save_path http://dl.google.com/closure-compiler/compiler-latest.tar.gz
+    tar -xvzf $save_path -C $dir &&\
+        sudo mv $dir/compiler.jar /usr/local/bin/closure-compiler.jar && rm -rf $save_path && rm -rf $dir
 }
 
 node-use
@@ -119,5 +119,5 @@ panewrap () { printf '\033k%s\033\\' "$1"; }
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 check_merge() {
-git format-patch `git rev-parse --abbrev-ref HEAD`..`git rev-parse --abbrev-ref @{-1}` --stdout | git apply --check
+    git format-patch `git rev-parse --abbrev-ref HEAD`..`git rev-parse --abbrev-ref @{-1}` --stdout | git apply --check
 }
