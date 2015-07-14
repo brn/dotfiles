@@ -31,6 +31,7 @@ export INCLUDE=/usr/local/include/
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.54/libexec
 export _WK=$WORKSPACE
+export LEIN_JAVA_CMD=`which drip`
 
 alias emacs='TERM=xterm-256color /usr/local/bin/emacsclient -nw -a ""'
 alias refresh_p='source ~/.zshrc'
@@ -61,8 +62,16 @@ function push-dotfiles {
 function serve {
     local cwd=`pwd`
     cd ~/GitHub/simple_dev_env/
-    node server.js $@
+    test -f stderrout.log && rm stderrout.log
+    $(node server.js $@ > stderrout.log 2>&1 &) || exit 1
+    SERVE_PID=$(ps aux | grep 'node server.js' | awk '{print $2}')
+    echo $SERVE_PID > server.pid
     cd $cwd;
+}
+
+
+function serve_pid() {
+    echo $(cat ~/GitHub/simple_dev_env/pid)
 }
 
 reattach-to-user-namespace launchctl setenv NODE_HOME $HOME/.nodebrew/current/bin

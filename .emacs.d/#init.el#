@@ -56,6 +56,7 @@
     cider
     ac-cider
     clojure-cheatsheet
+    clojure-test-mode
     slamhound
     smartparens
     rainbow-delimiters

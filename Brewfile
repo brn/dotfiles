@@ -2,7 +2,7 @@ update
 upgrade
 
 install brew-cask
-install wget zsh tmux rbenv jq awscli mysql nodebrew reattach-to-user-namespace pandoc tig ant dynamodb-local docker gpg
+install wget zsh tmux rbenv jq awscli mysql nodebrew reattach-to-user-namespace pandoc tig ant dynamodb-local docker gpg drip leiningen
 cask install iterm2
 cask install firefox
 cask install google-chrome
