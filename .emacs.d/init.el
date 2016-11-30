@@ -10,8 +10,10 @@
 
 (require 'package)
 
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(setq package-check-signature nil)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
 (package-initialize)
 
 (require 'cl)
@@ -59,6 +61,11 @@
     slamhound
     smartparens
     rainbow-delimiters
+    w3m
+    web-mode
+    tide
+    edbi
+    magit
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -111,7 +118,14 @@
 (require 'auto-complete-clang)
 (require 'whitespace)
 (require 'tern)
+(require 'w3m)
+(require 'web-mode)
+(require 'edbi)
+(require 'magit)
 (init-loader-load "~/.emacs.d/init/cmp")
 (require 'js-doc)
 (require 'moccur-edit)
+(require 'scala-mode2)
+(require 'tide)
 (setq debug-on-error nil)
+(smartparens-global-mode t)

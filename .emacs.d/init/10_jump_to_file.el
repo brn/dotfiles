@@ -35,7 +35,9 @@
                              (setq fullpath
                                    (if (null extension)
                                        (concat match ext)
-                                     match))
+                                     (if (not (file-exists-p match))
+                                         (concat match ext)
+                                       match)))
                              (setq case-fold-search case-fold)
                              (if (file-exists-p fullpath)
                                  (find-file fullpath)
@@ -62,11 +64,8 @@
           (setq target-filename (file-relative-name target (file-name-directory file-name)))
           (setq set-current-dot (string= (file-name-directory target-filename) (file-name-directory file-name)))
           (message "%s" set-current-dot)
-          (helm-run-after-quit
-           '(lambda(target-filename file-name set-current-dot)
-              (find-file file-name)
-              (if set-current-dot
-                  (insert (concat "./" target-filename))
-                (insert target-filename))
-              ) target-filename file-name set-current-dot)))))
+          (find-file file-name)
+          (if set-current-dot
+              (insert (concat "./" target-filename))
+            (insert target-filename))))))
 

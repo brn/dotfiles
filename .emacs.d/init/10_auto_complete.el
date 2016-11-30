@@ -1,8 +1,11 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
 (ac-config-default)
 
-;;auto-completeを有効
-(global-auto-complete-mode t)
+(add-to-list 'ac-modes 'text-mode)         ;; text-modeでも自動的に有効にする
+(add-to-list 'ac-modes 'fundamental-mode)  ;; fundamental-mode
+(add-to-list 'ac-modes 'org-mode)
+(add-to-list 'ac-modes 'yatex-mode)
+(add-to-list 'ac-modes 'js2-mode)
 ;;3文字以上で補完
 (setq ac-auto-start 3)
 (define-key ac-completing-map (kbd "C-n") 'ac-next)

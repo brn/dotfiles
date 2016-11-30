@@ -1,19 +1,16 @@
-(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
-
+;; sample config
 (add-hook 'typescript-mode-hook
-          '(lambda ()
-             (define-key typescript-mode-map  "{" 'brace-ret-brace)
-             (define-key typescript-mode-map  "\C-c\C-j" 'java-doc-ret)
-             (auto-complete-mode 1)))
+          (lambda ()
+            (interactive)
+            (local-set-key "\C-c\C-l" 'align-=)
+            (tide-setup)
+            (flycheck-mode +1)
+            (setq flycheck-check-syntax-automatically '(save mode-enabled))
+            (eldoc-mode +1)
+            ;; company is an optional dependency. You have to
+            ;; install it separately via package-install
+            (company-mode-on)))
 
-;;(require 'tss)
-
-;; ポイントしている要素についてのヘルプをポップアップ表示するキー
-;;(setq tss-popup-help-key "C-:")
-
-;; ポイントしている要素の定義元へジャンプするキー
-;;(setq tss-jump-to-definition-key "C->")
-
-;; 推奨設定を行う
-;;(tss-config-default)
-
+;; aligns annotation to the right hand side
+(setq company-tooltip-align-annotations t)
+;; (setq tide-tsserver-process-environment '("TSS_LOG=-level verbose -file /tmp/tss.log"))

@@ -5,11 +5,9 @@ HOSTNAMES=($(aws ec2 describe-instances --instance-ids $INSTANCE_IDS --query "Re
 pane=0
 
 tmux-split-pane.sh ${#HOSTNAMES[@]}
-sleep 2
 
 for HOSTNAME in ${HOSTNAMES[*]}
 do
-    tmux select-pane -t $pane
-    tmux send-keys "ssh ${HOSTNAME}.in.tgmm.jp" C-m
+    tmux send-keys -t $pane "ssh ${HOSTNAME}.in.tgmm.jp" C-m
     pane=$(expr ${pane} + 1)
 done

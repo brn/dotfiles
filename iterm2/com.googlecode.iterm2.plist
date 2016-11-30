@@ -92,6 +92,8 @@
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
+	<key>NSScrollViewShouldScrollUnderTitlebar</key>
+	<false/>
 	<key>NSTableView Columns KeyBingingTable</key>
 	<array>
 		<data>
@@ -103,7 +105,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>304</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -112,13 +114,13 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>732 283 445 270 0 0 1680 1028 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>-1870 512 924 485 -2560 -134 2560 1418 </string>
+	<string>-1870 284 606 456 -2560 -390 2560 1417 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>648 675 384 129 0 0 1680 1028 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 444 592 584 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 16 1673 1012 0 0 1680 1028 </string>
+	<string>0 4 1673 1023 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -576,7 +578,7 @@
 			<key>Normal Font</key>
 			<string>DejaVuSansMono 14</string>
 			<key>Option Key Sends</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<integer>0</integer>
 			<key>Right Option Key Sends</key>
@@ -749,10 +751,16 @@
 			<string>/Users/a12360</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveShownPromoWithId_4</key>
+	<true/>
+	<key>NoSyncInstallationId</key>
+	<string>B1B030C4-5260-4CE2-8F3E-4D68BD1DFC3E</string>
+	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
+	<real>486530318.34538502</real>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>455157971.33998901</real>
+	<real>477603561.07335502</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>457159914.26356202</real>
+	<real>486384458.432428</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -799,7 +807,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/a12360/github/dotfiles/iterm2</string>
+	<string>/Users/a12360/GitHub/dotfiles/iterm2</string>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -810,12 +818,14 @@
 	<integer>3</integer>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
+	<key>SUFeedAlternateAppNameKey</key>
+	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>http://iterm2.com/appcasts/testing.xml</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=87</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-06-26T01:12:06Z</date>
+	<date>2016-06-02T03:18:21Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -851,7 +861,7 @@
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
-	<string>.Lucida Grande UI</string>
+	<string>.AppleSystemUIFont</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
@@ -863,6 +873,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.1.1</string>
+	<string>3.0.0</string>
 </dict>
 </plist>

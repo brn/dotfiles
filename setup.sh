@@ -30,6 +30,9 @@ git submodule update --init
 cd ./.emacs.d/ && npm install && grunt
 cd ../
 
+## Install perl libraries.
+cpan RPC::EPC::Service DBI DBD::SQLite DBD::Pg DBD::mysql
+
 ## Create the symbolic links for all configuration files.
 ln -s ./zsh/.zshrc ~/.zshrc
 ln -s ./zsh/.zshrc.local ~/.zshrc.local

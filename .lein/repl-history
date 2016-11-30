@@ -1,0 +1,46 @@
+exit
+(defprotocol SeleniumProtectionProxyServerProtocol
+  "Seleniumの動作に影響のある要素を、htmlから取り除くproxy-serverのプロトコル。"
+  (client [this] "selenium用クライアントを作成する")
+  (start  [this] "プロキシサーバを起動する")
+  (stop   [this] "プロキシサーバを停止する")
+  (port   [this] "プロキシサーバのポートを取得する"))
+exit
+(into [] {:a 1 :b 2})
+(into [:keys [:a :b]] {:a 1 :b 2})
+(conj [] {:a 1 :b 2})
+(doc conj)
+(values {:a 1 :b 2})
+(val {:a 1 :b 2})
+(keys {:a 1 :b 2})
+(def x {:a 1 :b 2})
+(map #(% x) (keys x))
+(def negative-quotient (comp - /))
+(negative-quotient 8 3)
+negative-quotient
+(dir negative-quotient)
+(doc negative-quotient)
+(str negative-quotient)
+(detail negative-quotient)
+(negative-quotient 1)
+(negative-quotient 4 2)
+(- 4)
+(reduce #(%) [1 2 3])
+(reduce #(+ %1 %2) [1 2 3])
+(require '[cats-client-testser.distributor :as dist])
+exit
+(% 10 2)
+exit
+(if true 1)
+(if (if true true) 1)
+(if [1] 1)
+pwd
+(def ((fn [] (+ "x" "y"))))
+(let [x 1])
+(let [x 1] (println x))
+(let [x 1 y 2] (println x))
+(let [x 1 y 2] (println y))
+(let [(if true "x" "y") 1 y 2] (println y))
+(let [("x") 1 y 2] (println y))
+(let [(x) 1 y 2] (println y))
+(let [x] (println 1))

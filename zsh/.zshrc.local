@@ -5,16 +5,6 @@
 
 export PYENV_ROOT=$HOME/.pyenv
 
-## PATH
-export PATH=$PYENV_ROOT/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:~/bin:/Application:/Users/`whoami`/.rbenv/shims:~/bin:$PATH
-export PATH=~/.nodebrew/current/bin:$PATH
-export PATH=~/.cabal/bin/:$PATH
-export PATH=$PATH:/usr/local/Cellar/tmux/1.7/bin:/usr/local/Cellar/ncurses/5.9/share/terminfo
-export PATH=${JAVA_HOME}/bin:${PATH}
-export PATH=$HOME/.rust/bin:$PATH
-export DYLD_LIBRARY_PATH=$HOME/.rust/lib:$HOME/.rust/lib/rustlib/x86_64-apple-darwin/lib:$DYLD_LIBRARY_PATH
-## PATH
-
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 export PHANTOM_INSTALL_DIR=~/.mocha/phantom/osx
@@ -30,15 +20,37 @@ export WORKSPACE=~/Documents/workspace
 export INCLUDE=/usr/local/include/
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.54/libexec
+export ANDROID_HOME=$HOME/Library/Android/sdk
 export _WK=$WORKSPACE
-export LEIN_JAVA_CMD=`which drip`
+#export LEIN_JAVA_CMD=`which drip`
+#export LEIN_FAST_TRAMPOLINE=y
+
+
+## PATH
+export PATH=$PYENV_ROOT/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:~/bin:/Application:/Users/`whoami`/.rbenv/shims:~/bin:$PATH:$ANDROID_HOME/tools:$PATH:$ANDROID_HOME/platform-tools
+export PATH=/usr/local/opt/llvm/bin:$PATH
+export PATH=~/.nodebrew/current/bin:$PATH
+export PATH=~/.cabal/bin/:$PATH
+export PATH=$PATH:/usr/local/Cellar/tmux/1.7/bin:/usr/local/Cellar/ncurses/5.9/share/terminfo
+export PATH=${JAVA_HOME}/bin:${PATH}
+export PATH=$HOME/.rust/bin:$PATH
+export PATH=$PATH:/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/
+export DYLD_LIBRARY_PATH=$HOME/.rust/lib:$HOME/.rust/lib/rustlib/x86_64-apple-darwin/lib:$DYLD_LIBRARY_PATH
+## PATH
 
 alias emacs='TERM=xterm-256color /usr/local/bin/emacsclient -nw -a ""'
 alias refresh_p='source ~/.zshrc'
 alias ll='ls -l'
 alias git-c='git checkout'
+alias gcp-activate='gcloud config configurations activate'
+alias gcp-config='gcloud config'
+alias kc='kubectl'
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
+
+function rsvm() {
+  [ -s /Users/a12360/.rsvm/rsvm.sh ] && . /Users/a12360/.rsvm/rsvm.sh %@
+}
 
 function tssh() {
     panewrap $1 && ssh $@
@@ -64,14 +76,17 @@ function serve {
     cd ~/GitHub/simple_dev_env/
     test -f stderrout.log && rm stderrout.log
     $(node server.js $@ > stderrout.log 2>&1 &) || exit 1
-    SERVE_PID=$(ps aux | grep 'node server.js' | awk '{print $2}')
+    SERVE_PID=$(ps aux | grep 'node server.js' | grep -v grep | awk '{print $2}')
     echo $SERVE_PID > server.pid
     cd $cwd;
+    echo "server start"
 }
 
-
-function serve_pid() {
-    echo $(cat ~/GitHub/simple_dev_env/pid)
+function exit_serve() {
+    SERVE_PID=$(cat ~/GitHub/simple_dev_env/server.pid)
+    kill -TERM $SERVE_PID
+    rm ~/GitHub/simple_dev_env/server.pid
+    echo "server stop"
 }
 
 reattach-to-user-namespace launchctl setenv NODE_HOME $HOME/.nodebrew/current/bin
@@ -117,6 +132,13 @@ function update-closure-compiler {
     wget -O $save_path http://dl.google.com/closure-compiler/compiler-latest.tar.gz
     tar -xvzf $save_path -C $dir &&\
         sudo mv $dir/compiler.jar /usr/local/bin/closure-compiler.jar && rm -rf $save_path && rm -rf $dir
+}
+
+function tagsys_vagrant {
+  PWD=$(pwd)
+  cd ~/Vagrant
+  vagrant ${1} tagsys
+  cd $PWD
 }
 
 node-use

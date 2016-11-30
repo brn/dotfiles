@@ -25,8 +25,26 @@
   )
 
 
+(defun w3m-browse-url-other-window (url &optional newwin)
+  (let ((w3m-pop-up-windows t))
+    (if (one-window-p) (split-window))
+    (other-window 1)
+    (w3m-browse-url url newwin)))
+
+(defun markdown-render-w3m (n)
+  (interactive "p")
+  (message (buffer-file-name))
+  (call-process "/usr/local/bin/grip" nil nil nil
+                "--gfm" "--export"
+                (buffer-file-name)
+                "/tmp/grip.html")
+  (w3m-browse-url-other-window "file:///tmp/grip.html")
+  )
+
+
 (add-hook 'markdown-mode-hook '(lambda() 
                                  (local-set-key "\C-c\C-ah" 'markdown-insert-hash-link)
                                  (local-set-key "\C-c\C-ak" 'markdown-insert-hook-link)
+                                 (local-set-key "\C-c\C-ap" 'markdown-render-w3m)
                                  (markdown-custom)
                                  ))
