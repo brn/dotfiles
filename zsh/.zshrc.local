@@ -27,7 +27,7 @@ export _WK=$WORKSPACE
 
 
 ## PATH
-export PATH=$PYENV_ROOT/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:~/bin:/Application:/Users/`whoami`/.rbenv/shims:~/bin:$PATH:$ANDROID_HOME/tools:$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PYENV_ROOT/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:~/bin:/Application:/Users/`whoami`/.rbenv/shims:~/bin:~/GitHub/depot_tools:$PATH:$ANDROID_HOME/tools:$PATH:$ANDROID_HOME/platform-tools
 export PATH=/usr/local/opt/llvm/bin:$PATH
 export PATH=~/.nodebrew/current/bin:$PATH
 export PATH=~/.cabal/bin/:$PATH
@@ -45,11 +45,23 @@ alias git-c='git checkout'
 alias gcp-activate='gcloud config configurations activate'
 alias gcp-config='gcloud config'
 alias kc='kubectl'
+alias diff='colordiff'
+
+alias gico='git checkout'
+alias girb='git rebase'
+alias gipu='git push'
+alias gipl='git pull'
+
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 
 function rsvm() {
   [ -s /Users/a12360/.rsvm/rsvm.sh ] && . /Users/a12360/.rsvm/rsvm.sh %@
+}
+
+function dataurl() {
+  base64=$(openssl base64 < $1 | tr -d '\n')
+  echo "data:image/png;base64,${base64}"
 }
 
 function tssh() {
@@ -150,5 +162,5 @@ panewrap () { printf '\033k%s\033\\' "$1"; }
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 check_merge() {
-    git format-patch `git rev-parse --abbrev-ref HEAD`..`git rev-parse --abbrev-ref @{-1}` --stdout | git apply --check
+    git format-patch `git rev-parse --abbrev-ref HEAD`..`git rev-parse --abbrev-ref '@{-1}'` --stdout | git apply --check
 }

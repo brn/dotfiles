@@ -13,4 +13,7 @@
 
 ;; aligns annotation to the right hand side
 (setq company-tooltip-align-annotations t)
+
+(if (os-type-is-mac?)
+    (setq tide-tsserver-executable "/Users/a12360/.nodebrew/current/lib/node_modules/typescript/bin/tsserver"))
 ;; (setq tide-tsserver-process-environment '("TSS_LOG=-level verbose -file /tmp/tss.log"))

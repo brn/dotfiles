@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DCMAKE_GENERATOR=\"\\\"Unix Makefiles\\\"\" -DCMAKE_HOST_SYSTEM_PROCESSOR=\\\"x86_64\\\" -I/Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/clang-server/.   -std=c++11 -Wall -Wno-unused-result -O3 -DNDEBUG   -o CMakeFiles/clang-server.dir/main.cpp.o -c /Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/clang-server/main.cpp",
+  "file": "/Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/clang-server/main.cpp"
+},
+{
+  "directory": "/Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DCMAKE_GENERATOR=\"\\\"Unix Makefiles\\\"\" -DCMAKE_HOST_SYSTEM_PROCESSOR=\\\"x86_64\\\" -I/Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/clang-server/.   -std=c++11 -Wall -Wno-unused-result -O3 -DNDEBUG   -o CMakeFiles/clang-server.dir/ClangServer.cpp.o -c /Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/clang-server/ClangServer.cpp",
+  "file": "/Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/clang-server/ClangServer.cpp"
+},
+{
+  "directory": "/Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DCMAKE_GENERATOR=\"\\\"Unix Makefiles\\\"\" -DCMAKE_HOST_SYSTEM_PROCESSOR=\\\"x86_64\\\" -I/Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/clang-server/.   -std=c++11 -Wall -Wno-unused-result -O3 -DNDEBUG   -o CMakeFiles/clang-server.dir/ClangSession.cpp.o -c /Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/clang-server/ClangSession.cpp",
+  "file": "/Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/clang-server/ClangSession.cpp"
+},
+{
+  "directory": "/Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DCMAKE_GENERATOR=\"\\\"Unix Makefiles\\\"\" -DCMAKE_HOST_SYSTEM_PROCESSOR=\\\"x86_64\\\" -I/Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/clang-server/.   -std=c++11 -Wall -Wno-unused-result -O3 -DNDEBUG   -o CMakeFiles/clang-server.dir/Common.cpp.o -c /Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/clang-server/Common.cpp",
+  "file": "/Users/a12360/GitHub/dotfiles/.emacs.d/elpa/ac-clang-20161202.725/clang-server/Common.cpp"
+}
+]

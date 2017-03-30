@@ -19,3 +19,6 @@
 [submodule ".emacs.d/rust"]
 	path = .emacs.d/rust
 	url = https://github.com/rust-lang/rust.git
+[submodule "dircolors-solarized"]
+	path = dircolors-solarized
+	url = git@github.com:seebi/dircolors-solarized.git

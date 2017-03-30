@@ -48,7 +48,7 @@
     pretty-symbols
     mark-multiple
     powerline
-    jaunte
+;    jaunte
     gtags
     foreign-regexp
     popwin
@@ -66,6 +66,7 @@
     tide
     edbi
     magit
+    avy
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -109,13 +110,13 @@
 (require 'haskell-cabal)
 (require 'inline-string-rectangle)
 (require 'mark-more-like-this)
-(require 'jaunte)
+;(require 'jaunte)
 (require 'gyp)
 (require 'foreign-regexp)
 (require 'popwin)
 (require 'direx)
 (require 'direx-project)
-(require 'auto-complete-clang)
+(require 'ac-clang)
 (require 'whitespace)
 (require 'tern)
 (require 'w3m)
@@ -127,5 +128,6 @@
 (require 'moccur-edit)
 (require 'scala-mode2)
 (require 'tide)
+(require 'avy)
 (setq debug-on-error nil)
 (smartparens-global-mode t)

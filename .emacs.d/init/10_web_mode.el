@@ -37,6 +37,8 @@
                 :fringe-bitmap 'my-flycheck-fringe-indicator
                 :fringe-face 'flycheck-fringe-info)
               (setq flycheck-check-syntax-automatically '(save mode-enabled))
+              (local-set-key (kbd "C-c C-j") 'avy-goto-char-timer)
+              (local-set-key (kbd "C-c C-l") 'avy-goto-line)
               (eldoc-mode +1)
               (company-mode-on))))
 
