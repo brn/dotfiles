@@ -38,3 +38,30 @@
           ad-do-it)))                   ; default behavior
 
 (add-hook 'c++-mode-hook 'fix-enum-class)
+(add-hook 'c++-mode-hook 'rtags-start-process-unless-running)
+
+(add-hook 'c++-mode-hook
+          (lambda ()
+            (rtags-enable-standard-keybindings c-mode-base-map)
+            (local-set-key (kbd "M-.") 'rtags-find-symbol-at-point)
+            (local-set-key (kbd "M-;") 'rtags-find-symbol)
+            (local-set-key (kbd "M-@") 'rtags-find-references)
+            (local-set-key (kbd "M-,") 'rtags-location-stack-back)))
+
+
+(defun flymake-cc-init ()
+  (let* ((temp-file   (flymake-init-create-temp-buffer-copy
+                       'flymake-create-temp-inplace))
+         (local-file  (file-relative-name
+                       temp-file
+                       (file-name-directory buffer-file-name))))
+    (list "clang++" (list "-std=c++1y" "-Wall" "-Wextra" "-fsyntax-only" "-DPLATFORM_64BIT" local-file))))
+
+(push '("\\.cc$" flymake-cc-init) flymake-allowed-file-name-masks)
+
+(add-hook 'c++-mode-hook
+          '(lambda ()
+             (add-hook 'before-save-hook 'clang-format-buffer nil 'local)
+             (flymake-mode t)))
+(setq clang-format-style-option "Google")
+(setq rtags-tramp-enabled t) ;; TODO remove newer version.

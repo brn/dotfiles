@@ -1,0 +1,10 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("RTags_0"
+ (filename . "~/GitHub/v8/v8/src/runtime/runtime-debug.cc")
+ (front-context-string . "HandleDebugBreak")
+ (rear-context-string . "olate->debug()->")
+ (position . 3685))
+)

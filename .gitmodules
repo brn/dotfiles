@@ -1,6 +1,3 @@
-[submodule ".emacs.d/elisps/foreign-regexp"]
-	path = .emacs.d/elisps/foreign-regexp
-	url = https://github.com/k-talo/foreign-regexp.el.git
 [submodule ".emacs.d/elisps/less-mode"]
 	path = .emacs.d/elisps/less-mode
 	url = https://github.com/myfreeweb/less-mode.git

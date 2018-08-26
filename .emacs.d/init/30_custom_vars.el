@@ -22,10 +22,10 @@
  '(sr-speedbar-width 60 t)
  '(sr-speedbar-width-console 150)
  '(speedbar-add-supported-extension '(".js" ".as" ".html" ".css" ".php"))
- '(foreign-regexp/regexp-type 'javascript)    ; perl や javascript も指定可能
  '(reb-re-syntax 'foreign-regexp)
  '(direx-project:project-root-predicate-functions '(my/direx-root-p))
- '(haskell-font-lock-symbols t))
+ '(haskell-font-lock-symbols t)
+ `(rtags-tramp-enabled t))
 
 (custom-set-faces
  '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal))))

@@ -1,1 +1,1 @@
-(("dbi:mysql:fixer_app:127.0.0.1" "root" "") ("dbi:mysql:fixer_app" "root" "") ("mysql://127.0.0.1" "" "") ("127.0.0.1" "" ""))
+(("dbi:mysql:host=104.199.185.55;database=sales_common" "root" "") ("dbi:mysql:host=104.199.185.55" "root" "") ("dbi:mysql;host=104.199.185.55" "root" "") ("mysql:104.199.185.55" "root" "") ("dbi:mysql:104.199.185.55" "root" "") ("dbi:mysql:fixer_app:127.0.0.1" "root" "") ("dbi:mysql:fixer_app" "root" "") ("mysql://127.0.0.1" "" "") ("127.0.0.1" "" ""))

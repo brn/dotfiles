@@ -6,14 +6,14 @@
 (js2r-add-keybindings-with-prefix "C-c C-m")
 (setq ac-js2-evaluate-calls t)
 
-(add-hook 'js2-mode-hook
-          (lambda ()
-            (tern-mode t)))
+;; (add-hook 'js2-mode-hook
+;;           (lambda ()
+;;             (tern-mode t)))
 
-(eval-after-load 'tern
-  '(progn
-     (require 'tern-auto-complete)
-     (tern-ac-setup)))
+;; (eval-after-load 'tern
+;;   '(progn
+;;      (require 'tern-auto-complete)
+;;      (tern-ac-setup)))
 
 (custom-set-variables
 '(js2-strict-missing-semi-warning t)
@@ -36,7 +36,8 @@
 '(js2-strict-inconsistent-return-warning nil)
 '(js2-use-ast-for-indentation-p t)
 '(js2-auto-insert-semicolon t)
-'(js2-allow-keywords-as-property-names t))
+'(js2-allow-keywords-as-property-names t)
+'(js2-strict-trailing-comma-warning nil))
 
 (add-hook 'js2-mode-hook
           '(lambda ()
@@ -45,6 +46,7 @@
              (local-set-key "\C-cf" 'js-doc-insert-file-doc)
              (local-set-key (kbd "RET") (key-binding (kbd "M-j")))
              (ac-js2-mode)
+             (prettier-js-mode)
              (setq js2-additional-externs '("jQuery" "$" "goog" "ko" "camp" "describe" "it" "before" "beforeEach" "after" "afterEach" "assert" "cats"))
              (setq javascript-indent-level 2
                    javascript-expr-indent-offset 2

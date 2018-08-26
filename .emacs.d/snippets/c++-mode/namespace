@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: namespace
+# key: namespace
+# binding: C-c C-n
+# --
+namespace $1 {
+$2
+}  // namespace $1

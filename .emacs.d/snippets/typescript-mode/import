@@ -1,0 +1,7 @@
+# key: y-import
+# name: import
+# binding: [24 121 105]
+# --
+import {
+  $2
+} from '$1';

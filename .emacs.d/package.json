@@ -9,6 +9,6 @@
   "author": "brn",
   "private": true,
   "devDependencies": {
-    "grunt": "~0.4.2"
+    "grunt": "^0.4.5"
   }
 }

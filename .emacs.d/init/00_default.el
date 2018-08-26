@@ -35,6 +35,13 @@
 ;;メニューバーとツールバー非表示
 (menu-bar-mode 1)
 (tool-bar-mode 0)
+;;ウインドウのsplitを防ぐ
+(setq pop-up-windows nil)
+;;同じウインドウで開く
+(add-to-list
+ 'display-buffer-alist
+ '(".+" . (display-buffer-same-window
+                          . ((reusable-frames . t)))))
 
 ;;行数表示
 (autoload 'linum-mode "linum" nil t)
@@ -96,9 +103,6 @@
 ;;背景色
 (set-background-color "black")
 
-;; trampの設定
-(setq tramp-default-method "ssh")
-
 
 ;;入力メソッド
 (if (boundp 'input-method-alist)
@@ -141,6 +145,8 @@
 
 (setq font-lock-maximum-decoration '((c++-mode . 2)))
 
+;; 閉じる前に確認
+(setq confirm-kill-emacs 'y-or-n-p)
 
 (setq ff-other-file-alist
       '(("\\.mm?$" (".h"))
