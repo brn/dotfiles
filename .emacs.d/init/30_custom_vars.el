@@ -25,7 +25,8 @@
  '(reb-re-syntax 'foreign-regexp)
  '(direx-project:project-root-predicate-functions '(my/direx-root-p))
  '(haskell-font-lock-symbols t)
- `(rtags-tramp-enabled t))
+ `(rtags-tramp-enabled t)
+ `(clang-format-style "Google"))
 
 (custom-set-faces
  '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal))))

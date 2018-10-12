@@ -149,6 +149,7 @@
  '(c-hanging-braces-alist (quote set-from-style))
  '(c-hanging-semi&comma-criteria (quote set-from-style))
  '(c-report-syntactic-errors t)
+ '(clang-format-style "Google")
  '(direx-project:project-root-predicate-functions (quote (my/direx-root-p)))
  '(flycheck-display-errors-delay 0.5)
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))

@@ -61,7 +61,6 @@
 
 (add-hook 'c++-mode-hook
           '(lambda ()
-             (add-hook 'before-save-hook 'clang-format-buffer nil 'local)
+;;             (add-hook 'before-save-hook 'clang-format-buffer nil 'local)
              (flymake-mode t)))
-(setq clang-format-style-option "Google")
 (setq rtags-tramp-enabled t) ;; TODO remove newer version.
