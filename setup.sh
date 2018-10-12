@@ -19,6 +19,9 @@ brew tap caskroom/versions
 ## Install all bundles.
 brew bundle
 
+## Install nodejs
+nodebrew install-binary latest
+
 ## Google Chrome which installed from 'brew cask' is not support 1Passowrd,
 ## to enable it, move an App file that located at user local 'Applications' to the global 'Applications' directory.
 mv '/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app' /Applications/
