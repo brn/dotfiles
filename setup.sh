@@ -37,11 +37,19 @@ cd ../
 cpan RPC::EPC::Service DBI DBD::SQLite DBD::Pg DBD::mysql
 
 ## Create the symbolic links for all configuration files.
-ln -s ./zsh/.zshrc ~/.zshrc
-ln -s ./zsh/.zshrc.local ~/.zshrc.local
-ln -s ./zsh/.zshrc.osx ~/.zshrc.osx
-ln -s ./tmux/.tmux.conf ~/.tmux.conf
-ln -s ./.emacs.d ~/
+CWD=$(pwd)
+pushd ~/
+mkdir -p .tmux/plugins
+ln -s ${CWD}/zsh/.zshrc
+ln -s ${CWD}/zsh/.zshrc.local
+ln -s ${CWD}/zsh/.zshrc.osx
+ln -s ${CWD}/tmux/.tmux.conf
+ln -s ${CWD}/.emacs.d
+
+cd .tmux/plugins
+ln -s ${CWD}/tmux/tpm
+
+popd
 
 ## Setup karabiner.
 # cd karabiner && sh setting.sh 

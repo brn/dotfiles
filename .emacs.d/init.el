@@ -187,7 +187,7 @@
  '(nxml-outline-child-indent 4)
  '(package-selected-packages
    (quote
-    (python-mode flycheck-tip flycheck-popup-tip zencoding-mode yaml-mode web-mode w3m tss smartparens slamhound rainbow-delimiters racer pretty-symbols prettier-js powershell-mode powerline popwin open-junk-file nodejs-repl markdown-mode mark-multiple magit js-doc jaunte init-loader haskell-mode gtags google-c-style fuzzy flymake-google-cpplint flycheck-objc-clang flycheck-irony exec-path-from-shell ensime eimp edbi dockerfile-mode direx company-irony color-moccur coffee-mode cmake-mode clojure-cheatsheet clang-format avy auto-complete-clang-async auto-complete-clang actionscript-mode ace-jump-mode ac-js2 ac-clang ac-cider ac-c-headers)))
+    (js2-refactor js2-mode highlight2clipboard python-mode zencoding-mode yaml-mode w3m tss slamhound rainbow-delimiters racer pretty-symbols powershell-mode powerline popwin open-junk-file nodejs-repl markdown-mode mark-multiple magit js-doc jaunte init-loader haskell-mode gtags fuzzy flycheck-objc-clang exec-path-from-shell ensime eimp edbi dockerfile-mode direx company-irony color-moccur coffee-mode cmake-mode clojure-cheatsheet clang-format avy auto-complete-clang-async auto-complete-clang actionscript-mode ace-jump-mode ac-js2 ac-clang ac-cider ac-c-headers)))
  '(powerline-default-separator (quote slant))
  '(powerline-height 20)
  '(reb-re-syntax (quote foreign-regexp))

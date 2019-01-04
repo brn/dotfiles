@@ -1,32 +1,57 @@
-update
-upgrade
+tap 'caskroom/cask'
+tap 'railwaycat/emacsmacport'
 
-install brew-cask
-install wget zsh tmux rbenv jq awscli mysql nodebrew reattach-to-user-namespace pandoc tig docker gpg w3m wget curl sbt watch cabal-install docker flyway ghc
+brew 'wget'
+brew 'coreutils'
+brew 'zsh'
+brew 'tmux'
+brew 'rbenv'
+brew 'pyenv'
+brew 'goenv'
+brew 'jq'
+brew 'awscli'
+brew 'mysql'
+brew 'nodebrew'
+brew 'reattach-to-user-namespace'
+brew 'pandoc'
+brew 'tig'
+brew 'docker'
+brew 'gpg'
+brew 'w3m'
+brew 'wget'
+brew 'curl'
+brew 'sbt'
+brew 'watch' 
+brew 'cabal-install'
+brew 'flyway'
+brew 'ghc'
+brew 'circleci'
 
-cast install alfred
-cast install appcleaner
-cast install caffeine
-cast install chromium
-cast install clipmenu
-cast install cyberduck
-cast install docker
-cast install doxygen
-cast install emacs-mac
-cast install firefox
-cast install font-dejavu-sans
-cast install font-dejavu-sans-mono-for-powerline
-cast install fork
-cast install google-chrome
-cast install google-chrome-canary
-cast install google-cloud-sdk
-cast install google-japanese-ime
-cast install hex-fiend
-cast install iterm2
-cast install karabiner-elements
-cast install mysqlworkbench
-cast install shiftit
-cast install vagrant
-cast install virtualbox
-cast install visual-studio-code
-cast install wkhtmltopdf
+cask 'alfred'
+cask 'appcleaner'
+cask 'caffeine'
+cask 'chromium'
+cask 'clipmenu'
+cask 'cyberduck'
+cask 'docker'
+cask 'doxygen'
+cask 'emacs-mac'
+cask 'firefox'
+cask 'font-dejavu-sans'
+cask 'font-dejavu-sans-mono-for-powerline'
+cask 'fork'
+cask 'google-chrome'
+cask 'google-chrome-canary'
+cask 'google-cloud-sdk'
+cask 'google-japanese-ime'
+cask 'hex-fiend'
+cask 'iterm2'
+cask 'karabiner-elements'
+cask 'mysqlworkbench'
+cask 'shiftit'
+cask 'vagrant'
+cask 'virtualbox'
+cask 'visual-studio-code'
+cask 'wkhtmltopdf'
+cask 'slack'
+cask 'sketch'

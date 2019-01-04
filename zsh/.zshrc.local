@@ -27,9 +27,13 @@ export V8_BUILDER=13.115.196.98
 #export CPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/
 #export LEIN_JAVA_CMD=`which drip`
 #export LEIN_FAST_TRAMPOLINE=y
+export GOPATH=$HOME/go
+export GOENV_ROOT=$HOME/.goenv
 
 
 ## PATH
+export PATH=$GOENV_ROOT/bin:$PATH
+export PATH=$PATH:$GOPATH/bin
 export PATH=$PYENV_ROOT/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:~/bin:/Application:/Users/`whoami`/.rbenv/shims:~/bin:~/GitHub/depot_tools:$PATH:$ANDROID_HOME/tools:$PATH:$ANDROID_HOME/platform-tools:$HOME/.jsvu
 export PATH=/usr/local/opt/llvm/bin:$PATH
 export PATH=~/.nodebrew/current/bin:$PATH
@@ -45,11 +49,12 @@ export OS_AUTH_URL=http://10.6.250.11/v2.0
 export OS_TENANT_NAME="right_segment"
 export OS_USERNAME="right_segment"
 export OS_PASSWORD=Kte95SrJeDYKASzjBeMQShARYshUlqr
+export EDITOR=emacs
 ## PATH
 
-alias emacs='TERM=xterm-256color /usr/local/bin/emacsclient -nw -a ""'
+alias emacs='TERM=xterm-256color /usr/local/Cellar/emacs/26.1_1/bin/emacsclient -nw -a ""'
 alias refresh_p='source ~/.zshrc'
-alias ll='ls -l'
+alias ll='ls -lG'
 alias git-c='git checkout'
 alias gcp-activate='gcloud config configurations activate'
 alias gcp-config='gcloud config'
@@ -66,6 +71,9 @@ alias gipl='git pull'
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(goenv init -)"
+eval "$(direnv hook zsh)"
+
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
 function show-current-dir-as-window-name() {
   local PWD_LEN=${#PWD}
@@ -73,15 +81,13 @@ function show-current-dir-as-window-name() {
   if [ "$PWD_LEN" -gt 30 ]; then
     DISPLAY_PWD=$(echo $PWD | cut -c$(($PWD_LEN-30))-)
   fi
-  tmux set-window-option window-status-format " ${DISPLAY_PWD} " > /dev/null
-  tmux set-window-option window-status-current-format " ${DISPLAY_PWD} " > /dev/null
+  echo $DISPLAY_PWD
 }
 
-show-current-dir-as-window-name
 add-zsh-hook chpwd show-current-dir-as-window-name
 
 function view-gcr-build() {
-  open 'https://console.cloud.google.com/gcr/builds?project=cyberagent-037&authuser=3&hl=ja&organizationId=1051569445158'
+  open 'https://console.cloud.google.com/gcr/builds?project=cyberagent-037&authuser=1&hl=ja&organizationId=1051569445158'
 }
 
 function send-v8() {
@@ -251,8 +257,12 @@ compdef _pass-of pass-of
 
 panewrap () { printf '\033k%s\033\\' "$1"; }
 
-PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+#PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 check_merge() {
     git format-patch `git rev-parse --abbrev-ref HEAD`..`git rev-parse --abbrev-ref '@{-1}'` --stdout | git apply --check
+}
+
+npm_required() {
+  npm install yarn typescript prettier tslint storybook yaml2json json-diff -g
 }

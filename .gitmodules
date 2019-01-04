@@ -19,3 +19,9 @@
 [submodule "dircolors-solarized"]
 	path = dircolors-solarized
 	url = git@github.com:seebi/dircolors-solarized.git
+[submodule "solarized"]
+	path = solarized
+	url = https://github.com/altercation/solarized/
+[submodule "tpm"]
+	path = tpm
+	url = https://github.com/tmux-plugins/tpm
