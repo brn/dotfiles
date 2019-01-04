@@ -49,18 +49,17 @@
             (local-set-key (kbd "M-,") 'rtags-location-stack-back)))
 
 
-(defun flymake-cc-init ()
-  (let* ((temp-file   (flymake-init-create-temp-buffer-copy
-                       'flymake-create-temp-inplace))
-         (local-file  (file-relative-name
-                       temp-file
-                       (file-name-directory buffer-file-name))))
-    (list "clang++" (list "-std=c++1y" "-Wall" "-Wextra" "-fsyntax-only" "-DPLATFORM_64BIT" local-file))))
+;; (defun flymake-cc-init ()
+;;   (let* ((temp-file   (flymake-init-create-temp-buffer-copy
+;;                        'flymake-create-temp-inplace))
+;;          (local-file  (file-relative-name
+;;                        temp-file
+;;                        (file-name-directory buffer-file-name))))
+;;     (list "clang++" (list "-std=c++1y" "-Wall" "-Wextra" "-fsyntax-only" "-DPLATFORM_64BIT" local-file))))
 
-(push '("\\.cc$" flymake-cc-init) flymake-allowed-file-name-masks)
+;; (push '("\\.cc$" flymake-cc-init) flymake-allowed-file-name-masks)
 
 (add-hook 'c++-mode-hook
           '(lambda ()
-;;             (add-hook 'before-save-hook 'clang-format-buffer nil 'local)
-             (flymake-mode t)))
+             (add-hook 'before-save-hook 'clang-format-buffer nil 'local)))
 (setq rtags-tramp-enabled t) ;; TODO remove newer version.
