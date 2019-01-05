@@ -59,7 +59,7 @@
 
 ;; (push '("\\.cc$" flymake-cc-init) flymake-allowed-file-name-masks)
 
-(add-hook 'c++-mode-hook
-          '(lambda ()
-             (add-hook 'before-save-hook 'clang-format-buffer nil 'local)))
+;; (add-hook 'c++-mode-hook
+;;           '(lambda ()
+;;              (add-hook 'before-save-hook 'clang-format-buffer nil 'local)))
 (setq rtags-tramp-enabled t) ;; TODO remove newer version.
