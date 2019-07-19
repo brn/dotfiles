@@ -139,6 +139,10 @@
 (require 'clang-format)
 (setq debug-on-error nil)
 (smartparens-global-mode t)
+
+(define-key flycheck-mode-map (kbd "C-M-n") 'flycheck-next-error)
+(define-key flycheck-mode-map (kbd "C-M-p") 'flycheck-previous-error)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -146,20 +150,21 @@
  ;; If there is more than one, they won't work right.
  '(c-doc-author (format "Taketoshi Aono <%s>" c-doc-mail-address))
  '(c-doc-mail-address "dobaw20@gmail.com")
- '(c-hanging-braces-alist (quote set-from-style))
- '(c-hanging-semi&comma-criteria (quote set-from-style))
+ '(c-hanging-braces-alist 'set-from-style)
+ '(c-hanging-semi&comma-criteria 'set-from-style)
  '(c-report-syntactic-errors t)
  '(clang-format-style "Google")
- '(direx-project:project-root-predicate-functions (quote (my/direx-root-p)))
+ '(desktop-save-mode t)
+ '(direx-project:project-root-predicate-functions '(my/direx-root-p))
  '(flycheck-display-errors-delay 0.5)
- '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
- '(flycheck-highlighting-mode (quote lines))
+ '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)
+ '(flycheck-highlighting-mode 'lines)
  '(flycheck-popup-tip-error-prefix "* ")
  '(flymake-google-cpplint-command "~/GitHub/styleguide/cpplint/cpplint.py")
- '(foreign-regexp/regexp-type (quote javascript))
+ '(foreign-regexp/regexp-type 'javascript)
  '(haskell-font-lock-symbols t)
  '(indent-tabs-mode nil)
- '(irony-additional-clang-options (quote ("-std=c++1y" "-stdlib=libc++" "-DPLATFORM_64BIT")))
+ '(irony-additional-clang-options '("-std=c++1y" "-stdlib=libc++" "-DPLATFORM_64BIT"))
  '(js-indent-level 2)
  '(js2-allow-keywords-as-property-names t)
  '(js2-always-indent-assigned-expr-in-decls-p t)
@@ -186,18 +191,16 @@
  '(nxml-child-indent 4)
  '(nxml-outline-child-indent 4)
  '(package-selected-packages
-   (quote
-    (js2-refactor js2-mode highlight2clipboard python-mode zencoding-mode yaml-mode w3m tss slamhound rainbow-delimiters racer pretty-symbols powershell-mode powerline popwin open-junk-file nodejs-repl markdown-mode mark-multiple magit js-doc jaunte init-loader haskell-mode gtags fuzzy flycheck-objc-clang exec-path-from-shell ensime eimp edbi dockerfile-mode direx company-irony color-moccur coffee-mode cmake-mode clojure-cheatsheet clang-format avy auto-complete-clang-async auto-complete-clang actionscript-mode ace-jump-mode ac-js2 ac-clang ac-cider ac-c-headers)))
- '(powerline-default-separator (quote slant))
+   '(js2-refactor js2-mode highlight2clipboard python-mode zencoding-mode yaml-mode w3m tss slamhound rainbow-delimiters racer pretty-symbols powershell-mode powerline popwin open-junk-file nodejs-repl markdown-mode mark-multiple magit js-doc jaunte init-loader haskell-mode gtags fuzzy flycheck-objc-clang exec-path-from-shell ensime eimp edbi dockerfile-mode direx company-irony color-moccur coffee-mode cmake-mode clojure-cheatsheet clang-format avy auto-complete-clang-async auto-complete-clang actionscript-mode ace-jump-mode ac-js2 ac-clang ac-cider ac-c-headers))
+ '(powerline-default-separator 'slant)
  '(powerline-height 20)
- '(reb-re-syntax (quote foreign-regexp))
+ '(reb-re-syntax 'foreign-regexp)
  '(rtags-tramp-enabled t)
  '(sgml-basic-offset 4)
- '(speedbar-add-supported-extension (quote (".js" ".as" ".html" ".css" ".php")))
+ '(speedbar-add-supported-extension '(".js" ".as" ".html" ".css" ".php"))
  '(speedbar-show-unknown-files t)
  '(speedbar-tag-hierarchy-method
-   (quote
-    (speedbar-prefix-group-tag-hierarchy spe edbar-trim-words-tag-hierarchy speedbar-simple-group-tag-hierarchy speedbar-sort -tag-hierarchy)))
+   '(speedbar-prefix-group-tag-hierarchy spe edbar-trim-words-tag-hierarchy speedbar-simple-group-tag-hierarchy speedbar-sort -tag-hierarchy))
  '(sr-speedbar-auto-refresh t)
  '(sr-speedbar-max-width 200)
  '(sr-speedbar-width 60 t)
