@@ -1,0 +1,6 @@
+(use-package auto-async-byte-compile
+             :ensure t
+             :config
+             (setq auto-async-byte-compile-init-file "~/.emacs.d/init.el")k
+             (setq auto-async-byte-compile-exclude-files-regexp "/junk/")
+             (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode))

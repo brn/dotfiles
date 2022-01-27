@@ -1,4 +1,6 @@
-;; uuidの挿入
-(defun insert-uuid-4()
-  (interactive)
-  (insert (uuid-4)))
+(use-package uuid
+  :config
+  ;; uuidの挿入
+  (defun insert-uuid-4()
+    (interactive)
+    (insert (uuid-4))))

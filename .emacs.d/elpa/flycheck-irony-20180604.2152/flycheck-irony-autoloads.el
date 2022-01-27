@@ -1,4 +1,4 @@
-;;; flycheck-irony-autoloads.el --- automatically extracted autoloads
+;;; flycheck-irony-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -13,11 +13,9 @@
 (autoload 'flycheck-irony-setup "flycheck-irony" "\
 Setup Flycheck Irony.
 
-Add `irony' to `flycheck-checkers'.
+Add `irony' to `flycheck-checkers'." t nil)
 
-\(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "flycheck-irony" '("flycheck-irony-")))
+(register-definition-prefixes "flycheck-irony" '("flycheck-irony-"))
 
 ;;;***
 

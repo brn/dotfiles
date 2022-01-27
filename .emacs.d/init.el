@@ -1,148 +1,3 @@
-(let ((default-directory (expand-file-name "~/.emacs.d/elisps")))
-  (add-to-list 'load-path default-directory)
-  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-       (normal-top-level-add-subdirs-to-load-path)))
-
-(let ((default-directory (expand-file-name "~/.emacs.d/elpa")))
-  (add-to-list 'load-path default-directory)
-  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-      (normal-top-level-add-subdirs-to-load-path)))
-
-(require 'package)
-
-(setq package-check-signature nil)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
-(package-initialize)
-
-(require 'cl)
-
-(defvar installing-package-list
-  '(
-    ;; ここに使っているパッケージを書く。
-    init-loader
-    helm 
-    auto-complete
-    actionscript-mode
-    color-moccur
-    nodejs-repl
-    log4e
-    powershell-mode
-    coffee-mode
-    exec-path-from-shell
-    multiple-cursors
-    zencoding-mode
-    yasnippet
-    dash
-    js-doc
-    js2-mode
-    js2-refactor
-    markdown-mode
-    popup
-    json-mode
-    google-c-style
-    yaml-mode
-    open-junk-file
-    haskell-mode
-    pretty-symbols
-    mark-multiple
-    powerline
-;    jaunte
-    gtags
-    foreign-regexp
-    popwin
-    direx
-    company
-    clojure-mode
-    cider
-    ac-cider
-    clojure-cheatsheet
-    slamhound
-    smartparens
-    rainbow-delimiters
-    w3m
-    web-mode
-    tide
-    edbi
-    magit
-    avy
-    ))
-
-(let ((not-installed (loop for x in installing-package-list
-                            when (not (package-installed-p x))
-                            collect x)))
-  (when not-installed
-    (package-refresh-contents)
-    (dolist (pkg not-installed)
-        (package-install pkg))))
-
-(require 'tramp)
-(require 'flycheck)
-(require 'flycheck-popup-tip)
-(require 'helm-config)
-(require 'haskell-unicode-input-method)
-(require 'powerline)
-(require 'exec-path-from-shell)
-(require 'coffee-mode)
-(require 'auto-complete)
-(require 'auto-complete-config)
-(require 'company)
-(require 'ac-company)
-(require 'typescript)
-(require 'less-mode)
-(ac-config-default)
-(setq ac-auto-start 3)
-(require 'auto-install)
-(require 'google-c-style)
-(require 'zencoding-mode)
-(require 'textile-mode)
-(require 'yasnippet)
-(require 'js2-mode)
-(require 'js2-refactor)
-(require 'init-loader)
-(require 'c-doc)
-(require 'color-moccur)
-(require 'powershell-mode)
-(require 'log4e)
-(require 'yaxception)
-(require 'uuid)
-(require 'ftl)
-(require 'haskell-mode)
-(require 'haskell-cabal)
-(require 'inline-string-rectangle)
-(require 'mark-more-like-this)
-;(require 'jaunte)
-(require 'flymake-google-cpplint)
-(require 'irony)
-(require 'foreign-regexp)
-(require 'popwin)
-(require 'direx)
-(require 'direx-project)
-(require 'ac-clang)
-(require 'whitespace)
-(require 'tern)
-(require 'w3m)
-(require 'web-mode)
-(require 'edbi)
-(require 'magit)
-(require 'edbi)
-(init-loader-load "~/.emacs.d/init/cmp")
-(require 'js-doc)
-(require 'moccur-edit)
-(require 'scala-mode2)
-(require 'tide)
-(require 'avy)
-(require 'prettier-js)
-(require 'rtags)
-(require 'helm-rtags)
-(require 'clang-format)
-(setq debug-on-error nil)
-(smartparens-global-mode t)
-
-(define-key flycheck-mode-map (kbd "C-M-n") 'flycheck-next-error)
-(define-key flycheck-mode-map (kbd "C-M-p") 'flycheck-previous-error)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -154,17 +9,22 @@
  '(c-hanging-semi&comma-criteria 'set-from-style)
  '(c-report-syntactic-errors t)
  '(clang-format-style "Google")
+ '(company-lsp-async t)
+ '(company-lsp-cache-candidates nil)
+ '(company-lsp-enable-recompletion t)
+ '(company-lsp-enable-snippet t)
  '(desktop-save-mode t)
  '(direx-project:project-root-predicate-functions '(my/direx-root-p))
  '(flycheck-display-errors-delay 0.5)
- '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)
  '(flycheck-highlighting-mode 'lines)
  '(flycheck-popup-tip-error-prefix "* ")
  '(flymake-google-cpplint-command "~/GitHub/styleguide/cpplint/cpplint.py")
  '(foreign-regexp/regexp-type 'javascript)
  '(haskell-font-lock-symbols t)
+ '(help-at-pt-display-when-idle '(flymake-diagnostic) nil (help-at-pt))
+ '(help-at-pt-timer-delay 0.1)
  '(indent-tabs-mode nil)
- '(irony-additional-clang-options '("-std=c++1y" "-stdlib=libc++" "-DPLATFORM_64BIT"))
+ '(irony-additional-clang-options '("-std=c++17" "-stdlib=libc++" "-DPLATFORM_64BIT"))
  '(js-indent-level 2)
  '(js2-allow-keywords-as-property-names t)
  '(js2-always-indent-assigned-expr-in-decls-p t)
@@ -191,11 +51,10 @@
  '(nxml-child-indent 4)
  '(nxml-outline-child-indent 4)
  '(package-selected-packages
-   '(js2-refactor js2-mode highlight2clipboard python-mode zencoding-mode yaml-mode w3m tss slamhound rainbow-delimiters racer pretty-symbols powershell-mode powerline popwin open-junk-file nodejs-repl markdown-mode mark-multiple magit js-doc jaunte init-loader haskell-mode gtags fuzzy flycheck-objc-clang exec-path-from-shell ensime eimp edbi dockerfile-mode direx company-irony color-moccur coffee-mode cmake-mode clojure-cheatsheet clang-format avy auto-complete-clang-async auto-complete-clang actionscript-mode ace-jump-mode ac-js2 ac-clang ac-cider ac-c-headers))
- '(powerline-default-separator 'slant)
- '(powerline-height 20)
+   '(foreign-regexp go-mode typo-suggest csharp-mode web-mode eglot mmm-mode powershell cmake-ide company-rtags all-the-icons-dired helm neotree typescript company-quickhelp-terminal nginx-mode eslint-fix nlinum cl company-quickhelp auto-async-byte-compile uuid auto-install haskell-unicode-input-method zencoding lsp use-package helm-company flycheck-popup-tip flycheck-rtags dash dash-functional google-c-style helm-core helm-rtags log4e moccur-edit multiple-cursors pos-tip prettier-js spinner textile-mode company-irony company-irony-c-headers auto-complete cider clojure-mode irony js2-mode json-mode json-reformat json-snatcher jsonrpc sbt-mode projectile company-lsp helm-lsp flymake-eslint git-gutter js2-refactor highlight2clipboard python-mode zencoding-mode yaml-mode slamhound rainbow-delimiters racer pretty-symbols powershell-mode popwin open-junk-file nodejs-repl markdown-mode mark-multiple js-doc jaunte init-loader haskell-mode gtags fuzzy flycheck-objc-clang exec-path-from-shell ensime eimp edbi dockerfile-mode direx color-moccur coffee-mode cmake-mode clojure-cheatsheet clang-format avy auto-complete-clang-async auto-complete-clang actionscript-mode ace-jump-mode ac-clang ac-cider ac-c-headers))
  '(reb-re-syntax 'foreign-regexp)
  '(rtags-tramp-enabled t)
+ '(rustic-format-display-method 'pop-to-buffer-without-switch)
  '(sgml-basic-offset 4)
  '(speedbar-add-supported-extension '(".js" ".as" ".html" ".css" ".php"))
  '(speedbar-show-unknown-files t)
@@ -206,6 +65,7 @@
  '(sr-speedbar-width 60 t)
  '(sr-speedbar-width-console 150)
  '(typescript-indent-level 2)
+ '(warning-suppress-types '((comp) (comp) (comp)))
  '(yas-trigger-key "TAB"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -213,10 +73,19 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal))))
+ '(company-preview ((t (:foreground "darkgray" :underline t))))
+ '(company-preview-common ((t (:inherit company-preview))))
+ '(company-scrollbar-bg ((t (:background "#121212"))))
+ '(company-scrollbar-fg ((t (:background "#121212"))))
+ '(company-tooltip ((t (:background "lightgray" :foreground "black"))))
+ '(company-tooltip-common ((((type x)) (:inherit company-tooltip :weight bold)) (t (:inherit company-tooltip))))
+ '(company-tooltip-common-selection ((((type x)) (:inherit company-tooltip-selection :weight bold)) (t (:inherit company-tooltip-selection))))
+ '(company-tooltip-selection ((t (:background "steelblue" :foreground "white"))))
  '(dired-symlink ((t (:foreground "#00AAFF"))))
  '(font-lock-builtin-face ((t (:bold t :foreground "#00AAFF"))))
  '(font-lock-function-name-face ((t (:foreground "#66ff00"))))
  '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "#22aaff" :weight bold))))
+ '(font-lock-maximum-decoration t)
  '(helm-ff-directory ((t (:inherit font-lock-builtin-face :foreground "#0099FF"))))
  '(helm-ff-file ((t (:inherit font-lock-builtin-face :foreground "#FFFFFF"))))
  '(hi-blue-b ((((min-colors 88)) (:foreground "#00AAFF" :weight bold))))
@@ -224,4 +93,32 @@
  '(link ((((class color) (min-colors 88) (background light)) (:foreground "green" :underline t))))
  '(minibuffer-prompt ((t (:foreground "yellow"))))
  '(speedbar-directory-face ((((class color) (background light)) (:foreground "yellow"))))
- '(vhdl-speedbar-architecture-selected-face ((((min-colors 88) (class color) (background light)) (:foreground "#00AAFF" :underline t)))))
+ '(vhdl-speedbar-architecture-selected-face ((((min-colors 88) (class color) (background light)) (:foreground "#00AAFF" :underline t))))
+ '(web-mode-comment-face ((t :inherit font-lock-comment-face)))
+ '(web-mode-doctype-face ((t :inherit font-lock-doc-face)))
+ '(web-mode-html-attr-name-face ((t :inherit font-lock-variable-name-face)))
+ '(web-mode-html-attr-value-face ((t :inherit font-lock-string-face)))
+ '(web-mode-html-tag-face ((t :inherit font-lock-function-name-face)))
+ '(web-mode-server-comment-face ((t :inherit font-lock-comment-face))))
+
+(require 'use-package)
+(require 'package)
+(setq package-check-signature nil)
+(package-initialize)
+
+(use-package init-loader :ensure nil)
+(use-package cider :ensure nil)
+(use-package c-doc)
+(use-package whitespace :ensure nil)
+
+(init-loader-load "~/.emacs.d/init/")
+(setq debug-on-error nil)
+
+;; for rustic
+(with-eval-after-load 'rust-mode
+  (cl-delete-if (lambda (element) (equal (cdr element) 'rust-mode)) auto-mode-alist)
+  (cl-delete-if (lambda (element) (equal (cdr element) 'rustic-mode)) auto-mode-alist)
+  (add-to-list 'auto-mode-alist '("\\.rs$" . rustic-mode)))
+
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))

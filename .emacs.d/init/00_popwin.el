@@ -1,1 +1,4 @@
-(setq display-buffer-function 'popwin:display-buffer)
+(use-package popwin
+  :ensure t
+  :config
+  (setq display-buffer-function 'popwin:display-buffer))

@@ -32,6 +32,7 @@ export GOENV_ROOT=$HOME/.goenv
 
 
 ## PATH
+export PATH=/usr/local/Cellar/gcc/10.2.0_4/bin/:/usr/local/Cellar/gcc/10.2.0_4/lib/gcc/10/:$PATH
 export PATH=$GOENV_ROOT/bin:$PATH
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PYENV_ROOT/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:~/bin:/Application:/Users/`whoami`/.rbenv/shims:~/bin:~/GitHub/depot_tools:$PATH:$ANDROID_HOME/tools:$PATH:$ANDROID_HOME/platform-tools:$HOME/.jsvu
@@ -52,7 +53,7 @@ export OS_PASSWORD=Kte95SrJeDYKASzjBeMQShARYshUlqr
 export EDITOR=emacs
 ## PATH
 
-alias emacs='TERM=xterm-256color /usr/local/Cellar/emacs/26.1_1/bin/emacsclient -nw -a ""'
+alias emacs='TERM=xterm-256color /usr/local/Cellar/emacs-head@28/28.0.50_1/bin/emacsclient -a "/usr/local/Cellar/emacs-head@28/28.0.50_1/bin/emacs -nw --daemon" -nw'
 alias refresh_p='source ~/.zshrc'
 alias ll='ls -lG'
 alias git-c='git checkout'
@@ -62,6 +63,7 @@ alias kc='kubectl'
 alias diff='colordiff'
 alias ya='yarn'
 alias yar='yarn run'
+alias yai='yarn install --frozen-lockfile'
 
 alias gico='git checkout'
 alias girb='git rebase'
@@ -74,6 +76,7 @@ eval "$(goenv init -)"
 eval "$(direnv hook zsh)"
 
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+source ~/.cargo/env
 
 function show-current-dir-as-window-name() {
   local PWD_LEN=${#PWD}
@@ -87,7 +90,7 @@ function show-current-dir-as-window-name() {
 add-zsh-hook chpwd show-current-dir-as-window-name
 
 function view-gcr-build() {
-  open 'https://console.cloud.google.com/gcr/builds?project=cyberagent-037&authuser=1&hl=ja&organizationId=1051569445158'
+  open 'https://console.cloud.google.com/gcr/builds?project=cyberagent-037&authuser=0&hl=ja&organizationId=1051569445158'
 }
 
 function send-v8() {

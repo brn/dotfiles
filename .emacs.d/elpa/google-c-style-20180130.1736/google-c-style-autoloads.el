@@ -1,4 +1,4 @@
-;;; google-c-style-autoloads.el --- automatically extracted autoloads
+;;; google-c-style-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -15,17 +15,13 @@ Google C/C++ Programming Style.")
 
 (autoload 'google-set-c-style "google-c-style" "\
 Set the current buffer's c-style to Google C/C++ Programming
-  Style. Meant to be added to `c-mode-common-hook'.
-
-\(fn)" t nil)
+  Style. Meant to be added to `c-mode-common-hook'." t nil)
 
 (autoload 'google-make-newline-indent "google-c-style" "\
 Sets up preferred newline behavior. Not set by default. Meant
-  to be added to `c-mode-common-hook'.
+  to be added to `c-mode-common-hook'." t nil)
 
-\(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "google-c-style" '("google-c-lineup-expression-plus-4")))
+(register-definition-prefixes "google-c-style" '("google-c-lineup-expression-plus-4"))
 
 ;;;***
 

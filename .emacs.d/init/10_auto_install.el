@@ -1,2 +1,3 @@
-;auto-install.el
-(setq auto-install-directory "~/.emacs.d/elisps/")
+(use-package auto-install
+  :config
+  (setq auto-install-directory "~/.emacs.d/elisps/"))

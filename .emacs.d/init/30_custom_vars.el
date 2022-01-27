@@ -26,7 +26,12 @@
  '(direx-project:project-root-predicate-functions '(my/direx-root-p))
  '(haskell-font-lock-symbols t)
  `(rtags-tramp-enabled t)
- `(clang-format-style "Google"))
+ `(clang-format-style "Google")
+ `(company-lsp-cache-candidates nil)
+ `(company-lsp-async t)
+ `(company-lsp-enable-recompletion t)
+ `(company-lsp-enable-snippet t)
+ )
 
 (custom-set-faces
  '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal))))
@@ -52,7 +57,7 @@
 (setq-default line-spacing 2)
 
 ;;macの際のフォントサイズ修正
-(if (eq window-system 'mac)
+(if (or (eq window-system 'mac) (eq window-system 'ns))
     (if (os-type-is-mac?)
         (let* ((fontset-name "dejavumarugo")
                (jp-fontspec (font-spec :family "Hiragino Kaku Gothic ProN"))

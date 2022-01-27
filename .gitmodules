@@ -25,3 +25,6 @@
 [submodule "tpm"]
 	path = tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule ".emacs.d/web-mode"]
+	path = .emacs.d/web-mode
+	url = git@github.com:fxbois/web-mode.git

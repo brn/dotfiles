@@ -1,1 +1,4 @@
-(autoload 'edbi:open-db-viewer "edbi")
+(use-package edbi
+  :ensure t
+  :config
+  (autoload 'edbi:open-db-viewer "edbi"))

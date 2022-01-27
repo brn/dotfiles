@@ -28,9 +28,10 @@ module.exports = function(grunt) {
   var elisps = grunt.file.expand("./elisps/**/*.el");
   var elpas = grunt.file.expand("./elpa/**/*.el");
   var init = grunt.file.expand("./init/*.el");
-  var command = "emacs -Q --batch  -f batch-byte-compile ";
+  var command = "/usr/local/Cellar/emacs-head@28/28.0.50_1/Emacs.app/Contents/MacOS/Emacs --batch  -f batch-byte-compile ";
 
-  function isUpdated(src, dest) {
+    function isUpdated(src, dest) {
+	return true;
     if (!fs.existsSync(dest)) {
       return true;
     }
